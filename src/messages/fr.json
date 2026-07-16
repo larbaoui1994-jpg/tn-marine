@@ -1,0 +1,67 @@
+{
+  "Metadata": {
+    "title": "TN Marine — Électronique marine & peintures nautiques à Alger",
+    "description": "TN Marine, distributeur agréé d'électronique de navigation, de communication marine et de peintures nautiques à Aïn Benian, Alger. Catalogue, conseil et proforma pour professionnels et plaisanciers."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "brands": "Marques",
+    "about": "À propos",
+    "authGuide": "Guide des autorisations",
+    "contact": "Contact",
+    "booking": "Réservation",
+    "proforma": "Demander une proforma",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "account": "Mon compte",
+    "login": "Connexion",
+    "logout": "Déconnexion"
+  },
+  "Common": {
+    "language": "Langue",
+    "readMore": "En savoir plus",
+    "seeAll": "Voir tout",
+    "seeProducts": "Voir les produits",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "address": "Adresse",
+    "provisionalContent": "Contenu provisoire"
+  },
+  "Home": {
+    "heroKicker": "Distributeur agréé d'électronique marine",
+    "heroTitle": "L'électronique marine et les peintures nautiques de confiance, à Alger",
+    "heroSubtitle": "TN Marine équipe et conseille les professionnels et les plaisanciers en GPS, sondeurs, VHF, pilotes automatiques, cartographie, audio marine et peintures antifouling — auprès des plus grandes marques du nautisme.",
+    "heroCtaShop": "Découvrir le catalogue",
+    "heroCtaBooking": "Prendre rendez-vous",
+    "heroCtaProforma": "Demander une proforma",
+    "brandsTitle": "Nos marques partenaires",
+    "brandsSubtitle": "Dix marques de référence mondiale du nautisme, sélectionnées pour leur fiabilité et leur performance en mer.",
+    "whyTitle": "Pourquoi choisir TN Marine ?",
+    "whyItem1Title": "Expertise reconnue",
+    "whyItem1Text": "Une équipe spécialisée qui conseille chantiers navals, revendeurs et plaisanciers depuis de nombreuses années à Alger.",
+    "whyItem2Title": "Marques de référence",
+    "whyItem2Text": "Un catalogue construit autour de dix marques mondiales de l'électronique de navigation et des peintures nautiques.",
+    "whyItem3Title": "Accompagnement complet",
+    "whyItem3Text": "Conseil d'achat personnalisé, proforma détaillée et accompagnement dans les démarches d'autorisation ANF.",
+    "whyItem4Title": "Service pro & particuliers",
+    "whyItem4Text": "Des solutions adaptées aussi bien aux chantiers navals et installateurs qu'aux propriétaires de bateaux.",
+    "ctaSectionTitle": "Un projet, une question, un devis ?",
+    "ctaSectionText": "Notre équipe vous accompagne dans le choix de votre équipement et vous transmet une proforma détaillée sous 48h.",
+    "provisionalNotice": "Contenu provisoire — sera complété avec les textes définitifs de TN Marine."
+  },
+  "Footer": {
+    "companyName": "TN Marine",
+    "companyLegal": "EURL Technic Nautic Marine Import",
+    "tagline": "Distributeur agréé d'électronique marine et de peintures nautiques.",
+    "columnsNav": "Navigation",
+    "columnsResources": "Ressources",
+    "columnsContact": "Contact",
+    "hours": "Horaires",
+    "hoursText": "Lun-Jeu & Sam-Dim : 9h–17h · Vendredi : fermé",
+    "hoursNotice": "(horaires à confirmer)",
+    "social": "Réseaux sociaux",
+    "rights": "Tous droits réservés.",
+    "authGuideLink": "Guide des autorisations ANF"
+  }
+}

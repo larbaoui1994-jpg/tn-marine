@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tn-marine-dev",
+      "runtimeExecutable": "/Users/larbaouiraouf/.local/node/bin/node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev", "--webpack"],
+      "port": 3000,
+      "env": {
+        "PATH": "/Users/larbaouiraouf/.local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  ]
+}

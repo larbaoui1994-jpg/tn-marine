@@ -1,0 +1,67 @@
+{
+  "Metadata": {
+    "title": "TN Marine — Marine electronics & marine paints in Algiers",
+    "description": "TN Marine, authorized distributor of navigation and marine communication electronics and marine paints in Aïn Benian, Algiers. Catalog, advice and proforma for professionals and boat owners."
+  },
+  "Nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "brands": "Brands",
+    "about": "About",
+    "authGuide": "Authorization guide",
+    "contact": "Contact",
+    "booking": "Booking",
+    "proforma": "Request a proforma",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "account": "My account",
+    "login": "Log in",
+    "logout": "Log out"
+  },
+  "Common": {
+    "language": "Language",
+    "readMore": "Read more",
+    "seeAll": "See all",
+    "seeProducts": "See products",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "provisionalContent": "Provisional content"
+  },
+  "Home": {
+    "heroKicker": "Authorized marine electronics distributor",
+    "heroTitle": "Trusted marine electronics and marine paints, in Algiers",
+    "heroSubtitle": "TN Marine equips and advises professionals and boat owners on GPS units, fishfinders, VHF radios, autopilots, chartplotters, marine audio and antifouling paints — from the leading names in marine gear.",
+    "heroCtaShop": "Browse the catalog",
+    "heroCtaBooking": "Book an appointment",
+    "heroCtaProforma": "Request a proforma",
+    "brandsTitle": "Our partner brands",
+    "brandsSubtitle": "Ten world-reference marine brands, selected for their reliability and performance at sea.",
+    "whyTitle": "Why choose TN Marine?",
+    "whyItem1Title": "Recognized expertise",
+    "whyItem1Text": "A specialized team that has advised shipyards, resellers and boat owners for many years in Algiers.",
+    "whyItem2Title": "Reference brands",
+    "whyItem2Text": "A catalog built around ten world-leading brands in marine electronics and marine paints.",
+    "whyItem3Title": "Full support",
+    "whyItem3Text": "Personalized purchase advice, a detailed proforma, and guidance through the ANF authorization process.",
+    "whyItem4Title": "Pro & individual customers",
+    "whyItem4Text": "Solutions tailored to shipyards and installers as well as to boat owners.",
+    "ctaSectionTitle": "A project, a question, a quote?",
+    "ctaSectionText": "Our team helps you choose the right equipment and sends you a detailed proforma within 48 hours.",
+    "provisionalNotice": "Provisional content — will be completed with TN Marine's final copy."
+  },
+  "Footer": {
+    "companyName": "TN Marine",
+    "companyLegal": "EURL Technic Nautic Marine Import",
+    "tagline": "Authorized distributor of marine electronics and marine paints.",
+    "columnsNav": "Navigation",
+    "columnsResources": "Resources",
+    "columnsContact": "Contact",
+    "hours": "Opening hours",
+    "hoursText": "Mon-Thu & Sat-Sun: 9am–5pm · Friday: closed",
+    "hoursNotice": "(hours to be confirmed)",
+    "social": "Social media",
+    "rights": "All rights reserved.",
+    "authGuideLink": "ANF authorization guide"
+  }
+}
