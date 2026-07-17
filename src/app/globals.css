@@ -96,3 +96,16 @@ body {
   background: var(--color-accent-light);
   color: var(--color-primary-dark);
 }
+
+/*
+ * Impression — utilisé notamment par la checklist du Guide des
+ * autorisations ("téléchargeable/imprimable", cahier des charges §8) :
+ * masque la navigation et n'importe quel élément marqué .no-print.
+ */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}

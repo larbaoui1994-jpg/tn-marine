@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import AccountMenu from "@/components/auth/AccountMenu";
 
 const NAV_LINKS = [
   { key: "home", href: "/" },
@@ -60,6 +61,7 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
+          <AccountMenu />
           <Link
             href="/reservation"
             className="rounded-md border border-primary px-3.5 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-surface-alt transition-colors"
@@ -121,7 +123,10 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <div className="mt-3 flex flex-col gap-2 border-t border-border pt-3">
+          <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
+            <AccountMenu />
+          </div>
+          <div className="mt-3 flex flex-col gap-2">
             <Link
               href="/reservation"
               onClick={() => setMobileOpen(false)}

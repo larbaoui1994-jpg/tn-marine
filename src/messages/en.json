@@ -63,5 +63,283 @@
     "social": "Social media",
     "rights": "All rights reserved.",
     "authGuideLink": "ANF authorization guide"
+  },
+  "About": {
+    "metaTitle": "About — TN Marine",
+    "kicker": "About TN Marine",
+    "title": "Your trusted partner for marine electronics",
+    "intro": "EURL Technic Nautic Marine Import (TN Marine) is an authorized distributor of navigation electronics and marine paints, based in Aïn Benian, Algiers. We support shipyards and resellers as well as boat owners.",
+    "historyHeading": "Our story",
+    "historyText": "Based in Aïn Benian, TN Marine grew around a simple conviction: sea professionals and boat owners deserve reliable technical advice and direct access to the world's leading marine electronics brands. (Provisional content — to be completed with the company's actual history.)",
+    "expertiseHeading": "Our expertise",
+    "expertiseText": "Our team advises on the selection, installation and commissioning of navigation, communication and marine paint equipment, for projects ranging from leisure boats to professional vessels.",
+    "agreementsHeading": "Authorizations",
+    "agreementsText": "TN Marine is an authorized distributor for the brands listed below. (Details of authorizations and certifications to be completed by TN Marine.)",
+    "brandsHeading": "The brands we represent",
+    "brandsSubtitle": "Ten world-reference brands, each specialized in a field of marine electronics or marine paints.",
+    "brandsTableName": "Brand",
+    "brandsTableDomain": "Field of activity",
+    "brandsCta": "See products",
+    "locationHeading": "Find us",
+    "locationText": "Our premises are located in Aïn Benian, west of Algiers. Find the full address, directions and opening hours on the Contact page.",
+    "locationCta": "Go to the Contact page",
+    "brands": {
+      "lowrance": {
+        "domain": "Navigation electronics: fishfinders, GPS units and combo displays, geared towards fishing and boating"
+      },
+      "simrad": {
+        "domain": "Professional and leisure navigation electronics: chartplotters, radars, autopilots"
+      },
+      "garmin": {
+        "domain": "Navigation electronics: GPS units, fishfinders, navigation instruments"
+      },
+      "cmap": {
+        "domain": "Digital marine cartography"
+      },
+      "navionics": {
+        "domain": "Digital marine cartography (charts and bathymetric data)"
+      },
+      "fusion": {
+        "domain": "Onboard audio and entertainment systems for boats"
+      },
+      "minnKota": {
+        "domain": "Electric fishing motors (trolling motors)"
+      },
+      "international": {
+        "domain": "Marine paints and coatings (antifouling, varnish, primers)"
+      },
+      "cobraMarine": {
+        "domain": "VHF radios and marine communication equipment"
+      },
+      "airmar": {
+        "domain": "Sensors and transducers for fishfinders, GPS units and instruments"
+      }
+    }
+  },
+  "Contact": {
+    "metaTitle": "Contact — TN Marine",
+    "kicker": "Contact",
+    "title": "Let's talk about your project",
+    "intro": "A question, a need for advice, or a quote request? Our team gets back to you quickly.",
+    "infoHeading": "Contact details",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Opening hours",
+    "hoursText": "Monday-Thursday and Saturday-Sunday: 9am–5pm · Friday: closed",
+    "hoursNotice": "(hours to be confirmed with TN Marine)",
+    "socialLabel": "Social media",
+    "mapTitle": "TN Marine location on Google Maps",
+    "form": {
+      "heading": "Send us a message",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you, your message has been sent. Our team will get back to you shortly.",
+      "genericError": "Something went wrong, please try again or contact us by phone.",
+      "errorName": "Please enter your name (2 characters minimum).",
+      "errorEmail": "Please enter a valid email address.",
+      "errorMessage": "Your message must be at least 10 characters long."
+    }
+  },
+  "Categories": {
+    "gps-traceurs": "GPS & Chartplotters",
+    "sondeurs": "Fishfinders",
+    "cartographie": "Marine Cartography",
+    "vhf-communication": "VHF & Communication",
+    "radars": "Radars",
+    "pilotes-automatiques": "Autopilots",
+    "moteurs-electriques": "Electric Motors",
+    "audio-marine": "Marine Audio",
+    "peintures-antifouling": "Paints & Antifouling"
+  },
+  "Brands": {
+    "metaTitle": "Our brands — TN Marine",
+    "kicker": "Our brands",
+    "title": "Ten reference brands in marine equipment",
+    "intro": "TN Marine selects brands recognized for their reliability, to equip professionals and boat owners alike.",
+    "viewBrand": "View brand",
+    "productsCount": "{count, plural, =0 {No products} one {# product} other {# products}}",
+    "items": {
+      "lowrance": {
+        "tagline": "Navigation electronics: fishfinders, GPS units and combo displays, geared towards fishing and boating"
+      },
+      "simrad": {
+        "tagline": "Professional and leisure navigation electronics: chartplotters, radars, autopilots"
+      },
+      "garmin": {
+        "tagline": "Navigation electronics: GPS units, fishfinders, navigation instruments"
+      },
+      "cmap": {
+        "tagline": "Digital marine cartography"
+      },
+      "navionics": {
+        "tagline": "Digital marine cartography (charts and bathymetric data)"
+      },
+      "fusion": {
+        "tagline": "Onboard audio and entertainment systems for boats"
+      },
+      "minnKota": {
+        "tagline": "Electric fishing motors (trolling motors)"
+      },
+      "international": {
+        "tagline": "Marine paints and coatings (antifouling, varnish, primers)"
+      },
+      "cobraMarine": {
+        "tagline": "VHF radios and marine communication equipment"
+      },
+      "airmar": {
+        "tagline": "Sensors and transducers for fishfinders, GPS units and instruments"
+      }
+    }
+  },
+  "Shop": {
+    "metaTitle": "Shop — TN Marine",
+    "kicker": "Catalog",
+    "title": "Our product catalog",
+    "intro": "Navigation electronics, marine communication, electric motors and marine paints — filter by category or brand to find the right equipment for your project.",
+    "filterCategoryLabel": "Category",
+    "filterBrandLabel": "Brand",
+    "allCategories": "All categories",
+    "allBrands": "All brands",
+    "resultsCount": "{count, plural, =0 {No products} one {# product} other {# products}}",
+    "noResults": "No products match these filters.",
+    "resetFilters": "Reset filters",
+    "viewProduct": "View product sheet",
+    "requestProforma": "Request a proforma",
+    "specsHeading": "Technical specifications",
+    "descriptionHeading": "Description",
+    "brandLabel": "Brand",
+    "categoryLabel": "Category",
+    "backToShop": "Back to catalog",
+    "relatedProducts": "More products from this brand",
+    "provisionalPhoto": "Provisional photo",
+    "anf": {
+      "title": "ANF authorization required",
+      "text": "Operating this equipment on board requires an authorization from the Agence Nationale des Fréquences (ANF).",
+      "link": "See the Authorization Guide"
+    }
+  },
+  "Auth": {
+    "loginTitle": "Log in",
+    "loginIntro": "Log in to access your booking space.",
+    "signupTitle": "Create an account",
+    "signupIntro": "Create your account to book appointments and track your requests.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "loginSubmit": "Log in",
+    "loginSubmitting": "Logging in…",
+    "signupSubmit": "Create my account",
+    "signupSubmitting": "Creating account…",
+    "noAccount": "Don't have an account yet?",
+    "createAccount": "Create an account",
+    "alreadyAccount": "Already have an account?",
+    "signIn": "Log in",
+    "passwordHint": "8 characters minimum",
+    "errors": {
+      "invalidCredentials": "Incorrect email or password.",
+      "emailTaken": "An account already exists with this email address.",
+      "signinAfterSignupFailed": "Your account was created, but automatic sign-in failed. Please log in with your credentials.",
+      "nameTooShort": "Please enter your name (2 characters minimum).",
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordTooShort": "Password must be at least 8 characters long."
+    }
+  },
+  "Booking": {
+    "metaTitle": "Booking — TN Marine",
+    "kicker": "Booking space",
+    "title": "Book an appointment for purchase advice",
+    "intro": "Choose a date and describe what you need, our team will confirm your appointment.",
+    "formHeading": "New appointment",
+    "dateLabel": "Preferred date and time",
+    "topicLabel": "Appointment topic",
+    "topicPlaceholder": "E.g. Choosing a fishfinder/GPS for a fishing boat",
+    "notesLabel": "Additional details (optional)",
+    "submit": "Request appointment",
+    "submitting": "Sending…",
+    "success": "Your appointment request has been recorded. Our team will contact you to confirm it.",
+    "errorDate": "Please choose a future date.",
+    "errorTopic": "Please enter the appointment topic.",
+    "myAppointmentsHeading": "My appointments",
+    "noAppointments": "You don't have any appointments yet.",
+    "status": {
+      "PENDING": "Awaiting confirmation",
+      "CONFIRMED": "Confirmed",
+      "CANCELLED": "Cancelled"
+    }
+  },
+  "Proforma": {
+    "metaTitle": "Proforma request — TN Marine",
+    "kicker": "Proforma request",
+    "title": "Request a proforma",
+    "intro": "Select one or more products from our catalog, or freely describe what you need. Our sales team will send you a detailed proforma within 48 hours.",
+    "sectionProducts": "Requested products",
+    "lineLabel": "Product {index}",
+    "productLabel": "Product",
+    "productPlaceholder": "Choose a product from the catalog",
+    "autreOption": "Other product (not in catalog)",
+    "freeTextLabel": "Product name",
+    "freeTextPlaceholder": "E.g. Portable fishfinder, model not listed",
+    "referenceLabel": "Reference (optional)",
+    "quantityLabel": "Quantity",
+    "addLine": "+ Add a product",
+    "removeLine": "Remove",
+    "sectionContact": "Your contact details",
+    "fullNameLabel": "Full name",
+    "companyLabel": "Company (optional)",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "notesLabel": "Additional comments (optional)",
+    "notesPlaceholder": "Any useful information about your request",
+    "submit": "Send proforma request",
+    "submitting": "Sending…",
+    "success": "Thank you, your proforma request has been recorded. A confirmation has been sent to your email, and our sales team will get back to you with the details within 48 hours.",
+    "errorFullName": "Please enter your name (2 characters minimum).",
+    "errorEmail": "Please enter a valid email address.",
+    "errorPhone": "Please enter a phone number.",
+    "errorLines": "Please select a product from the catalog or enter its name for each line."
+  },
+  "AuthGuide": {
+    "metaTitle": "Authorization Guide — TN Marine",
+    "kicker": "Authorization Guide",
+    "title": "ANF authorization for your radio equipment",
+    "intro": "Some marine navigation and communication equipment requires an authorization from the Agence Nationale des Fréquences (ANF) before it can be purchased and operated on board.",
+    "equipmentConcerned": "Equipment concerned: VHF, fishfinder/GPS, radar.",
+    "mentionQuote": "\"An ANF authorization is required to purchase/operate this equipment\"",
+    "mentionExplanation": "This notice appears on the relevant product sheets, with a link to this page.",
+    "checklistHeading": "Documents required for the ANF application",
+    "checklistIntro": "The authorization application file must be submitted to the ANF (Agence Nationale des Fréquences) and includes:",
+    "checklist": {
+      "proforma": "The product proforma (provided by TN Marine when requesting a proforma on the site)",
+      "role": "The vessel's role d'armement (crew list/registration) or circulation card",
+      "fishingCard": "The fishing card (carte bleue)",
+      "birthCertificate": "A birth certificate",
+      "idCard": "A copy of the national ID card",
+      "proofOfResidence": "Proof of residence"
+    },
+    "printButton": "Print / Download the checklist",
+    "firstStepHeading": "The proforma, the first step of your application",
+    "firstStepText": "Requesting a proforma on our site is the first step of your ANF application: it provides the document required to start the procedure.",
+    "firstStepCta": "Request a proforma",
+    "legalHeading": "Legal basis",
+    "legalText": "This authorization to operate radio equipment installed on board a vessel is issued by the ANF in accordance with executive decree No. 09-410 of December 10, 2009 (as amended and supplemented) setting the safety rules applicable to sensitive equipment.",
+    "contactHeading": "Contact and further information",
+    "contactText": "For any question, the required forms, processing times or possible fees, contact the Agence Nationale des Fréquences directly or visit its official website.",
+    "contactCta": "ANF official website — anf.dz",
+    "provisionalNotice": "List provided by TN Marine based on its field experience — to be confirmed/updated if the administrative procedure changes."
+  },
+  "Chatbot": {
+    "title": "TN Marine Assistant",
+    "openLabel": "Open the assistant",
+    "closeLabel": "Close the assistant",
+    "welcomeMessage": "Hello! I'm the TN Marine assistant. Ask me anything about our catalog, brands, or products.",
+    "inputPlaceholder": "Type your message…",
+    "send": "Send",
+    "sending": "The assistant is typing…",
+    "errorMessage": "Sorry, something went wrong. Please try again or contact us directly.",
+    "disclaimer": "Answers are generated automatically from our catalog."
   }
 }

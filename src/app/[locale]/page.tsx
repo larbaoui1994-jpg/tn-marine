@@ -1,25 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { BRAND_DIRECTORY } from "@/lib/brand-directory";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
-
-// Marques partenaires — noms exacts du cahier des charges (section 5).
-// Logos officiels à intégrer plus tard ; badges texte en attendant.
-const BRANDS = [
-  "Lowrance",
-  "Simrad",
-  "Garmin",
-  "C-MAP",
-  "Navionics",
-  "Fusion",
-  "Minn Kota",
-  "International",
-  "Cobra Marine",
-  "Airmar",
-];
 
 const WHY_ITEMS = [
   { key: "whyItem1", icon: "🧭" },
@@ -82,13 +68,13 @@ export default async function HomePage({
           <p className="mx-auto mt-3 max-w-2xl text-text-muted">{t("brandsSubtitle")}</p>
         </div>
         <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {BRANDS.map((brand) => (
+          {BRAND_DIRECTORY.map((brand) => (
             <Link
-              key={brand}
-              href="/marques"
+              key={brand.slug}
+              href={`/marques/${brand.slug}`}
               className="flex items-center justify-center rounded-lg border border-border bg-surface-alt px-4 py-6 text-center font-semibold text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
             >
-              {brand}
+              {brand.name}
             </Link>
           ))}
         </div>

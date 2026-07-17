@@ -1,0 +1,526 @@
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaClient } from "../src/generated/prisma/client";
+import { BRAND_DIRECTORY } from "../src/lib/brand-directory";
+import {
+  CATEGORY_DIRECTORY,
+  ANF_CATEGORY_SLUGS,
+  type CategorySlug,
+} from "../src/lib/category-directory";
+
+const adapter = new PrismaBetterSqlite3({
+  url: process.env.DATABASE_URL ?? "file:./dev.db",
+});
+const prisma = new PrismaClient({ adapter });
+
+type Spec = { label: string; value: string };
+
+interface ProductSeed {
+  slug: string;
+  name: string;
+  brand: (typeof BRAND_DIRECTORY)[number]["slug"];
+  category: CategorySlug;
+  shortDescription: string;
+  description: string;
+  specs: Spec[];
+}
+
+// Contenu d'exemple réaliste, rédigé pour TN Marine (pas de copie des
+// sites de marques — cf. cahier des charges §4). À remplacer/compléter
+// par TN Marine avec les fiches techniques officielles.
+const products: ProductSeed[] = [
+  // --- Lowrance ---------------------------------------------------------
+  {
+    slug: "lowrance-hds-live-9",
+    name: "Lowrance HDS Live 9",
+    brand: "lowrance",
+    category: "gps-traceurs",
+    shortDescription:
+      "Traceur/sondeur combiné 9 pouces avec cartographie et connectivité sans fil",
+    description:
+      "Le HDS Live 9 combine un traceur de cartes haute performance et un sondeur multi-fréquence sur un écran tactile de 9 pouces. Compatible avec les modules StructureScan 3D et Active Imaging, il s'intègre en réseau NMEA 2000 et Ethernet pour piloter l'ensemble des instruments du bord.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile, lisible en plein soleil" },
+      { label: "Sondeur", value: "CHIRP, DownScan et SideScan" },
+      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
+      { label: "Connectivité", value: "Wi-Fi, Bluetooth, NMEA 2000, Ethernet" },
+      { label: "Étanchéité", value: "IPX7" },
+    ],
+  },
+  {
+    slug: "lowrance-elite-fs-7",
+    name: "Lowrance Elite FS 7",
+    brand: "lowrance",
+    category: "sondeurs",
+    shortDescription: "Sondeur/GPS combiné pour la pêche, écran 7 pouces",
+    description:
+      "L'Elite FS 7 associe cartographie, sondeur CHIRP et imagerie latérale Active Imaging dans un boîtier compact pensé pour la pêche embarquée. Son interface intuitive facilite la localisation rapide des zones de poisson.",
+    specs: [
+      { label: "Écran", value: "7 pouces tactile" },
+      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1" },
+      { label: "Cartographie", value: "C-MAP US Coastal préchargée" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "lowrance-hook-reveal-5",
+    name: "Lowrance HOOK Reveal 5",
+    brand: "lowrance",
+    category: "sondeurs",
+    shortDescription: "Sondeur/GPS d'entrée de gamme, écran couleur 5 pouces",
+    description:
+      "Le HOOK Reveal 5 est une solution simple et abordable pour s'équiper en sondeur/GPS. Livré avec la cartographie côtière et un sondeur CHIRP, il convient aux petites unités de pêche et de plaisance.",
+    specs: [
+      { label: "Écran", value: "5 pouces couleur" },
+      { label: "Sondeur", value: "CHIRP, DownScan" },
+      { label: "Cartographie", value: "Cartographie côtière préchargée" },
+      { label: "Alimentation", value: "12V" },
+    ],
+  },
+
+  // --- Simrad -------------------------------------------------------------
+  {
+    slug: "simrad-nsx-3009",
+    name: "Simrad NSX 3009",
+    brand: "simrad",
+    category: "gps-traceurs",
+    shortDescription: "Traceur multifonction 9 pouces à écran tactile haute définition",
+    description:
+      "Le NSX 3009 offre une interface tactile fluide, un sondeur intégré large bande et la compatibilité avec les radars et pilotes automatiques Simrad. Conçu pour une intégration complète du poste de barre.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile haute définition" },
+      { label: "Sondeur", value: "Actif large bande intégré" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+      { label: "Connectivité", value: "Wi-Fi, Ethernet, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "simrad-halo-20-plus",
+    name: "Simrad Halo20+",
+    brand: "simrad",
+    category: "radars",
+    shortDescription: "Radar à balayage automatique, portée jusqu'à 36 milles nautiques",
+    description:
+      "Le Halo20+ est un radar à impulsions compact combinant les technologies pulse compression courte, moyenne et longue portée pour une détection fiable, de la navigation côtière à la haute mer.",
+    specs: [
+      { label: "Portée", value: "Jusqu'à 36 milles nautiques" },
+      { label: "Technologie", value: "Pulse compression multi-portée" },
+      { label: "Rotation", value: "24 à 60 tr/min selon le mode" },
+      { label: "Zone de garde", value: "MARPA, alarme anticollision" },
+    ],
+  },
+  {
+    slug: "simrad-ap44",
+    name: "Simrad AP44",
+    brand: "simrad",
+    category: "pilotes-automatiques",
+    shortDescription:
+      "Écran de contrôle pour pilote automatique, interface tactile et boutons physiques",
+    description:
+      "L'AP44 pilote les systèmes de pilotage automatique Simrad avec une interface tactile combinée à des commandes physiques utilisables même par mer formée. Compatible avec les réseaux NMEA 2000 et SimNet.",
+    specs: [
+      { label: "Écran", value: "4,1 pouces tactile + boutons physiques" },
+      { label: "Réseau", value: "NMEA 2000, SimNet" },
+      { label: "Étanchéité", value: "IPX7" },
+      { label: "Modes", value: "Suivi de route, de cap et de vent" },
+    ],
+  },
+
+  // --- Garmin ---------------------------------------------------------
+  {
+    slug: "garmin-gpsmap-943xsv",
+    name: "Garmin GPSMAP 943xsv",
+    brand: "garmin",
+    category: "gps-traceurs",
+    shortDescription:
+      "Traceur/sondeur combiné 9 pouces avec sondeur CHIRP traditionnel et ClearVü",
+    description:
+      "Le GPSMAP 943xsv associe cartographie marine détaillée et sondeur haute résolution CHIRP, ClearVü et SideVü. Sa connectivité étendue permet de contrôler moteurs, pilote automatique et radar depuis un seul écran.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile" },
+      { label: "Sondeur", value: "CHIRP traditionnel, ClearVü, SideVü" },
+      { label: "Cartographie", value: "Compatible Garmin Navionics+" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000, réseau Garmin Marine" },
+    ],
+  },
+  {
+    slug: "garmin-echomap-uhd2-63cv",
+    name: "Garmin ECHOMAP UHD2 63cv",
+    brand: "garmin",
+    category: "sondeurs",
+    shortDescription: "Sondeur/GPS 6 pouces avec cartographie préchargée",
+    description:
+      "L'ECHOMAP UHD2 63cv embarque un écran haute définition, un sondeur CHIRP traditionnel et ClearVü, ainsi que la cartographie côtière préchargée pour une mise en route immédiate.",
+    specs: [
+      { label: "Écran", value: "6 pouces haute définition" },
+      { label: "Sondeur", value: "CHIRP traditionnel, ClearVü" },
+      { label: "Cartographie", value: "Côtière préchargée" },
+      { label: "Connectivité", value: "NMEA 2000, Garmin Quickdraw Contours" },
+    ],
+  },
+  {
+    slug: "garmin-gnx-130",
+    name: "Garmin GNX 130",
+    brand: "garmin",
+    category: "gps-traceurs",
+    shortDescription: "Instrument de navigation multifonction, écran couleur lisible au soleil",
+    description:
+      "Le GNX 130 affiche les données essentielles de navigation — vitesse, cap, profondeur, vent — sur un écran couleur circulaire lisible en plein soleil. Il s'intègre au réseau NMEA 2000 existant du bord.",
+    specs: [
+      { label: "Écran", value: "4 pouces couleur, circulaire" },
+      { label: "Données affichées", value: "Vitesse, cap, profondeur, vent" },
+      { label: "Réseau", value: "NMEA 2000" },
+      { label: "Étanchéité", value: "IPX7" },
+    ],
+  },
+
+  // --- C-MAP -------------------------------------------------------------
+  {
+    slug: "cmap-discover-x",
+    name: "C-MAP Discover X",
+    brand: "cmap",
+    category: "cartographie",
+    shortDescription: "Cartographie marine détaillée pour la navigation côtière",
+    description:
+      "C-MAP Discover X propose une cartographie vectorielle détaillée incluant les données bathymétriques, les aides à la navigation et les points d'intérêt portuaires, avec mises à jour régulières.",
+    specs: [
+      { label: "Format", value: "Carte mémoire, mise à jour en ligne" },
+      { label: "Couverture", value: "Zone côtière détaillée" },
+      { label: "Données", value: "Bathymétrie, aides à la navigation, ports" },
+    ],
+  },
+  {
+    slug: "cmap-reveal-x",
+    name: "C-MAP Reveal X",
+    brand: "cmap",
+    category: "cartographie",
+    shortDescription: "Cartographie avec relief 3D et imagerie satellite haute résolution",
+    description:
+      "C-MAP Reveal X ajoute le relief sous-marin en 3D et l'imagerie satellite haute résolution à la cartographie vectorielle, pour une meilleure lecture des zones côtières et des fonds marins.",
+    specs: [
+      { label: "Relief", value: "Vue 3D des fonds marins" },
+      { label: "Imagerie", value: "Satellite haute résolution" },
+      { label: "Compatibilité", value: "Traceurs C-MAP compatibles" },
+    ],
+  },
+  {
+    slug: "cmap-genesis",
+    name: "C-MAP Genesis",
+    brand: "cmap",
+    category: "cartographie",
+    shortDescription:
+      "Création de cartes bathymétriques personnalisées à partir des relevés du sondeur",
+    description:
+      "La fonction Genesis permet de générer ses propres cartes bathymétriques haute précision à partir des données collectées par le sondeur du bord, puis de les partager avec la communauté C-MAP.",
+    specs: [
+      { label: "Fonction", value: "Cartographie bathymétrique participative" },
+      { label: "Source", value: "Données du sondeur du bord" },
+      { label: "Partage", value: "Communauté C-MAP en ligne" },
+    ],
+  },
+
+  // --- Navionics -------------------------------------------------------
+  {
+    slug: "navionics-plus-regular",
+    name: "Navionics+ Regular",
+    brand: "navionics",
+    category: "cartographie",
+    shortDescription: "Carte marine régionale avec données de pêche SonarChart",
+    description:
+      "Navionics+ Regular couvre une zone de navigation régionale avec cartographie détaillée, courbes bathymétriques SonarChart et informations utiles à la pêche et à la plaisance.",
+    specs: [
+      { label: "Couverture", value: "Régionale" },
+      { label: "Bathymétrie", value: "SonarChart" },
+      { label: "Mises à jour", value: "Via l'application Navionics Boating" },
+    ],
+  },
+  {
+    slug: "navionics-platinum-plus",
+    name: "Navionics Platinum+",
+    brand: "navionics",
+    category: "cartographie",
+    shortDescription:
+      "Cartographie haut de gamme avec relief ombré et données bathymétriques enrichies",
+    description:
+      "Navionics Platinum+ ajoute le relief ombré terrestre et sous-marin ainsi que des courbes bathymétriques enrichies pour une lecture fine du relief des fonds, idéale pour la pêche et la navigation de précision.",
+    specs: [
+      { label: "Relief", value: "Relief ombré terre et mer" },
+      { label: "Bathymétrie", value: "Courbes enrichies SonarChart+" },
+      { label: "Usage", value: "Pêche et navigation de précision" },
+    ],
+  },
+  {
+    slug: "navionics-small-craft",
+    name: "Navionics Small Craft Chart",
+    brand: "navionics",
+    category: "cartographie",
+    shortDescription: "Cartographie détaillée pour petites embarcations en zone côtière",
+    description:
+      "Pensée pour les petites unités naviguant près des côtes, cette carte met l'accent sur le détail des zones portuaires, des chenaux et des mouillages.",
+    specs: [
+      { label: "Couverture", value: "Zone côtière rapprochée" },
+      { label: "Détail", value: "Ports, chenaux, mouillages" },
+    ],
+  },
+
+  // --- Fusion -------------------------------------------------------------
+  {
+    slug: "fusion-ms-ra70n",
+    name: "Fusion MS-RA70N",
+    brand: "fusion",
+    category: "audio-marine",
+    shortDescription: "Récepteur audio marin multizone avec contrôle par application",
+    description:
+      "Le MS-RA70N pilote jusqu'à trois zones audio indépendantes, intègre le Bluetooth et le contrôle via l'application Fusion-Link, et se connecte aux traceurs compatibles NMEA 2000 pour un contrôle direct depuis l'écran de navigation.",
+    specs: [
+      { label: "Zones audio", value: "3 zones indépendantes" },
+      { label: "Connectivité", value: "Bluetooth, Fusion-Link, NMEA 2000" },
+      { label: "Étanchéité", value: "Façade IPX6/6K9K" },
+    ],
+  },
+  {
+    slug: "fusion-apollo-srx400",
+    name: "Fusion Apollo SRX400",
+    brand: "fusion",
+    category: "audio-marine",
+    shortDescription: "Amplificateur marin 4 canaux, 400 watts",
+    description:
+      "L'amplificateur Apollo SRX400 délivre une puissance de 400 watts répartie sur 4 canaux pour animer plusieurs paires de haut-parleurs marins avec un son puissant et clair, même en navigation.",
+    specs: [
+      { label: "Puissance", value: "400 W sur 4 canaux" },
+      { label: "Étanchéité", value: "Résistant aux embruns" },
+      { label: "Usage", value: "Amplification de haut-parleurs marins" },
+    ],
+  },
+  {
+    slug: "fusion-ms-el602",
+    name: "Fusion MS-EL602",
+    brand: "fusion",
+    category: "audio-marine",
+    shortDescription: "Paire de haut-parleurs marins étanches 6,5 pouces",
+    description:
+      "Ces haut-parleurs 6,5 pouces certifiés résistants aux UV et à l'eau salée offrent un rendu audio équilibré, avec éclairage LED intégré disponible en plusieurs finitions de grille.",
+    specs: [
+      { label: "Taille", value: "6,5 pouces (par paire)" },
+      { label: "Résistance", value: "UV et eau salée" },
+      { label: "Éclairage", value: "LED intégré" },
+    ],
+  },
+
+  // --- Minn Kota ---------------------------------------------------------
+  {
+    slug: "minn-kota-riptide-terrova",
+    name: "Minn Kota Riptide Terrova",
+    brand: "minn-kota",
+    category: "moteurs-electriques",
+    shortDescription:
+      "Moteur de traîne électrique avec pointeur GPS et fonction ancre virtuelle",
+    description:
+      "Le Riptide Terrova intègre la technologie i-Pilot avec pointeur GPS, mémorisation d'itinéraires et ancre virtuelle Spot-Lock, pour un positionnement précis en toutes conditions, y compris en eau salée.",
+    specs: [
+      { label: "Usage", value: "Eau salée" },
+      { label: "Technologie", value: "i-Pilot, Spot-Lock (ancre virtuelle)" },
+      { label: "Commande", value: "Télécommande et pédale sans fil" },
+    ],
+  },
+  {
+    slug: "minn-kota-endura-max",
+    name: "Minn Kota Endura Max",
+    brand: "minn-kota",
+    category: "moteurs-electriques",
+    shortDescription: "Moteur de traîne manuel, entrée de gamme, fiable et robuste",
+    description:
+      "L'Endura Max est un moteur de traîne manuel simple d'utilisation, au rapport qualité/prix reconnu, adapté aux plaisanciers et pêcheurs occasionnels.",
+    specs: [
+      { label: "Commande", value: "Manuelle (manche directionnel)" },
+      { label: "Usage", value: "Eau douce" },
+      { label: "Vitesses", value: "5 vitesses avant, 3 arrière" },
+    ],
+  },
+  {
+    slug: "minn-kota-ulterra",
+    name: "Minn Kota Ulterra",
+    brand: "minn-kota",
+    category: "moteurs-electriques",
+    shortDescription: "Moteur de traîne rétractable avec télécommande et déploiement automatique",
+    description:
+      "L'Ulterra se déploie et se range automatiquement d'une simple pression, et se pilote à distance via télécommande ou application. Il intègre également la technologie i-Pilot avec pointeur GPS.",
+    specs: [
+      { label: "Déploiement", value: "Automatique, motorisé" },
+      { label: "Technologie", value: "i-Pilot avec pointeur GPS" },
+      { label: "Commande", value: "Télécommande, application mobile" },
+    ],
+  },
+
+  // --- International -------------------------------------------------
+  {
+    slug: "international-micron-350",
+    name: "International Micron 350",
+    brand: "international",
+    category: "peintures-antifouling",
+    shortDescription: "Antifouling matrice dure haute performance, usage professionnel et plaisance",
+    description:
+      "Micron 350 est un antifouling à matrice dure offrant une protection longue durée contre les salissures marines, adapté aux coques régulièrement carénées et aux bateaux rapides.",
+    specs: [
+      { label: "Type", value: "Antifouling matrice dure" },
+      { label: "Usage", value: "Coques régulièrement carénées, bateaux rapides" },
+      { label: "Application", value: "Rouleau, pistolet ou brosse" },
+    ],
+  },
+  {
+    slug: "international-interprotect",
+    name: "International Interprotect",
+    brand: "international",
+    category: "peintures-antifouling",
+    shortDescription: "Primaire époxy de protection de coque contre l'osmose",
+    description:
+      "Interprotect est un système époxy multicouche qui protège la coque contre la pénétration d'eau et le risque d'osmose, à appliquer avant toute couche d'antifouling.",
+    specs: [
+      { label: "Type", value: "Primaire époxy multicouche" },
+      { label: "Fonction", value: "Protection contre l'osmose" },
+      { label: "Support", value: "Coques polyester" },
+    ],
+  },
+  {
+    slug: "international-perfection",
+    name: "International Perfection",
+    brand: "international",
+    category: "peintures-antifouling",
+    shortDescription: "Vernis marine haute brillance pour bois extérieur",
+    description:
+      "Perfection est un vernis monocomposant qui offre une finition haute brillance et une excellente résistance aux UV, pour protéger et sublimer les boiseries extérieures.",
+    specs: [
+      { label: "Type", value: "Vernis monocomposant" },
+      { label: "Finition", value: "Haute brillance" },
+      { label: "Résistance", value: "UV et intempéries" },
+    ],
+  },
+
+  // --- Cobra Marine --------------------------------------------------
+  {
+    slug: "cobra-marine-mr-hh350-flt",
+    name: "Cobra Marine MR HH350 FLT",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    shortDescription: "VHF portable flottante, étanche IPX7",
+    description:
+      "La MR HH350 FLT est une VHF portable flottante et étanche IPX7, équipée de canaux météo et d'une fonction d'appel de détresse, pensée pour rester à portée de main en toutes circonstances.",
+    specs: [
+      { label: "Type", value: "VHF portable, flottante" },
+      { label: "Étanchéité", value: "IPX7" },
+      { label: "Fonctions", value: "Canaux météo, appel de détresse" },
+    ],
+  },
+  {
+    slug: "cobra-marine-mr-f80b",
+    name: "Cobra Marine MR F80B",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    shortDescription: "VHF fixe avec DSC et haut-parleur externe",
+    description:
+      "La MR F80B est une VHF fixe intégrant l'appel sélectif numérique (DSC) relié au GPS du bord, avec sortie haut-parleur externe pour une meilleure écoute au poste de barre.",
+    specs: [
+      { label: "Type", value: "VHF fixe" },
+      { label: "DSC", value: "Appel sélectif numérique, relié au GPS" },
+      { label: "Sortie audio", value: "Haut-parleur externe" },
+    ],
+  },
+  {
+    slug: "cobra-marine-mr-hh125",
+    name: "Cobra Marine MR HH125",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    shortDescription: "VHF portable compacte et légère pour la plaisance",
+    description:
+      "La MR HH125 est une VHF portable compacte, simple d'utilisation, idéale comme radio de secours ou pour l'annexe.",
+    specs: [
+      { label: "Type", value: "VHF portable compacte" },
+      { label: "Usage", value: "Radio de secours, annexe" },
+    ],
+  },
+
+  // --- Airmar --------------------------------------------------------
+  {
+    slug: "airmar-b175c",
+    name: "Airmar B175C",
+    brand: "airmar",
+    category: "sondeurs",
+    shortDescription: "Sonde traversante CHIRP large bande, coque composite",
+    description:
+      "La B175C est une sonde traversante large bande CHIRP conçue pour les coques composites, offrant une image sonar haute résolution compatible avec les principaux traceurs du marché.",
+    specs: [
+      { label: "Type", value: "Sonde traversante, large bande CHIRP" },
+      { label: "Support", value: "Coques composites" },
+      { label: "Compatibilité", value: "Principaux traceurs du marché" },
+    ],
+  },
+  {
+    slug: "airmar-p79",
+    name: "Airmar P79",
+    brand: "airmar",
+    category: "sondeurs",
+    shortDescription: "Sonde tableau arrière en plastique, montage simple",
+    description:
+      "La P79 est une sonde économique à montage sur tableau arrière, en boîtier plastique, adaptée aux petites embarcations de plaisance et de pêche.",
+    specs: [
+      { label: "Type", value: "Sonde tableau arrière" },
+      { label: "Boîtier", value: "Plastique" },
+      { label: "Usage", value: "Petites embarcations" },
+    ],
+  },
+  {
+    slug: "airmar-dst800",
+    name: "Airmar DST800",
+    brand: "airmar",
+    category: "sondeurs",
+    shortDescription: "Capteur tri-fonction : vitesse, profondeur et température",
+    description:
+      "Le DST800 regroupe en une seule sonde la mesure de la vitesse surface, de la profondeur et de la température de l'eau, avec une grande précision et une installation simplifiée.",
+    specs: [
+      { label: "Mesures", value: "Vitesse, profondeur, température" },
+      { label: "Installation", value: "Simplifiée, capteur unique" },
+    ],
+  },
+];
+
+async function main() {
+  await prisma.proformaLine.deleteMany();
+  await prisma.proformaRequest.deleteMany();
+  await prisma.appointment.deleteMany();
+  await prisma.product.deleteMany();
+  await prisma.category.deleteMany();
+  await prisma.brand.deleteMany();
+
+  for (const c of CATEGORY_DIRECTORY) {
+    await prisma.category.create({ data: { slug: c.slug, name: c.name } });
+  }
+
+  for (const b of BRAND_DIRECTORY) {
+    await prisma.brand.create({ data: { slug: b.slug, name: b.name } });
+  }
+
+  for (const p of products) {
+    await prisma.product.create({
+      data: {
+        slug: p.slug,
+        name: p.name,
+        shortDescription: p.shortDescription,
+        description: p.description,
+        specs: p.specs,
+        requiresAnfAuth: ANF_CATEGORY_SLUGS.includes(p.category),
+        brand: { connect: { slug: p.brand } },
+        category: { connect: { slug: p.category } },
+      },
+    });
+  }
+
+  console.log(
+    `Seed terminé : ${CATEGORY_DIRECTORY.length} catégories, ${BRAND_DIRECTORY.length} marques, ${products.length} produits.`,
+  );
+}
+
+main()
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(() => prisma.$disconnect());

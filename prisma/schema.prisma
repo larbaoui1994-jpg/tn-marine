@@ -1,0 +1,117 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// --- Catalogue ---------------------------------------------------------
+
+model Category {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  name      String
+  createdAt DateTime  @default(now())
+  products  Product[]
+}
+
+model Brand {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  name      String
+  createdAt DateTime  @default(now())
+  products  Product[]
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  name             String
+  shortDescription String
+  description      String
+  // Liste ordonnée de caractéristiques techniques : [{ "label": "...", "value": "..." }, ...]
+  specs            Json
+  imageUrl         String?
+  // Mention "Autorisation ANF nécessaire" (cahier des charges §8) sur les
+  // fiches VHF, sondeur/GPS et radar.
+  requiresAnfAuth  Boolean  @default(false)
+
+  brandId    String
+  brand      Brand    @relation(fields: [brandId], references: [id])
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  proformaLines ProformaLine[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// --- Comptes & réservation ----------------------------------------------
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String? // haché — authentification par identifiants
+  createdAt DateTime @default(now())
+
+  appointments     Appointment[]
+  proformaRequests ProformaRequest[]
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+model Appointment {
+  id        String            @id @default(cuid())
+  userId    String
+  user      User              @relation(fields: [userId], references: [id])
+  date      DateTime
+  topic     String?
+  notes     String?
+  status    AppointmentStatus @default(PENDING)
+  createdAt DateTime          @default(now())
+}
+
+// --- Demandes de proforma ------------------------------------------------
+
+enum ProformaStatus {
+  NEW
+  PROCESSED
+  CLOSED
+}
+
+model ProformaRequest {
+  id        String         @id @default(cuid())
+  userId    String?
+  user      User?          @relation(fields: [userId], references: [id])
+  fullName  String
+  email     String
+  phone     String
+  company   String?
+  notes     String?
+  status    ProformaStatus @default(NEW)
+  lines     ProformaLine[]
+  createdAt DateTime       @default(now())
+}
+
+model ProformaLine {
+  id        String          @id @default(cuid())
+  requestId String
+  request   ProformaRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product?        @relation(fields: [productId], references: [id])
+  // Référence saisie librement si le produit n'est pas dans le catalogue.
+  freeText  String?
+  reference String?
+  quantity  Int             @default(1)
+}

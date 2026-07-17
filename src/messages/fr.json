@@ -63,5 +63,283 @@
     "social": "Réseaux sociaux",
     "rights": "Tous droits réservés.",
     "authGuideLink": "Guide des autorisations ANF"
+  },
+  "About": {
+    "metaTitle": "À propos — TN Marine",
+    "kicker": "À propos de TN Marine",
+    "title": "Votre partenaire de confiance pour l'électronique marine",
+    "intro": "EURL Technic Nautic Marine Import (TN Marine) est un distributeur agréé d'électronique de navigation et de peintures nautiques, basé à Aïn Benian, Alger. Nous accompagnons aussi bien les chantiers navals et revendeurs que les plaisanciers.",
+    "historyHeading": "Notre histoire",
+    "historyText": "Implantée à Aïn Benian, TN Marine s'est développée autour d'une conviction simple : les professionnels de la mer et les plaisanciers méritent un conseil technique fiable et un accès direct aux plus grandes marques mondiales de l'électronique marine. (Contenu provisoire — à compléter avec l'historique réel de l'entreprise.)",
+    "expertiseHeading": "Notre expertise",
+    "expertiseText": "Notre équipe conseille sur le choix, l'installation et la mise en service des équipements de navigation, de communication et de peinture nautique, pour des projets allant du bateau de plaisance au navire professionnel.",
+    "agreementsHeading": "Agréments",
+    "agreementsText": "TN Marine est distributeur agréé des marques présentées ci-dessous. (Détail des agréments et certifications à compléter par TN Marine.)",
+    "brandsHeading": "Les marques que nous représentons",
+    "brandsSubtitle": "Dix marques de référence mondiale, chacune spécialisée dans un domaine de l'électronique marine ou des peintures nautiques.",
+    "brandsTableName": "Marque",
+    "brandsTableDomain": "Domaine d'activité",
+    "brandsCta": "Voir les produits",
+    "locationHeading": "Nous trouver",
+    "locationText": "Nos locaux sont situés à Aïn Benian, à l'ouest d'Alger. Retrouvez l'adresse complète, le plan d'accès et nos horaires sur la page Contact.",
+    "locationCta": "Voir la page Contact",
+    "brands": {
+      "lowrance": {
+        "domain": "Électronique de navigation : sondeurs, GPS et combinés, orientés pêche et plaisance"
+      },
+      "simrad": {
+        "domain": "Électronique de navigation professionnelle et plaisance : traceurs, radars, pilotes automatiques"
+      },
+      "garmin": {
+        "domain": "Électronique de navigation : GPS, sondeurs, instruments de navigation"
+      },
+      "cmap": {
+        "domain": "Cartographie marine numérique"
+      },
+      "navionics": {
+        "domain": "Cartographie marine numérique (cartes et données bathymétriques)"
+      },
+      "fusion": {
+        "domain": "Systèmes audio et divertissement embarqué pour bateaux"
+      },
+      "minnKota": {
+        "domain": "Moteurs électriques de pêche (moteurs de traîne / « trolling motors »)"
+      },
+      "international": {
+        "domain": "Peintures et revêtements nautiques (antifouling, vernis, apprêts)"
+      },
+      "cobraMarine": {
+        "domain": "Radios VHF et équipements de communication marine"
+      },
+      "airmar": {
+        "domain": "Capteurs et sondes (transducteurs) pour sondeurs, GPS et instruments"
+      }
+    }
+  },
+  "Contact": {
+    "metaTitle": "Contact — TN Marine",
+    "kicker": "Contact",
+    "title": "Parlons de votre projet",
+    "intro": "Une question, un besoin de conseil ou une demande de devis ? Notre équipe vous répond rapidement.",
+    "infoHeading": "Coordonnées",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "hoursLabel": "Horaires",
+    "hoursText": "Lundi-Jeudi et Samedi-Dimanche : 9h–17h · Vendredi : fermé",
+    "hoursNotice": "(horaires à confirmer avec TN Marine)",
+    "socialLabel": "Réseaux sociaux",
+    "mapTitle": "Localisation de TN Marine sur Google Maps",
+    "form": {
+      "heading": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone (optionnel)",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "success": "Merci, votre message a bien été envoyé. Notre équipe vous répondra rapidement.",
+      "genericError": "Une erreur est survenue, merci de réessayer ou de nous contacter par téléphone.",
+      "errorName": "Merci d'indiquer votre nom (2 caractères minimum).",
+      "errorEmail": "Merci d'indiquer une adresse e-mail valide.",
+      "errorMessage": "Votre message doit contenir au moins 10 caractères."
+    }
+  },
+  "Categories": {
+    "gps-traceurs": "GPS & traceurs",
+    "sondeurs": "Sondeurs",
+    "cartographie": "Cartographie marine",
+    "vhf-communication": "VHF & communication",
+    "radars": "Radars",
+    "pilotes-automatiques": "Pilotes automatiques",
+    "moteurs-electriques": "Moteurs électriques",
+    "audio-marine": "Audio marine",
+    "peintures-antifouling": "Peintures & antifouling"
+  },
+  "Brands": {
+    "metaTitle": "Nos marques — TN Marine",
+    "kicker": "Nos marques",
+    "title": "Dix marques de référence du nautisme",
+    "intro": "TN Marine sélectionne des marques reconnues pour leur fiabilité, afin d'équiper aussi bien les professionnels que les plaisanciers.",
+    "viewBrand": "Voir la marque",
+    "productsCount": "{count, plural, =0 {Aucun produit} one {# produit} other {# produits}}",
+    "items": {
+      "lowrance": {
+        "tagline": "Électronique de navigation : sondeurs, GPS et combinés, orientés pêche et plaisance"
+      },
+      "simrad": {
+        "tagline": "Électronique de navigation professionnelle et plaisance : traceurs, radars, pilotes automatiques"
+      },
+      "garmin": {
+        "tagline": "Électronique de navigation : GPS, sondeurs, instruments de navigation"
+      },
+      "cmap": {
+        "tagline": "Cartographie marine numérique"
+      },
+      "navionics": {
+        "tagline": "Cartographie marine numérique (cartes et données bathymétriques)"
+      },
+      "fusion": {
+        "tagline": "Systèmes audio et divertissement embarqué pour bateaux"
+      },
+      "minnKota": {
+        "tagline": "Moteurs électriques de pêche (moteurs de traîne / « trolling motors »)"
+      },
+      "international": {
+        "tagline": "Peintures et revêtements nautiques (antifouling, vernis, apprêts)"
+      },
+      "cobraMarine": {
+        "tagline": "Radios VHF et équipements de communication marine"
+      },
+      "airmar": {
+        "tagline": "Capteurs et sondes (transducteurs) pour sondeurs, GPS et instruments"
+      }
+    }
+  },
+  "Shop": {
+    "metaTitle": "Boutique — TN Marine",
+    "kicker": "Catalogue",
+    "title": "Notre catalogue de produits",
+    "intro": "Électronique de navigation, communication marine, moteurs électriques et peintures nautiques — filtrez par catégorie ou par marque pour trouver l'équipement adapté à votre projet.",
+    "filterCategoryLabel": "Catégorie",
+    "filterBrandLabel": "Marque",
+    "allCategories": "Toutes les catégories",
+    "allBrands": "Toutes les marques",
+    "resultsCount": "{count, plural, =0 {Aucun produit} one {# produit} other {# produits}}",
+    "noResults": "Aucun produit ne correspond à ces filtres.",
+    "resetFilters": "Réinitialiser les filtres",
+    "viewProduct": "Voir la fiche produit",
+    "requestProforma": "Demander une proforma",
+    "specsHeading": "Caractéristiques techniques",
+    "descriptionHeading": "Description",
+    "brandLabel": "Marque",
+    "categoryLabel": "Catégorie",
+    "backToShop": "Retour au catalogue",
+    "relatedProducts": "Autres produits de la marque",
+    "provisionalPhoto": "Photo provisoire",
+    "anf": {
+      "title": "Autorisation ANF nécessaire",
+      "text": "L'exploitation de cet équipement à bord nécessite une autorisation de l'Agence Nationale des Fréquences (ANF).",
+      "link": "Voir le Guide des autorisations"
+    }
+  },
+  "Auth": {
+    "loginTitle": "Connexion",
+    "loginIntro": "Connectez-vous pour accéder à votre espace réservation.",
+    "signupTitle": "Créer un compte",
+    "signupIntro": "Créez votre compte pour prendre rendez-vous et suivre vos demandes.",
+    "nameLabel": "Nom complet",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "loginSubmit": "Se connecter",
+    "loginSubmitting": "Connexion en cours…",
+    "signupSubmit": "Créer mon compte",
+    "signupSubmitting": "Création du compte…",
+    "noAccount": "Pas encore de compte ?",
+    "createAccount": "Créer un compte",
+    "alreadyAccount": "Déjà un compte ?",
+    "signIn": "Se connecter",
+    "passwordHint": "8 caractères minimum",
+    "errors": {
+      "invalidCredentials": "E-mail ou mot de passe incorrect.",
+      "emailTaken": "Un compte existe déjà avec cette adresse e-mail.",
+      "signinAfterSignupFailed": "Votre compte a bien été créé, mais la connexion automatique a échoué. Merci de vous connecter avec vos identifiants.",
+      "nameTooShort": "Merci d'indiquer votre nom (2 caractères minimum).",
+      "emailInvalid": "Merci d'indiquer une adresse e-mail valide.",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères."
+    }
+  },
+  "Booking": {
+    "metaTitle": "Réservation — TN Marine",
+    "kicker": "Espace réservation",
+    "title": "Prendre rendez-vous pour un conseil d'achat",
+    "intro": "Choisissez une date et décrivez votre besoin, notre équipe confirmera votre rendez-vous.",
+    "formHeading": "Nouveau rendez-vous",
+    "dateLabel": "Date et heure souhaitées",
+    "topicLabel": "Sujet du rendez-vous",
+    "topicPlaceholder": "Ex. Choix d'un sondeur/GPS pour un bateau de pêche",
+    "notesLabel": "Précisions (optionnel)",
+    "submit": "Demander le rendez-vous",
+    "submitting": "Envoi en cours…",
+    "success": "Votre demande de rendez-vous a bien été enregistrée. Notre équipe vous contactera pour la confirmer.",
+    "errorDate": "Merci de choisir une date future.",
+    "errorTopic": "Merci d'indiquer le sujet du rendez-vous.",
+    "myAppointmentsHeading": "Mes rendez-vous",
+    "noAppointments": "Vous n'avez pas encore de rendez-vous.",
+    "status": {
+      "PENDING": "En attente de confirmation",
+      "CONFIRMED": "Confirmé",
+      "CANCELLED": "Annulé"
+    }
+  },
+  "Proforma": {
+    "metaTitle": "Demande de proforma — TN Marine",
+    "kicker": "Demande de proforma",
+    "title": "Demander une proforma",
+    "intro": "Sélectionnez un ou plusieurs produits dans notre catalogue, ou décrivez librement votre besoin. Notre équipe commerciale vous transmet une proforma détaillée sous 48h.",
+    "sectionProducts": "Produits souhaités",
+    "lineLabel": "Produit {index}",
+    "productLabel": "Produit",
+    "productPlaceholder": "Choisir un produit du catalogue",
+    "autreOption": "Autre produit (non catalogué)",
+    "freeTextLabel": "Nom du produit",
+    "freeTextPlaceholder": "Ex. Sondeur portable, modèle non répertorié",
+    "referenceLabel": "Référence (optionnel)",
+    "quantityLabel": "Quantité",
+    "addLine": "+ Ajouter un produit",
+    "removeLine": "Retirer",
+    "sectionContact": "Vos coordonnées",
+    "fullNameLabel": "Nom complet",
+    "companyLabel": "Société (optionnel)",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "notesLabel": "Précisions / commentaires (optionnel)",
+    "notesPlaceholder": "Toute information utile à votre demande",
+    "submit": "Envoyer la demande de proforma",
+    "submitting": "Envoi en cours…",
+    "success": "Merci, votre demande de proforma a bien été enregistrée. Un accusé de réception vous a été envoyé par e-mail, et notre équipe commerciale vous recontactera avec le détail sous 48h.",
+    "errorFullName": "Merci d'indiquer votre nom (2 caractères minimum).",
+    "errorEmail": "Merci d'indiquer une adresse e-mail valide.",
+    "errorPhone": "Merci d'indiquer un numéro de téléphone.",
+    "errorLines": "Merci de sélectionner un produit du catalogue ou d'indiquer son nom pour chaque ligne."
+  },
+  "AuthGuide": {
+    "metaTitle": "Guide des autorisations — TN Marine",
+    "kicker": "Guide des autorisations",
+    "title": "Autorisation ANF pour vos équipements radioélectriques",
+    "intro": "Certains équipements de navigation et de communication marine nécessitent une autorisation de l'Agence Nationale des Fréquences (ANF) avant leur achat et leur exploitation à bord.",
+    "equipmentConcerned": "Équipements concernés : VHF, sondeur/GPS, radar.",
+    "mentionQuote": "« Une autorisation de l'ANF est nécessaire pour l'achat/l'exploitation de cet équipement »",
+    "mentionExplanation": "Cette mention apparaît sur les fiches produits concernées, avec un lien vers cette page.",
+    "checklistHeading": "Pièces à fournir pour le dossier ANF",
+    "checklistIntro": "Le dossier de demande d'autorisation doit être déposé auprès de l'ANF (Agence Nationale des Fréquences) et comprend :",
+    "checklist": {
+      "proforma": "La proforma du produit (fournie par TN Marine lors de la demande de proforma sur le site)",
+      "role": "Le rôle d'armement du bateau ou la carte de circulation",
+      "fishingCard": "La carte de pêche (carte bleue)",
+      "birthCertificate": "Un extrait de naissance",
+      "idCard": "Une copie de la carte d'identité",
+      "proofOfResidence": "Un justificatif de résidence"
+    },
+    "printButton": "Imprimer / Télécharger la checklist",
+    "firstStepHeading": "La proforma, première étape de votre dossier",
+    "firstStepText": "La demande de proforma sur notre site est la première étape de votre dossier ANF : elle vous fournit le document requis pour engager la procédure.",
+    "firstStepCta": "Demander une proforma",
+    "legalHeading": "Base légale",
+    "legalText": "Cette autorisation d'exploitation des équipements radioélectriques installés à bord de navire est délivrée par l'ANF conformément au décret exécutif n°09-410 du 10 décembre 2009 (modifié et complété) fixant les règles de sécurité applicables aux équipements sensibles.",
+    "contactHeading": "Contact et informations complémentaires",
+    "contactText": "Pour toute question, la constitution des formulaires, les délais ou les éventuels frais, contactez directement l'Agence Nationale des Fréquences ou consultez son site officiel.",
+    "contactCta": "Site officiel de l'ANF — anf.dz",
+    "provisionalNotice": "Liste fournie par TN Marine sur la base de son expérience terrain — à confirmer/actualiser si la procédure administrative évolue."
+  },
+  "Chatbot": {
+    "title": "Assistant TN Marine",
+    "openLabel": "Ouvrir l'assistant",
+    "closeLabel": "Fermer l'assistant",
+    "welcomeMessage": "Bonjour ! Je suis l'assistant TN Marine. Posez-moi vos questions sur notre catalogue, nos marques ou nos produits.",
+    "inputPlaceholder": "Écrivez votre message…",
+    "send": "Envoyer",
+    "sending": "L'assistant écrit…",
+    "errorMessage": "Désolé, une erreur est survenue. Merci de réessayer ou de nous contacter directement.",
+    "disclaimer": "Réponses générées automatiquement à partir de notre catalogue."
   }
 }

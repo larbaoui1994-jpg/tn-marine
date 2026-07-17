@@ -6,6 +6,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { routing, isRtlLocale } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AuthSessionProvider from "@/components/providers/AuthSessionProvider";
+import ChatWidget from "@/components/chat/ChatWidget";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -62,9 +64,12 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col bg-surface text-text">
         <NextIntlClientProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <AuthSessionProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <ChatWidget />
+          </AuthSessionProvider>
         </NextIntlClientProvider>
       </body>
     </html>
