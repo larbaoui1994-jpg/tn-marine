@@ -9,6 +9,36 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Ordre d'affichage des sous-gammes lorsque le catalogue est filtré par
+// marque et que les produits renseignent `productLine` (ex. Lowrance
+// Sondeurs : Eagle → Elite FS → HDS PRO, du plus accessible au plus haut
+// de gamme).
+const PRODUCT_LINE_ORDER = ["Eagle", "Elite FS", "HDS PRO"];
+
+function groupByProductLine<T extends { productLine: string | null }>(products: T[]) {
+  const byLine = new Map<string, T[]>();
+  const ungrouped: T[] = [];
+
+  for (const product of products) {
+    if (product.productLine) {
+      const list = byLine.get(product.productLine) ?? [];
+      list.push(product);
+      byLine.set(product.productLine, list);
+    } else {
+      ungrouped.push(product);
+    }
+  }
+
+  const orderedLines = [...byLine.keys()].sort(
+    (a, b) => PRODUCT_LINE_ORDER.indexOf(a) - PRODUCT_LINE_ORDER.indexOf(b),
+  );
+
+  return {
+    groups: orderedLines.map((line) => ({ line, products: byLine.get(line)! })),
+    ungrouped,
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -58,11 +88,40 @@ export default async function ShopPage({
       </div>
 
       {products.length > 0 ? (
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        marque === "lowrance" ? (
+          (() => {
+            const { groups, ungrouped } = groupByProductLine(products);
+            return (
+              <div className="mt-8 space-y-10">
+                {groups.map(({ line, products: lineProducts }) => (
+                  <div key={line}>
+                    <h2 className="text-lg font-semibold text-primary">
+                      {t("productLine", { line })}
+                    </h2>
+                    <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      {lineProducts.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                {ungrouped.length > 0 && (
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {ungrouped.map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })()
+        ) : (
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        )
       ) : (
         <p className="mt-12 rounded-lg border border-border bg-surface-alt px-6 py-10 text-center text-text-muted">
           {t("noResults")}

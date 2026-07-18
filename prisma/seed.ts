@@ -19,6 +19,7 @@ interface ProductSeed {
   name: string;
   brand: (typeof BRAND_DIRECTORY)[number]["slug"];
   category: CategorySlug;
+  productLine?: string;
   shortDescription: string;
   description: string;
   specs: Spec[];
@@ -28,37 +29,201 @@ interface ProductSeed {
 // sites de marques — cf. cahier des charges §4). À remplacer/compléter
 // par TN Marine avec les fiches techniques officielles.
 const products: ProductSeed[] = [
-  // --- Lowrance ---------------------------------------------------------
+  // --- Lowrance — Gamme Eagle (entrée de gamme, accessible) --------------
   {
-    slug: "lowrance-hds-live-9",
-    name: "Lowrance HDS Live 9",
+    slug: "lowrance-eagle-4x",
+    name: "Lowrance Eagle 4X",
     brand: "lowrance",
-    category: "gps-traceurs",
-    shortDescription:
-      "Traceur/sondeur combiné 9 pouces avec cartographie et connectivité sans fil",
+    category: "sondeurs",
+    productLine: "Eagle",
+    shortDescription: "Sondeur seul (sans GPS), écran 4 pouces, idéal petites embarcations",
     description:
-      "Le HDS Live 9 combine un traceur de cartes haute performance et un sondeur multi-fréquence sur un écran tactile de 9 pouces. Compatible avec les modules StructureScan 3D et Active Imaging, il s'intègre en réseau NMEA 2000 et Ethernet pour piloter l'ensemble des instruments du bord.",
+      "L'Eagle 4X est le sondeur le plus simple de la gamme Lowrance, à commande par boutons et sans cartographie GPS intégrée. Son défilement en continu facilite la détection des poissons et la lecture de la colonne d'eau, un atout pour la pêche côtière sur petites embarcations ou annexes en Méditerranée. Ses réglages automatiques le rendent immédiatement opérationnel, sans réglage préalable.",
     specs: [
-      { label: "Écran", value: "9 pouces tactile, lisible en plein soleil" },
-      { label: "Sondeur", value: "CHIRP, DownScan et SideScan" },
-      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
-      { label: "Connectivité", value: "Wi-Fi, Bluetooth, NMEA 2000, Ethernet" },
-      { label: "Étanchéité", value: "IPX7" },
+      { label: "Écran", value: "4 pouces IPS, format portrait" },
+      { label: "Sondeur", value: "CHIRP, sonde Bullet grand angle" },
+      { label: "Cartographie", value: "Aucune — sondeur seul, sans GPS" },
+      { label: "Réglages", value: "Configuration automatique, commande par boutons" },
     ],
   },
+  {
+    slug: "lowrance-eagle-5",
+    name: "Lowrance Eagle 5",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Eagle",
+    shortDescription: "Sondeur/traceur compact, écran tactile 5 pouces, réglages automatiques",
+    description:
+      "L'Eagle 5 associe sondeur et cartographie GPS sur un écran tactile compact, pensé pour les petites unités de pêche côtière. Sa sonde combine CHIRP et imagerie latérale/verticale pour repérer rapidement les zones de poisson, avec une cartographie de base préchargée évolutive vers C-MAP.",
+    specs: [
+      { label: "Écran", value: "5 pouces tactile, dalle IPS" },
+      { label: "Sondeur", value: "CHIRP, imagerie SplitShot/TripleShot HD selon version" },
+      { label: "Cartographie", value: "Carte de base mondiale préchargée, évolutive vers C-MAP" },
+      { label: "Réglages", value: "Configuration automatique" },
+    ],
+  },
+  {
+    slug: "lowrance-eagle-7",
+    name: "Lowrance Eagle 7",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Eagle",
+    shortDescription: "Sondeur/traceur d'entrée de gamme, écran 7 pouces, réglages automatiques",
+    description:
+      "L'Eagle 7 est le sondeur/traceur Lowrance le plus accessible, pensé pour une prise en main immédiate grâce à ses réglages automatiques. Sa sonde combine sondeur CHIRP et imagerie latérale/verticale pour repérer rapidement les fonds et les bancs de poisson le long des côtes algériennes. Une cartographie de base mondiale est préchargée, évolutive vers C-MAP — un choix adapté aux petites et moyennes embarcations de pêche côtière.",
+    specs: [
+      { label: "Écran", value: "7 pouces, dalle IPS lisible au soleil" },
+      { label: "Sondeur", value: "CHIRP, imagerie SideScan/DownScan (selon sonde)" },
+      { label: "Cartographie", value: "Carte de base mondiale préchargée, évolutive vers C-MAP" },
+      { label: "Réglages", value: "Configuration automatique" },
+    ],
+  },
+  {
+    slug: "lowrance-eagle-9",
+    name: "Lowrance Eagle 9",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Eagle",
+    shortDescription: "Sondeur/traceur d'entrée de gamme, grand écran 9 pouces",
+    description:
+      "L'Eagle 9 reprend la simplicité d'utilisation de la gamme Eagle sur un grand écran tactile, apprécié pour sa lisibilité au poste de barre. Sa sonde TripleShot HD combine CHIRP, imagerie latérale et verticale pour couvrir efficacement les zones de pêche côtières et hauturières le long du littoral algérien. Une cartographie de base mondiale est incluse, évolutive vers C-MAP.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile, dalle IPS" },
+      { label: "Sondeur", value: "CHIRP, TripleShot HD (SideScan et DownScan)" },
+      { label: "Cartographie", value: "Carte de base mondiale préchargée, évolutive vers C-MAP" },
+      { label: "Réglages", value: "Configuration automatique" },
+    ],
+  },
+
+  // --- Lowrance — Gamme Elite FS (milieu-haut de gamme, pêche) -----------
   {
     slug: "lowrance-elite-fs-7",
     name: "Lowrance Elite FS 7",
     brand: "lowrance",
     category: "sondeurs",
-    shortDescription: "Sondeur/GPS combiné pour la pêche, écran 7 pouces",
+    productLine: "Elite FS",
+    shortDescription: "Sondeur/GPS combiné pour la pêche, écran tactile 7 pouces",
     description:
-      "L'Elite FS 7 associe cartographie, sondeur CHIRP et imagerie latérale Active Imaging dans un boîtier compact pensé pour la pêche embarquée. Son interface intuitive facilite la localisation rapide des zones de poisson.",
+      "L'Elite FS 7 donne accès aux outils de détection Lowrance les plus avancés — Active Imaging 3-en-1 et compatibilité ActiveTarget 2 — sur un écran tactile multi-touch à verre plat anti-reflet. Compact et lisible en plein soleil, il convient aux petites et moyennes embarcations de pêche côtière en Méditerranée.",
     specs: [
-      { label: "Écran", value: "7 pouces tactile" },
-      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1" },
-      { label: "Cartographie", value: "C-MAP US Coastal préchargée" },
+      { label: "Écran", value: "7 pouces tactile multi-touch, verre plat anti-reflet" },
+      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1, compatible ActiveTarget 2" },
+      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
       { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "lowrance-elite-fs-9",
+    name: "Lowrance Elite FS 9",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Elite FS",
+    shortDescription: "Sondeur/GPS combiné, écran tactile 9 pouces, compatible ActiveTarget 2",
+    description:
+      "L'Elite FS 9 embarque l'ensemble des outils de détection de poissons Lowrance sur un plus grand écran tactile, avec commande directe des ancres Power-Pole et moteurs électriques compatibles. Un choix adapté aux embarcations de 6 à 8 mètres pratiquant la pêche côtière et hauturière en Méditerranée.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile multi-touch" },
+      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1, compatible ActiveTarget 2" },
+      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
+      { label: "Intégration", value: "Commande des ancres Power-Pole et moteurs électriques compatibles" },
+    ],
+  },
+  {
+    slug: "lowrance-elite-fs-10",
+    name: "Lowrance Elite FS 10",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Elite FS",
+    shortDescription: "Sondeur/GPS combiné, écran tactile 10 pouces",
+    description:
+      "L'Elite FS 10 offre une plus grande surface d'affichage pour exploiter pleinement la cartographie et l'imagerie sonar Active Imaging, avec un écran tactile multi-touch lisible en plein soleil. Idéal pour les sorties de pêche prolongées sur la côte algérienne, sur des unités de 6 à 9 mètres.",
+    specs: [
+      { label: "Écran", value: "10 pouces tactile multi-touch" },
+      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1, compatible ActiveTarget 2" },
+      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "lowrance-elite-fs-12",
+    name: "Lowrance Elite FS 12",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "Elite FS",
+    shortDescription: "Sondeur/GPS combiné haut de gamme, écran tactile 12 pouces",
+    description:
+      "L'Elite FS 12 est le plus grand modèle de la gamme, pensé pour une lecture confortable de la cartographie et des images sonar à plusieurs à bord. Il conserve l'accès complet aux outils de détection Lowrance (Active Imaging, ActiveTarget 2) sur un écran tactile multi-touch, pour la pêche côtière et hauturière en Méditerranée.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile multi-touch" },
+      { label: "Sondeur", value: "CHIRP, Active Imaging 3-en-1, compatible ActiveTarget 2" },
+      { label: "Cartographie", value: "Compatible C-MAP et Navionics" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+
+  // --- Lowrance — Gamme HDS PRO (haut de gamme, professionnel) -----------
+  {
+    slug: "lowrance-hds-pro-9",
+    name: "Lowrance HDS PRO 9",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "HDS PRO",
+    shortDescription: "Sondeur/traceur professionnel 9 pouces, contrôle proue à poupe",
+    description:
+      "Le HDS PRO 9 ouvre la gamme professionnelle Lowrance : cartographie C-MAP dernière génération, écran tactile SolarMAX HD lisible en plein soleil, et pilotage du bateau de la proue à la poupe. Un format compact adapté aux petites et moyennes unités de pêche côtière en Méditerranée.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "CHIRP, compatible ActiveTarget 2 et Active Imaging HD" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
+    ],
+  },
+  {
+    slug: "lowrance-hds-pro-10",
+    name: "Lowrance HDS PRO 10",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "HDS PRO",
+    shortDescription: "Sondeur/traceur professionnel 10 pouces",
+    description:
+      "Le HDS PRO 10 associe un écran tactile SolarMAX HD à la cartographie C-MAP la plus récente, avec un contrôle complet du bateau de la proue à la poupe. Une solution professionnelle pour la pêche côtière et hauturière sur des unités de 6 à 9 mètres en Méditerranée.",
+    specs: [
+      { label: "Écran", value: "10 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "CHIRP, compatible ActiveTarget 2 et Active Imaging HD" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
+    ],
+  },
+  {
+    slug: "lowrance-hds-pro-12",
+    name: "Lowrance HDS PRO 12",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "HDS PRO",
+    shortDescription: "Sondeur/traceur professionnel 12 pouces, contrôle proue à poupe",
+    description:
+      "Le HDS PRO 12 se positionne au sommet de la gamme Lowrance : cartographie C-MAP dernière génération, écran tactile SolarMAX HD lisible en plein soleil, et pilotage du bateau de la proue à la poupe (moteur électrique, ancre, pilote automatique) depuis un seul écran. Son grand format et la clarté de son sondeur en font une solution taillée pour la pêche côtière et hauturière en Méditerranée, sur des unités de 6 à 9 mètres.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "CHIRP, compatible ActiveTarget 2 et Active Imaging HD" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
+    ],
+  },
+  {
+    slug: "lowrance-hds-pro-16",
+    name: "Lowrance HDS PRO 16",
+    brand: "lowrance",
+    category: "sondeurs",
+    productLine: "HDS PRO",
+    shortDescription: "Sondeur/traceur professionnel haut de gamme, écran 16 pouces",
+    description:
+      "Le HDS PRO 16 est le modèle amiral de la gamme Lowrance, avec un très grand écran tactile SolarMAX HD pour une lecture précise de la cartographie C-MAP et des images sonar. Il centralise le contrôle du bateau de la proue à la poupe, pour les unités de pêche hauturière en Méditerranée jusqu'à 9 mètres.",
+    specs: [
+      { label: "Écran", value: "16 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "CHIRP, compatible ActiveTarget 2 et Active Imaging HD" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
     ],
   },
   {
@@ -506,6 +671,7 @@ async function main() {
         shortDescription: p.shortDescription,
         description: p.description,
         specs: p.specs,
+        productLine: p.productLine,
         requiresAnfAuth: ANF_CATEGORY_SLUGS.includes(p.category),
         brand: { connect: { slug: p.brand } },
         category: { connect: { slug: p.category } },

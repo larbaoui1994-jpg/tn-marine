@@ -40,6 +40,10 @@ model Product {
   // Mention "Autorisation ANF nécessaire" (cahier des charges §8) sur les
   // fiches VHF, sondeur/GPS et radar.
   requiresAnfAuth  Boolean  @default(false)
+  // Sous-gamme du fabricant (ex. "Eagle", "Elite FS", "HDS PRO" chez
+  // Lowrance), pour regrouper l'affichage catalogue par gamme. Optionnel :
+  // absent pour la plupart des produits.
+  productLine      String?
 
   brandId    String
   brand      Brand    @relation(fields: [brandId], references: [id])

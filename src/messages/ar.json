@@ -205,6 +205,7 @@
     "allCategories": "جميع الفئات",
     "allBrands": "جميع العلامات التجارية",
     "resultsCount": "{count, plural, zero {لا توجد منتجات} one {منتج واحد} two {منتجان} few {# منتجات} many {# منتجًا} other {# منتج}}",
+    "productLine": "فئة {line}",
     "noResults": "لا يوجد منتج يطابق هذه الفلاتر.",
     "resetFilters": "إعادة تعيين الفلاتر",
     "viewProduct": "عرض بطاقة المنتج",
