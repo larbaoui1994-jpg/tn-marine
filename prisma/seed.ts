@@ -226,22 +226,6 @@ const products: ProductSeed[] = [
       { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
     ],
   },
-  {
-    slug: "lowrance-hook-reveal-5",
-    name: "Lowrance HOOK Reveal 5",
-    brand: "lowrance",
-    category: "sondeurs",
-    shortDescription: "Sondeur/GPS d'entrée de gamme, écran couleur 5 pouces",
-    description:
-      "Le HOOK Reveal 5 est une solution simple et abordable pour s'équiper en sondeur/GPS. Livré avec la cartographie côtière et un sondeur CHIRP, il convient aux petites unités de pêche et de plaisance.",
-    specs: [
-      { label: "Écran", value: "5 pouces couleur" },
-      { label: "Sondeur", value: "CHIRP, DownScan" },
-      { label: "Cartographie", value: "Cartographie côtière préchargée" },
-      { label: "Alimentation", value: "12V" },
-    ],
-  },
-
   // --- Simrad -------------------------------------------------------------
   {
     slug: "simrad-nsx-3009",
