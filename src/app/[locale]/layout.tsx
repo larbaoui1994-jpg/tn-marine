@@ -66,10 +66,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <AuthSessionProvider>
             <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <ChatWidget />
           </AuthSessionProvider>
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ChatWidget />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 
 /**
@@ -7,7 +8,13 @@ import { prisma } from "@/lib/prisma";
  * cela garantit des réponses toujours à jour et sans invention, ce que
  * demande le cahier des charges (§11).
  */
-export async function buildCatalogContext(): Promise<string> {
+export const buildCatalogContext = unstable_cache(
+  buildCatalogContextUncached,
+  ["catalog-context"],
+  { revalidate: 300 },
+);
+
+async function buildCatalogContextUncached(): Promise<string> {
   const products = await prisma.product.findMany({
     include: { brand: true, category: true },
     orderBy: [{ brand: { name: "asc" } }, { name: "asc" }],

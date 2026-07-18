@@ -48,7 +48,7 @@ export async function submitProformaAction(
         productIdRaw && productIdRaw !== "autre" ? productIdRaw : undefined,
       freeText: String(formData.get(`freeText_${id}`) || "").trim() || undefined,
       reference: String(formData.get(`reference_${id}`) || "").trim() || undefined,
-      quantity: Number(formData.get(`quantity_${id}`)) || 1,
+      quantity: Number(formData.get(`quantity_${id}`)),
     };
   });
 

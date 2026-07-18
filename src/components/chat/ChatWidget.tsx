@@ -8,6 +8,10 @@ interface ChatMessage {
   content: string;
 }
 
+// Reste sous la limite de 30 messages validée par /api/chat, avec une marge
+// de sécurité (chaque échange ajoute un message utilisateur + une réponse).
+const MAX_HISTORY = 20;
+
 export default function ChatWidget() {
   const t = useTranslations("Chatbot");
   const locale = useLocale();
@@ -29,8 +33,8 @@ export default function ChatWidget() {
 
     const nextMessages: ChatMessage[] = [
       ...messages,
-      { role: "user", content: text },
-    ];
+      { role: "user" as const, content: text },
+    ].slice(-MAX_HISTORY);
     setMessages(nextMessages);
     setInput("");
     setIsPending(true);

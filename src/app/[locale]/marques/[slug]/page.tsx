@@ -1,3 +1,4 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -13,14 +14,14 @@ export function generateStaticParams() {
   );
 }
 
-async function getBrand(slug: string) {
+const getBrand = cache(async (slug: string) => {
   return prisma.brand.findUnique({
     where: { slug },
     include: {
       products: { include: { brand: true, category: true }, orderBy: { name: "asc" } },
     },
   });
-}
+});
 
 export async function generateMetadata({
   params,
