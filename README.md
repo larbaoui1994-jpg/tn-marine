@@ -6,7 +6,7 @@ Site vitrine et catalogue en ligne de TN Marine : présentation de l'entreprise,
 
 - [Next.js 16](https://nextjs.org) (App Router, Server Actions)
 - [Tailwind CSS v4](https://tailwindcss.com)
-- [Prisma 7](https://www.prisma.io) + SQLite (adaptateur `better-sqlite3`)
+- [Prisma 7](https://www.prisma.io) + Postgres (adaptateur `pg`, hébergé sur [Neon](https://neon.tech))
 - [NextAuth.js v5](https://authjs.dev) (authentification par identifiants + bcrypt)
 - [next-intl](https://next-intl.dev) (i18n FR/AR/EN, RTL natif)
 - [Claude API](https://docs.claude.com) (Anthropic) pour le chatbot
@@ -47,7 +47,7 @@ Site vitrine et catalogue en ligne de TN Marine : présentation de l'entreprise,
 
    | Variable | Description |
    |---|---|
-   | `DATABASE_URL` | Chemin de la base SQLite (`file:./dev.db` convient en local) |
+   | `DATABASE_URL` | Chaîne de connexion Postgres (créer un projet gratuit sur [Neon](https://neon.tech) et utiliser la chaîne de connexion "pooled") |
    | `AUTH_SECRET` | Secret NextAuth, à générer avec `openssl rand -base64 32` |
    | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASSWORD` | Optionnel — sans SMTP configuré, les e-mails (contact, proforma) sont simplement journalisés dans la console serveur |
    | `CONTACT_TO_EMAIL` | Adresse de réception des demandes (contact, proforma) |
@@ -77,6 +77,17 @@ npm run build   # build de production
 npm run start   # démarrer le build de production
 npm run lint    # ESLint
 ```
+
+## Déploiement
+
+Le site est prévu pour être déployé sur [Vercel](https://vercel.com), avec la base de données hébergée sur [Neon](https://neon.tech) (Postgres serverless) :
+
+1. Créer un projet Neon, copier sa chaîne de connexion "pooled".
+2. Connecter le dépôt GitHub à un nouveau projet Vercel.
+3. Renseigner les variables d'environnement du tableau ci-dessus dans les réglages du projet Vercel (`DATABASE_URL` pointant vers Neon).
+4. Déployer — Vercel exécute `npm run build` automatiquement à chaque push sur `main`.
+
+Les migrations Prisma (`npx prisma migrate deploy`) doivent être appliquées à la base Neon avant ou pendant le premier déploiement.
 
 ## Structure du projet
 
