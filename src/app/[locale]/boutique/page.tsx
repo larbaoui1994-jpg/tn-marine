@@ -15,7 +15,17 @@ export function generateStaticParams() {
 // de gamme).
 const PRODUCT_LINE_ORDER = ["Eagle", "Elite FS", "HDS PRO"];
 
-function groupByProductLine<T extends { productLine: string | null }>(products: T[]) {
+// Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
+// "Elite FS 12" → 12), pour trier chaque gamme du plus petit écran au plus
+// grand plutôt que par ordre alphabétique.
+function modelSizeFromName(name: string): number {
+  const matches = name.match(/\d+/g);
+  return matches ? parseInt(matches[matches.length - 1], 10) : 0;
+}
+
+function groupByProductLine<T extends { productLine: string | null; name: string }>(
+  products: T[],
+) {
   const byLine = new Map<string, T[]>();
   const ungrouped: T[] = [];
 
@@ -34,7 +44,12 @@ function groupByProductLine<T extends { productLine: string | null }>(products: 
   );
 
   return {
-    groups: orderedLines.map((line) => ({ line, products: byLine.get(line)! })),
+    groups: orderedLines.map((line) => ({
+      line,
+      products: [...byLine.get(line)!].sort(
+        (a, b) => modelSizeFromName(a.name) - modelSizeFromName(b.name),
+      ),
+    })),
     ungrouped,
   };
 }
