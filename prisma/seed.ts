@@ -112,6 +112,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Elite FS",
+    images: Array.from({ length: 9 }, (_, i) => `/products/lowrance-elite-fs-7-${i + 1}.png`),
     shortDescription: "Sondeur/GPS combiné pour la pêche, écran tactile 7 pouces",
     description:
       "L'Elite FS 7 donne accès aux outils de détection Lowrance les plus avancés — Active Imaging 3-en-1 et compatibilité ActiveTarget 2 — sur un écran tactile multi-touch à verre plat anti-reflet. Compact et lisible en plein soleil, il convient aux petites et moyennes embarcations de pêche côtière en Méditerranée.",
@@ -128,6 +129,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Elite FS",
+    images: Array.from({ length: 7 }, (_, i) => `/products/lowrance-elite-fs-9-${i + 1}.png`),
     shortDescription: "Sondeur/GPS combiné, écran tactile 9 pouces, compatible ActiveTarget 2",
     description:
       "L'Elite FS 9 embarque l'ensemble des outils de détection de poissons Lowrance sur un plus grand écran tactile, avec commande directe des ancres Power-Pole et moteurs électriques compatibles. Un choix adapté aux embarcations de 6 à 8 mètres pratiquant la pêche côtière et hauturière en Méditerranée.",
@@ -144,6 +146,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Elite FS",
+    images: Array.from({ length: 28 }, (_, i) => `/products/lowrance-elite-fs-10-${i + 1}.png`),
     shortDescription: "Sondeur/GPS combiné, écran tactile 10 pouces",
     description:
       "L'Elite FS 10 offre une plus grande surface d'affichage pour exploiter pleinement la cartographie et l'imagerie sonar Active Imaging, avec un écran tactile multi-touch lisible en plein soleil. Idéal pour les sorties de pêche prolongées sur la côte algérienne, sur des unités de 6 à 9 mètres.",
@@ -160,6 +163,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Elite FS",
+    images: Array.from({ length: 28 }, (_, i) => `/products/lowrance-elite-fs-12-${i + 1}.png`),
     shortDescription: "Sondeur/GPS combiné haut de gamme, écran tactile 12 pouces",
     description:
       "L'Elite FS 12 est le plus grand modèle de la gamme, pensé pour une lecture confortable de la cartographie et des images sonar à plusieurs à bord. Il conserve l'accès complet aux outils de détection Lowrance (Active Imaging, ActiveTarget 2) sur un écran tactile multi-touch, pour la pêche côtière et hauturière en Méditerranée.",
