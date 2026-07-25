@@ -59,6 +59,11 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Eagle",
+    images: [
+      "/products/lowrance-eagle-5-1.png",
+      "/products/lowrance-eagle-5-2.png",
+      "/products/lowrance-eagle-5-3.png",
+    ],
     shortDescription: "Sondeur/traceur compact, écran tactile 5 pouces, réglages automatiques",
     description:
       "L'Eagle 5 associe sondeur et cartographie GPS sur un écran tactile compact, pensé pour les petites unités de pêche côtière. Sa sonde combine CHIRP et imagerie latérale/verticale pour repérer rapidement les zones de poisson, avec une cartographie de base préchargée évolutive vers C-MAP.",
