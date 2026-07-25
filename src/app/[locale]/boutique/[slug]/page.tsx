@@ -1,6 +1,5 @@
 import { cache } from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -9,6 +8,7 @@ import { prisma } from "@/lib/prisma";
 import { categoryIcon } from "@/lib/category-directory";
 import AnfNotice from "@/components/shop/AnfNotice";
 import ProductCard from "@/components/shop/ProductCard";
+import ProductGallery from "@/components/shop/ProductGallery";
 
 export async function generateStaticParams() {
   const products = await prisma.product.findMany({ select: { slug: true } });
@@ -67,17 +67,8 @@ export default async function ProductPage({
       </Link>
 
       <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-2">
-        {product.imageUrl ? (
-          <div className="relative h-72 rounded-xl bg-surface-alt sm:h-96">
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
-              className="object-contain p-6"
-            />
-          </div>
+        {product.images.length > 0 ? (
+          <ProductGallery images={product.images} productName={product.name} />
         ) : (
           // Visuel provisoire — en attendant les photos officielles du produit
           <div className="flex h-72 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-7xl sm:h-96">

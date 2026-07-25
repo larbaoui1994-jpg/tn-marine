@@ -36,7 +36,9 @@ model Product {
   description      String
   // Liste ordonnée de caractéristiques techniques : [{ "label": "...", "value": "..." }, ...]
   specs            Json
-  imageUrl         String?
+  // Photos produit, dans l'ordre d'affichage (galerie) ; vide tant qu'aucune
+  // photo officielle n'a été fournie.
+  images           String[] @default([])
   // Mention "Autorisation ANF nécessaire" (cahier des charges §8) sur les
   // fiches VHF, sondeur/GPS et radar.
   requiresAnfAuth  Boolean  @default(false)

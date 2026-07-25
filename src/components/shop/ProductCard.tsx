@@ -9,7 +9,7 @@ interface ProductCardProps {
     name: string;
     shortDescription: string;
     requiresAnfAuth: boolean;
-    imageUrl?: string | null;
+    images: string[];
     brand: { name: string };
     category: { slug: string };
   };
@@ -18,16 +18,17 @@ interface ProductCardProps {
 export default async function ProductCard({ product }: ProductCardProps) {
   const t = await getTranslations("Shop");
   const tCategories = await getTranslations("Categories");
+  const coverImage = product.images[0];
 
   return (
     <Link
       href={`/boutique/${product.slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface-alt transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
     >
-      {product.imageUrl ? (
+      {coverImage ? (
         <div className="relative h-36 bg-surface">
           <Image
-            src={product.imageUrl}
+            src={coverImage}
             alt={product.name}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
