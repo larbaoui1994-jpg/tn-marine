@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -27,7 +28,15 @@ export default async function HomePage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary text-text-inverse">
-        <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_20%_20%,white,transparent_35%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
+        <Image
+          src="/lifestyle/eagle-hero.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/50 rtl:bg-gradient-to-l" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent-light">
             {t("heroKicker")}
