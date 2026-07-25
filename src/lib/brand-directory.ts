@@ -5,7 +5,7 @@
  * "About" et "Brands" dans les fichiers de messages).
  */
 export const BRAND_DIRECTORY = [
-  { key: "lowrance", slug: "lowrance", name: "Lowrance" },
+  { key: "lowrance", slug: "lowrance", name: "Lowrance", logoUrl: "/brands/lowrance.png" },
   { key: "simrad", slug: "simrad", name: "Simrad" },
   { key: "garmin", slug: "garmin", name: "Garmin" },
   { key: "cmap", slug: "cmap", name: "C-MAP" },
@@ -21,4 +21,11 @@ export type BrandKey = (typeof BRAND_DIRECTORY)[number]["key"];
 
 export function brandKeyFromSlug(slug: string): BrandKey | undefined {
   return BRAND_DIRECTORY.find((b) => b.slug === slug)?.key;
+}
+
+// Certaines marques n'ont pas encore de logo fourni ; on affiche alors le
+// nom en texte (voir les usages de cette fonction).
+export function brandLogoUrl(slug: string): string | undefined {
+  const brand = BRAND_DIRECTORY.find((b) => b.slug === slug);
+  return brand && "logoUrl" in brand ? brand.logoUrl : undefined;
 }

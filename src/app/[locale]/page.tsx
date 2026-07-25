@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { BRAND_DIRECTORY } from "@/lib/brand-directory";
+import { BRAND_DIRECTORY, brandLogoUrl } from "@/lib/brand-directory";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -77,15 +77,28 @@ export default async function HomePage({
           <p className="mx-auto mt-3 max-w-2xl text-text-muted">{t("brandsSubtitle")}</p>
         </div>
         <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {BRAND_DIRECTORY.map((brand) => (
-            <Link
-              key={brand.slug}
-              href={`/marques/${brand.slug}`}
-              className="flex items-center justify-center rounded-lg border border-border bg-surface-alt px-4 py-6 text-center font-semibold text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
-            >
-              {brand.name}
-            </Link>
-          ))}
+          {BRAND_DIRECTORY.map((brand) => {
+            const logoUrl = brandLogoUrl(brand.slug);
+            return (
+              <Link
+                key={brand.slug}
+                href={`/marques/${brand.slug}`}
+                className="flex items-center justify-center rounded-lg border border-border bg-surface-alt px-4 py-6 text-center font-semibold text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
+              >
+                {logoUrl ? (
+                  <Image
+                    src={logoUrl}
+                    alt={brand.name}
+                    width={140}
+                    height={32}
+                    className="h-8 w-auto object-contain"
+                  />
+                ) : (
+                  brand.name
+                )}
+              </Link>
+            );
+          })}
         </div>
       </section>
 

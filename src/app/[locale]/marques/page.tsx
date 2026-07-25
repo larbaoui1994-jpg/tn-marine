@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { prisma } from "@/lib/prisma";
-import { brandKeyFromSlug } from "@/lib/brand-directory";
+import { brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-directory";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -46,13 +47,24 @@ export default async function BrandsPage({
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {brands.map((brand) => {
           const key = brandKeyFromSlug(brand.slug);
+          const logoUrl = brandLogoUrl(brand.slug);
           return (
             <Link
               key={brand.id}
               href={`/marques/${brand.slug}`}
               className="flex flex-col rounded-xl border border-border bg-surface-alt p-6 transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
             >
-              <h2 className="text-xl font-bold text-primary">{brand.name}</h2>
+              {logoUrl ? (
+                <Image
+                  src={logoUrl}
+                  alt={brand.name}
+                  width={140}
+                  height={32}
+                  className="h-8 w-auto object-contain"
+                />
+              ) : (
+                <h2 className="text-xl font-bold text-primary">{brand.name}</h2>
+              )}
               {key && (
                 <p className="mt-2 flex-1 text-sm text-text-muted">
                   {t(`items.${key}.tagline`)}

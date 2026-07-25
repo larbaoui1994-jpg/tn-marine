@@ -1,11 +1,12 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { prisma } from "@/lib/prisma";
-import { BRAND_DIRECTORY, brandKeyFromSlug } from "@/lib/brand-directory";
+import { BRAND_DIRECTORY, brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-directory";
 import ProductCard from "@/components/shop/ProductCard";
 
 export function generateStaticParams() {
@@ -49,6 +50,7 @@ export default async function BrandPage({
   }
 
   const key = brandKeyFromSlug(brand.slug);
+  const logoUrl = brandLogoUrl(brand.slug);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -57,7 +59,16 @@ export default async function BrandPage({
       </Link>
 
       <div className="mt-4 max-w-2xl">
-        <h1 className="text-3xl font-bold text-primary sm:text-4xl">{brand.name}</h1>
+        {logoUrl && (
+          <Image
+            src={logoUrl}
+            alt={brand.name}
+            width={220}
+            height={48}
+            className="h-10 w-auto object-contain"
+          />
+        )}
+        <h1 className="mt-3 text-3xl font-bold text-primary sm:text-4xl">{brand.name}</h1>
         {key && <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>}
       </div>
 
