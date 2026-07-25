@@ -59,11 +59,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Eagle",
-    images: [
-      "/products/lowrance-eagle-5-1.png",
-      "/products/lowrance-eagle-5-2.png",
-      "/products/lowrance-eagle-5-3.png",
-    ],
+    images: Array.from({ length: 11 }, (_, i) => `/products/lowrance-eagle-5-${i + 1}.png`),
     shortDescription: "Sondeur/traceur compact, écran tactile 5 pouces, réglages automatiques",
     description:
       "L'Eagle 5 associe sondeur et cartographie GPS sur un écran tactile compact, pensé pour les petites unités de pêche côtière. Sa sonde combine CHIRP et imagerie latérale/verticale pour repérer rapidement les zones de poisson, avec une cartographie de base préchargée évolutive vers C-MAP.",
@@ -80,12 +76,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Eagle",
-    images: [
-      "/products/lowrance-eagle-7-1.png",
-      "/products/lowrance-eagle-7-2.png",
-      "/products/lowrance-eagle-7-3.png",
-      "/products/lowrance-eagle-7-4.png",
-    ],
+    images: Array.from({ length: 19 }, (_, i) => `/products/lowrance-eagle-7-${i + 1}.png`),
     shortDescription: "Sondeur/traceur d'entrée de gamme, écran 7 pouces, réglages automatiques",
     description:
       "L'Eagle 7 est le sondeur/traceur Lowrance le plus accessible, pensé pour une prise en main immédiate grâce à ses réglages automatiques. Sa sonde combine sondeur CHIRP et imagerie latérale/verticale pour repérer rapidement les fonds et les bancs de poisson le long des côtes algériennes. Une cartographie de base mondiale est préchargée, évolutive vers C-MAP — un choix adapté aux petites et moyennes embarcations de pêche côtière.",
