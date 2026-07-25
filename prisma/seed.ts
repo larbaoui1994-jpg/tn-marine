@@ -93,6 +93,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Eagle",
+    images: Array.from({ length: 19 }, (_, i) => `/products/lowrance-eagle-9-${i + 1}.png`),
     shortDescription: "Sondeur/traceur d'entrée de gamme, grand écran 9 pouces",
     description:
       "L'Eagle 9 reprend la simplicité d'utilisation de la gamme Eagle sur un grand écran tactile, apprécié pour sa lisibilité au poste de barre. Sa sonde TripleShot HD combine CHIRP, imagerie latérale et verticale pour couvrir efficacement les zones de pêche côtières et hauturières le long du littoral algérien. Une cartographie de base mondiale est incluse, évolutive vers C-MAP.",
