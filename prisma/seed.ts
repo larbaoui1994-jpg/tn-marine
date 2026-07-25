@@ -20,6 +20,7 @@ interface ProductSeed {
   brand: (typeof BRAND_DIRECTORY)[number]["slug"];
   category: CategorySlug;
   productLine?: string;
+  imageUrl?: string;
   shortDescription: string;
   description: string;
   specs: Spec[];
@@ -36,6 +37,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "Eagle",
+    imageUrl: "/products/lowrance-eagle-4x.jpg",
     shortDescription: "Sondeur seul (sans GPS), écran 4 pouces, idéal petites embarcations",
     description:
       "L'Eagle 4X est le sondeur le plus simple de la gamme Lowrance, à commande par boutons et sans cartographie GPS intégrée. Son défilement en continu facilite la détection des poissons et la lecture de la colonne d'eau, un atout pour la pêche côtière sur petites embarcations ou annexes en Méditerranée. Ses réglages automatiques le rendent immédiatement opérationnel, sans réglage préalable.",
@@ -656,6 +658,7 @@ async function main() {
         description: p.description,
         specs: p.specs,
         productLine: p.productLine,
+        imageUrl: p.imageUrl,
         requiresAnfAuth: ANF_CATEGORY_SLUGS.includes(p.category),
         brand: { connect: { slug: p.brand } },
         category: { connect: { slug: p.category } },

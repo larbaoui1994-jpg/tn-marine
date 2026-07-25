@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { categoryIcon } from "@/lib/category-directory";
@@ -8,6 +9,7 @@ interface ProductCardProps {
     name: string;
     shortDescription: string;
     requiresAnfAuth: boolean;
+    imageUrl?: string | null;
     brand: { name: string };
     category: { slug: string };
   };
@@ -22,10 +24,22 @@ export default async function ProductCard({ product }: ProductCardProps) {
       href={`/boutique/${product.slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface-alt transition-all hover:-translate-y-0.5 hover:border-secondary hover:shadow-md"
     >
-      {/* Visuel provisoire — en attendant les photos officielles des produits */}
-      <div className="flex h-36 items-center justify-center bg-gradient-to-br from-primary to-secondary text-4xl">
-        <span aria-hidden="true">{categoryIcon(product.category.slug)}</span>
-      </div>
+      {product.imageUrl ? (
+        <div className="relative h-36 bg-surface">
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-contain p-3"
+          />
+        </div>
+      ) : (
+        // Visuel provisoire — en attendant les photos officielles des produits
+        <div className="flex h-36 items-center justify-center bg-gradient-to-br from-primary to-secondary text-4xl">
+          <span aria-hidden="true">{categoryIcon(product.category.slug)}</span>
+        </div>
+      )}
 
       <div className="flex flex-1 flex-col p-4">
         <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
