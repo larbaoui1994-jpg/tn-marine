@@ -7,14 +7,14 @@
 export const BRAND_DIRECTORY = [
   { key: "lowrance", slug: "lowrance", name: "Lowrance", logoUrl: "/brands/lowrance.png" },
   { key: "simrad", slug: "simrad", name: "Simrad", logoUrl: "/brands/simrad.png" },
-  { key: "garmin", slug: "garmin", name: "Garmin" },
-  { key: "cmap", slug: "cmap", name: "C-MAP" },
-  { key: "navionics", slug: "navionics", name: "Navionics" },
-  { key: "fusion", slug: "fusion", name: "Fusion" },
-  { key: "minnKota", slug: "minn-kota", name: "Minn Kota" },
-  { key: "international", slug: "international", name: "International" },
-  { key: "cobraMarine", slug: "cobra-marine", name: "Cobra Marine" },
-  { key: "airmar", slug: "airmar", name: "Airmar" },
+  { key: "garmin", slug: "garmin", name: "Garmin", logoUrl: "/brands/garmin.png" },
+  { key: "cmap", slug: "cmap", name: "C-MAP", logoUrl: "/brands/cmap.png" },
+  { key: "navionics", slug: "navionics", name: "Navionics", logoUrl: "/brands/navionics.png" },
+  { key: "fusion", slug: "fusion", name: "Fusion", logoUrl: "/brands/fusion.png" },
+  { key: "minnKota", slug: "minn-kota", name: "Minn Kota", logoUrl: "/brands/minn-kota.png" },
+  { key: "international", slug: "international", name: "International", logoUrl: "/brands/international.png" },
+  { key: "cobraMarine", slug: "cobra-marine", name: "Cobra Marine", logoUrl: "/brands/cobra-marine.png" },
+  { key: "airmar", slug: "airmar", name: "Airmar", logoUrl: "/brands/airmar.png" },
 ] as const;
 
 export type BrandKey = (typeof BRAND_DIRECTORY)[number]["key"];
