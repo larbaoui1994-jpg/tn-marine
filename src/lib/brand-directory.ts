@@ -6,7 +6,7 @@
  */
 export const BRAND_DIRECTORY = [
   { key: "lowrance", slug: "lowrance", name: "Lowrance", logoUrl: "/brands/lowrance.png" },
-  { key: "simrad", slug: "simrad", name: "Simrad" },
+  { key: "simrad", slug: "simrad", name: "Simrad", logoUrl: "/brands/simrad.png" },
   { key: "garmin", slug: "garmin", name: "Garmin" },
   { key: "cmap", slug: "cmap", name: "C-MAP" },
   { key: "navionics", slug: "navionics", name: "Navionics" },
