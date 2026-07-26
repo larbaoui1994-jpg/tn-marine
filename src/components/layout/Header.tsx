@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -25,18 +26,17 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2 shrink-0"
+          className="flex items-center shrink-0"
           onClick={() => setMobileOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-surface-alt font-bold">
-            TN
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-bold text-primary text-base">TN Marine</span>
-            <span className="text-[11px] text-text-muted hidden sm:block">
-              Technic Nautic Marine Import
-            </span>
-          </span>
+          <Image
+            src="/logo/tn-marine-logo.png"
+            alt="TN Marine — Technic Nautic Marine Import"
+            width={464}
+            height={96}
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1" aria-label={t("menu")}>

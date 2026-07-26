@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -25,13 +26,14 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-primary-dark font-bold">
-                TN
-              </span>
-              <span className="font-bold text-lg">{t("companyName")}</span>
-            </div>
-            <p className="mt-1 text-xs text-text-inverse/60">{t("companyLegal")}</p>
+            <Image
+              src="/logo/tn-marine-logo-white.png"
+              alt="TN Marine — Technic Nautic Marine Import"
+              width={464}
+              height={96}
+              className="h-8 w-auto"
+            />
+            <p className="mt-2 text-xs text-text-inverse/60">{t("companyLegal")}</p>
             <p className="mt-3 text-sm text-text-inverse/80">{t("tagline")}</p>
           </div>
 
