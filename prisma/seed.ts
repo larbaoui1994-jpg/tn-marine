@@ -182,6 +182,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "HDS PRO",
+    images: Array.from({ length: 15 }, (_, i) => `/products/lowrance-hds-pro-9-${i + 1}.png`),
     shortDescription: "Sondeur/traceur professionnel 9 pouces, contrôle proue à poupe",
     description:
       "Le HDS PRO 9 ouvre la gamme professionnelle Lowrance : cartographie C-MAP dernière génération, écran tactile SolarMAX HD lisible en plein soleil, et pilotage du bateau de la proue à la poupe. Un format compact adapté aux petites et moyennes unités de pêche côtière en Méditerranée.",
@@ -198,6 +199,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "HDS PRO",
+    images: Array.from({ length: 16 }, (_, i) => `/products/lowrance-hds-pro-10-${i + 1}.png`),
     shortDescription: "Sondeur/traceur professionnel 10 pouces",
     description:
       "Le HDS PRO 10 associe un écran tactile SolarMAX HD à la cartographie C-MAP la plus récente, avec un contrôle complet du bateau de la proue à la poupe. Une solution professionnelle pour la pêche côtière et hauturière sur des unités de 6 à 9 mètres en Méditerranée.",
@@ -214,6 +216,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "HDS PRO",
+    images: Array.from({ length: 16 }, (_, i) => `/products/lowrance-hds-pro-12-${i + 1}.png`),
     shortDescription: "Sondeur/traceur professionnel 12 pouces, contrôle proue à poupe",
     description:
       "Le HDS PRO 12 se positionne au sommet de la gamme Lowrance : cartographie C-MAP dernière génération, écran tactile SolarMAX HD lisible en plein soleil, et pilotage du bateau de la proue à la poupe (moteur électrique, ancre, pilote automatique) depuis un seul écran. Son grand format et la clarté de son sondeur en font une solution taillée pour la pêche côtière et hauturière en Méditerranée, sur des unités de 6 à 9 mètres.",
@@ -230,6 +233,7 @@ const products: ProductSeed[] = [
     brand: "lowrance",
     category: "sondeurs",
     productLine: "HDS PRO",
+    images: Array.from({ length: 17 }, (_, i) => `/products/lowrance-hds-pro-16-${i + 1}.png`),
     shortDescription: "Sondeur/traceur professionnel haut de gamme, écran 16 pouces",
     description:
       "Le HDS PRO 16 est le modèle amiral de la gamme Lowrance, avec un très grand écran tactile SolarMAX HD pour une lecture précise de la cartographie C-MAP et des images sonar. Il centralise le contrôle du bateau de la proue à la poupe, pour les unités de pêche hauturière en Méditerranée jusqu'à 9 mètres.",
