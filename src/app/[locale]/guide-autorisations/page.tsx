@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -48,8 +49,15 @@ export default async function AuthGuidePage({
       <p className="mt-4 text-text-muted">{t("intro")}</p>
       <p className="mt-4 font-semibold text-primary">{t("equipmentConcerned")}</p>
 
-      <blockquote className="mt-6 border-s-4 border-accent bg-accent/10 px-5 py-4 italic text-text">
-        {t("mentionQuote")}
+      <blockquote className="mt-6 flex items-center gap-4 border-s-4 border-accent bg-accent/10 px-5 py-4 italic text-text">
+        <Image
+          src="/logo/anf-logo.png"
+          alt="ANF — Agence Nationale des Fréquences"
+          width={144}
+          height={138}
+          className="h-12 w-auto shrink-0 not-italic"
+        />
+        <span>{t("mentionQuote")}</span>
       </blockquote>
       <p className="mt-3 text-sm text-text-muted">{t("mentionExplanation")}</p>
 
@@ -100,7 +108,16 @@ export default async function AuthGuidePage({
 
       {/* Contact ANF */}
       <div className="mt-12 rounded-xl border border-border bg-surface-alt p-6 sm:p-8">
-        <h2 className="text-xl font-semibold text-primary">{t("contactHeading")}</h2>
+        <div className="flex items-center gap-4">
+          <Image
+            src="/logo/anf-logo.png"
+            alt="ANF — Agence Nationale des Fréquences"
+            width={144}
+            height={138}
+            className="h-14 w-auto shrink-0"
+          />
+          <h2 className="text-xl font-semibold text-primary">{t("contactHeading")}</h2>
+        </div>
         <p className="mt-2 text-text-muted">{t("contactText")}</p>
         <a
           href="https://www.anf.dz"
