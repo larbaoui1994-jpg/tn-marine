@@ -285,6 +285,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSX",
+    images: Array.from({ length: 16 }, (_, i) => `/products/simrad-nsx-3007-${i + 1}.png`),
     shortDescription: "Traceur multifonction 7 pouces à écran tactile haute définition",
     description:
       "Le NSX 3007 ouvre la gamme NSX avec une interface tactile fluide et un sondeur intégré large bande, dans un format compact adapté aux petites unités. Il partage la même compatibilité avec les radars Halo et pilotes automatiques que le reste de la gamme.",
@@ -301,6 +302,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSX",
+    images: Array.from({ length: 8 }, (_, i) => `/products/simrad-nsx-3009-${i + 1}.png`),
     shortDescription: "Traceur multifonction 9 pouces à écran tactile haute définition",
     description:
       "Le NSX 3009 offre une interface tactile fluide, un sondeur intégré large bande et la compatibilité avec les radars et pilotes automatiques Simrad. Conçu pour une intégration complète du poste de barre.",
@@ -317,6 +319,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSX",
+    images: Array.from({ length: 8 }, (_, i) => `/products/simrad-nsx-3012-${i + 1}.png`),
     shortDescription: "Traceur multifonction 12 pouces à écran tactile haute définition",
     description:
       "Le NSX 3012 est le plus grand modèle de la gamme NSX, avec une surface d'affichage étendue pour la cartographie et le sondeur large bande intégré. Il conserve la compatibilité complète avec les radars Halo et pilotes automatiques Simrad.",
@@ -335,6 +338,10 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSX ULTRAWIDE",
+    images: Array.from(
+      { length: 5 },
+      (_, i) => `/products/simrad-nsx-ultrawide-3012-${i + 1}.png`,
+    ),
     shortDescription: "Traceur multifonction 12 pouces au format ultra-large, écran tactile",
     description:
       "Le NSX Ultrawide 3012 reprend l'électronique de la gamme NSX sur un écran au format panoramique, offrant davantage d'espace pour afficher plusieurs vues côte à côte — cartographie, sondeur et données de navigation — sans compromis de lisibilité.",
@@ -351,6 +358,10 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSX ULTRAWIDE",
+    images: Array.from(
+      { length: 11 },
+      (_, i) => `/products/simrad-nsx-ultrawide-3015-${i + 1}.png`,
+    ),
     shortDescription: "Traceur multifonction 15 pouces au format ultra-large, écran tactile",
     description:
       "Le NSX Ultrawide 3015 est le plus grand écran de la gamme NSX, au format panoramique. Il permet d'afficher simultanément cartographie, sondeur et instruments sur une seule dalle tactile, un atout pour le poste de barre des unités de pêche hauturière.",
