@@ -12,7 +12,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="relative h-96 rounded-xl bg-surface-alt sm:h-[32rem]">
         <Image
           src={images[activeIndex]}
@@ -48,7 +48,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
       </div>
 
       {images.length > 1 && (
-        <div className="mt-3 flex gap-2">
+        <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
           {images.map((src, index) => (
             <button
               key={src}
