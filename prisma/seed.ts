@@ -244,12 +244,63 @@ const products: ProductSeed[] = [
       { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
     ],
   },
-  // --- Simrad -------------------------------------------------------------
+  // --- Simrad — Gamme GO (entrée de gamme, compacte) ---------------------
+  {
+    slug: "simrad-go7",
+    name: "Simrad GO7",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "GO",
+    shortDescription: "Traceur/sondeur compact 7 pouces, écran tactile lisible au soleil",
+    description:
+      "Le GO7 associe cartographie et sondeur sur un format compact taillé pour les petites embarcations. Son écran tactile résiste aux embruns et reste lisible en plein soleil, avec une cartographie C-MAP intégrée prête à l'emploi dès la sortie du carton.",
+    specs: [
+      { label: "Écran", value: "7 pouces tactile, verre trempé anti-reflet" },
+      { label: "Sondeur", value: "CHIRP large bande intégré" },
+      { label: "Cartographie", value: "C-MAP intégrée, compatible cartes SD" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "simrad-go9",
+    name: "Simrad GO9",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "GO",
+    shortDescription: "Traceur/sondeur compact 9 pouces, écran tactile lisible au soleil",
+    description:
+      "Le GO9 reprend la simplicité d'utilisation de la gamme GO sur un écran plus grand, pour une lecture confortable de la cartographie et du sondeur au poste de barre. Sa cartographie C-MAP intégrée et son sondeur CHIRP en font une solution accessible pour la pêche côtière.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile, verre trempé anti-reflet" },
+      { label: "Sondeur", value: "CHIRP large bande intégré" },
+      { label: "Cartographie", value: "C-MAP intégrée, compatible cartes SD" },
+      { label: "Connectivité", value: "Wi-Fi, NMEA 2000" },
+    ],
+  },
+
+  // --- Simrad — Gamme NSX (milieu de gamme, tactile) ----------------------
+  {
+    slug: "simrad-nsx-3007",
+    name: "Simrad NSX 3007",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSX",
+    shortDescription: "Traceur multifonction 7 pouces à écran tactile haute définition",
+    description:
+      "Le NSX 3007 ouvre la gamme NSX avec une interface tactile fluide et un sondeur intégré large bande, dans un format compact adapté aux petites unités. Il partage la même compatibilité avec les radars Halo et pilotes automatiques que le reste de la gamme.",
+    specs: [
+      { label: "Écran", value: "7 pouces tactile haute définition" },
+      { label: "Sondeur", value: "Actif large bande intégré" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+      { label: "Connectivité", value: "Wi-Fi, Ethernet, NMEA 2000" },
+    ],
+  },
   {
     slug: "simrad-nsx-3009",
     name: "Simrad NSX 3009",
     brand: "simrad",
     category: "gps-traceurs",
+    productLine: "NSX",
     shortDescription: "Traceur multifonction 9 pouces à écran tactile haute définition",
     description:
       "Le NSX 3009 offre une interface tactile fluide, un sondeur intégré large bande et la compatibilité avec les radars et pilotes automatiques Simrad. Conçu pour une intégration complète du poste de barre.",
@@ -258,6 +309,158 @@ const products: ProductSeed[] = [
       { label: "Sondeur", value: "Actif large bande intégré" },
       { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
       { label: "Connectivité", value: "Wi-Fi, Ethernet, NMEA 2000" },
+    ],
+  },
+  {
+    slug: "simrad-nsx-3012",
+    name: "Simrad NSX 3012",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSX",
+    shortDescription: "Traceur multifonction 12 pouces à écran tactile haute définition",
+    description:
+      "Le NSX 3012 est le plus grand modèle de la gamme NSX, avec une surface d'affichage étendue pour la cartographie et le sondeur large bande intégré. Il conserve la compatibilité complète avec les radars Halo et pilotes automatiques Simrad.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile haute définition" },
+      { label: "Sondeur", value: "Actif large bande intégré" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+      { label: "Connectivité", value: "Wi-Fi, Ethernet, NMEA 2000" },
+    ],
+  },
+
+  // --- Simrad — Gamme NSX Ultrawide (écran panoramique) -------------------
+  {
+    slug: "simrad-nsx-ultrawide-3012",
+    name: "Simrad NSX Ultrawide 3012",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSX ULTRAWIDE",
+    shortDescription: "Traceur multifonction 12 pouces au format ultra-large, écran tactile",
+    description:
+      "Le NSX Ultrawide 3012 reprend l'électronique de la gamme NSX sur un écran au format panoramique, offrant davantage d'espace pour afficher plusieurs vues côte à côte — cartographie, sondeur et données de navigation — sans compromis de lisibilité.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile, format ultra-large panoramique" },
+      { label: "Sondeur", value: "Actif large bande intégré" },
+      { label: "Affichage", value: "Multi-fenêtres simultanées (cartographie, sondeur, instruments)" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+  {
+    slug: "simrad-nsx-ultrawide-3015",
+    name: "Simrad NSX Ultrawide 3015",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSX ULTRAWIDE",
+    shortDescription: "Traceur multifonction 15 pouces au format ultra-large, écran tactile",
+    description:
+      "Le NSX Ultrawide 3015 est le plus grand écran de la gamme NSX, au format panoramique. Il permet d'afficher simultanément cartographie, sondeur et instruments sur une seule dalle tactile, un atout pour le poste de barre des unités de pêche hauturière.",
+    specs: [
+      { label: "Écran", value: "15 pouces tactile, format ultra-large panoramique" },
+      { label: "Sondeur", value: "Actif large bande intégré" },
+      { label: "Affichage", value: "Multi-fenêtres simultanées (cartographie, sondeur, instruments)" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+
+  // --- Simrad — Gamme NSS evo3 (professionnelle) --------------------------
+  {
+    slug: "simrad-nss-7-evo3",
+    name: "Simrad NSS 7 EVO 3",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS EVO 3",
+    shortDescription: "Traceur multifonction professionnel 7 pouces, écran SolarMAX HD",
+    description:
+      "Le NSS 7 evo3 associe un écran SolarMAX HD lisible en plein soleil à un sondeur large bande intégré, avec une compatibilité complète avec l'écosystème Simrad — radars Halo, pilotes automatiques et sondes StructureScan. Une base solide pour équiper un poste de barre professionnel.",
+    specs: [
+      { label: "Écran", value: "7 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan" },
+      { label: "Cartographie", value: "C-MAP, compatible cartes SD" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+
+  // --- Simrad — Gamme NSS evo3S (processeur renforcé) ---------------------
+  {
+    slug: "simrad-nss-9-evo3s",
+    name: "Simrad NSS 9 EVO 3S",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS EVO 3S",
+    shortDescription: "Traceur multifonction professionnel 9 pouces, processeur renforcé",
+    description:
+      "Le NSS 9 evo3S reprend l'écran SolarMAX HD de la gamme evo3 avec un processeur plus puissant et des connectiques élargies, pour intégrer davantage de capteurs et de sources vidéo au poste de barre.",
+    specs: [
+      { label: "Écran", value: "9 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D" },
+      { label: "Connectivité", value: "Ethernet, NMEA 2000, ports vidéo additionnels" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+  {
+    slug: "simrad-nss-12-evo3s",
+    name: "Simrad NSS 12 EVO 3S",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS EVO 3S",
+    shortDescription: "Traceur multifonction professionnel 12 pouces, processeur renforcé",
+    description:
+      "Le NSS 12 evo3S offre une plus grande surface d'affichage pour exploiter pleinement la cartographie et le sondeur large bande, avec le processeur renforcé et les connectiques élargies de la gamme evo3S.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D" },
+      { label: "Connectivité", value: "Ethernet, NMEA 2000, ports vidéo additionnels" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+  {
+    slug: "simrad-nss-16-evo3s",
+    name: "Simrad NSS 16 EVO 3S",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS EVO 3S",
+    shortDescription: "Traceur multifonction professionnel haut de gamme, écran 16 pouces",
+    description:
+      "Le NSS 16 evo3S est le modèle amiral de la gamme evo3S, avec un très grand écran SolarMAX HD pour une lecture précise de la cartographie et des images sonar à plusieurs à bord. Il centralise le contrôle du poste de barre pour les unités de pêche hauturière.",
+    specs: [
+      { label: "Écran", value: "16 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D" },
+      { label: "Connectivité", value: "Ethernet, NMEA 2000, ports vidéo additionnels" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+
+  // --- Simrad — Gamme NSS4 (nouvelle génération) ---------------------------
+  {
+    slug: "simrad-nss4-10",
+    name: "Simrad NSS4-10",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS 4",
+    shortDescription: "Traceur multifonction nouvelle génération, écran tactile 10 pouces",
+    description:
+      "Le NSS4-10 inaugure la nouvelle génération d'interface Simrad, avec un écran SolarMAX HD et une intégration étendue à l'ensemble de l'écosystème Simrad — radars Halo, sondes StructureScan et pilotes automatiques — pour un poste de barre professionnel évolutif.",
+    specs: [
+      { label: "Écran", value: "10 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D et Forward Scan" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+  {
+    slug: "simrad-nss4-12",
+    name: "Simrad NSS4-12",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS 4",
+    shortDescription: "Traceur multifonction nouvelle génération, écran tactile 12 pouces",
+    description:
+      "Le NSS4-12 offre une plus grande surface d'affichage pour la nouvelle génération d'interface Simrad, avec une intégration étendue à l'ensemble de l'écosystème Simrad — radars Halo, sondes StructureScan et pilotes automatiques.",
+    specs: [
+      { label: "Écran", value: "12 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D et Forward Scan" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
     ],
   },
   {

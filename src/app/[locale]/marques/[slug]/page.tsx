@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { prisma } from "@/lib/prisma";
 import { BRAND_DIRECTORY, brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-directory";
+import { groupByProductLine } from "@/lib/product-grouping";
 import ProductCard from "@/components/shop/ProductCard";
 
 export function generateStaticParams() {
@@ -73,11 +74,32 @@ export default async function BrandPage({
       </div>
 
       {brand.products.length > 0 ? (
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {brand.products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        (() => {
+          const { groups, ungrouped } = groupByProductLine(brand.products);
+          return (
+            <div className="mt-10 space-y-10">
+              {groups.map(({ line, products: lineProducts }) => (
+                <div key={line}>
+                  <h2 className="text-lg font-semibold text-primary">
+                    {tShop("productLine", { line })}
+                  </h2>
+                  <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {lineProducts.map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+              {ungrouped.length > 0 && (
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {ungrouped.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })()
       ) : (
         <p className="mt-12 rounded-lg border border-border bg-surface-alt px-6 py-10 text-center text-text-muted">
           {tShop("noResults")}

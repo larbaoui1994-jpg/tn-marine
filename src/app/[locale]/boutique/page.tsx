@@ -4,54 +4,10 @@ import { routing } from "@/i18n/routing";
 import { prisma } from "@/lib/prisma";
 import ProductCard from "@/components/shop/ProductCard";
 import CatalogFilters from "@/components/shop/CatalogFilters";
+import { groupByProductLine } from "@/lib/product-grouping";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
-}
-
-// Ordre d'affichage des sous-gammes lorsque le catalogue est filtré par
-// marque et que les produits renseignent `productLine` (ex. Lowrance
-// Sondeurs : Eagle → Elite FS → HDS PRO, du plus accessible au plus haut
-// de gamme).
-const PRODUCT_LINE_ORDER = ["Eagle", "Elite FS", "HDS PRO"];
-
-// Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
-// "Elite FS 12" → 12), pour trier chaque gamme du plus petit écran au plus
-// grand plutôt que par ordre alphabétique.
-function modelSizeFromName(name: string): number {
-  const matches = name.match(/\d+/g);
-  return matches ? parseInt(matches[matches.length - 1], 10) : 0;
-}
-
-function groupByProductLine<T extends { productLine: string | null; name: string }>(
-  products: T[],
-) {
-  const byLine = new Map<string, T[]>();
-  const ungrouped: T[] = [];
-
-  for (const product of products) {
-    if (product.productLine) {
-      const list = byLine.get(product.productLine) ?? [];
-      list.push(product);
-      byLine.set(product.productLine, list);
-    } else {
-      ungrouped.push(product);
-    }
-  }
-
-  const orderedLines = [...byLine.keys()].sort(
-    (a, b) => PRODUCT_LINE_ORDER.indexOf(a) - PRODUCT_LINE_ORDER.indexOf(b),
-  );
-
-  return {
-    groups: orderedLines.map((line) => ({
-      line,
-      products: [...byLine.get(line)!].sort(
-        (a, b) => modelSizeFromName(a.name) - modelSizeFromName(b.name),
-      ),
-    })),
-    ungrouped,
-  };
 }
 
 export async function generateMetadata({
@@ -103,7 +59,7 @@ export default async function ShopPage({
       </div>
 
       {products.length > 0 ? (
-        marque === "lowrance" ? (
+        marque ? (
           (() => {
             const { groups, ungrouped } = groupByProductLine(products);
             return (
