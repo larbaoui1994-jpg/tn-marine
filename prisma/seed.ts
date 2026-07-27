@@ -463,37 +463,8 @@ const products: ProductSeed[] = [
       { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
     ],
   },
-  {
-    slug: "simrad-halo-20-plus",
-    name: "Simrad Halo20+",
-    brand: "simrad",
-    category: "radars",
-    shortDescription: "Radar à balayage automatique, portée jusqu'à 36 milles nautiques",
-    description:
-      "Le Halo20+ est un radar à impulsions compact combinant les technologies pulse compression courte, moyenne et longue portée pour une détection fiable, de la navigation côtière à la haute mer.",
-    specs: [
-      { label: "Portée", value: "Jusqu'à 36 milles nautiques" },
-      { label: "Technologie", value: "Pulse compression multi-portée" },
-      { label: "Rotation", value: "24 à 60 tr/min selon le mode" },
-      { label: "Zone de garde", value: "MARPA, alarme anticollision" },
-    ],
-  },
-  {
-    slug: "simrad-ap44",
-    name: "Simrad AP44",
-    brand: "simrad",
-    category: "pilotes-automatiques",
-    shortDescription:
-      "Écran de contrôle pour pilote automatique, interface tactile et boutons physiques",
-    description:
-      "L'AP44 pilote les systèmes de pilotage automatique Simrad avec une interface tactile combinée à des commandes physiques utilisables même par mer formée. Compatible avec les réseaux NMEA 2000 et SimNet.",
-    specs: [
-      { label: "Écran", value: "4,1 pouces tactile + boutons physiques" },
-      { label: "Réseau", value: "NMEA 2000, SimNet" },
-      { label: "Étanchéité", value: "IPX7" },
-      { label: "Modes", value: "Suivi de route, de cap et de vent" },
-    ],
-  },
+  // Halo20+ (radar) et AP44 (pilote automatique) retirés temporairement
+  // du catalogue à la demande de TN Marine — seront réajoutés plus tard.
 
   // --- Garmin ---------------------------------------------------------
   {
