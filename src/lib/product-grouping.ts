@@ -14,6 +14,13 @@ const PRODUCT_LINE_ORDER = [
   "NSS EVO 3",
   "NSS EVO 3S",
   "NSS 4",
+  "Stéréos & Radios",
+  "HP XS Sport",
+  "HP Wake Tower Signature",
+  "HP Apollo",
+  "Amplificateurs Signature",
+  "Amplificateurs Apollo",
+  "Accessoires",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
