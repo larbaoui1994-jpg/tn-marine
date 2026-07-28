@@ -815,6 +815,42 @@ const products: ProductSeed[] = [
     ],
   },
 
+  // --- Fusion — Gamme Tower XS Sport ----------------------------------------
+  {
+    slug: "fusion-xs-flt652-white",
+    name: "Fusion Tower XS Sport 6.5\" Blanc",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "HP Tower XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-flt652-white-${i + 1}.png`),
+    shortDescription: "Haut-parleur wake tower 6,5 pouces, 200 W, blanc, LED RVB",
+    description:
+      "Le haut-parleur Tower XS Sport 6,5 pouces en finition blanche, 200 W avec éclairage LED RVB intégré, pour équiper une wake tower à un tarif plus accessible que la gamme Signature.",
+    specs: [
+      { label: "Taille", value: "6,5 pouces" },
+      { label: "Puissance", value: "200 W" },
+      { label: "Montage", value: "Wake tower" },
+      { label: "Finition", value: "Blanc, LED RVB" },
+    ],
+  },
+  {
+    slug: "fusion-xs-flt652-black",
+    name: "Fusion Tower XS Sport 6.5\" Noir",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "HP Tower XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-flt652-black-${i + 1}.png`),
+    shortDescription: "Haut-parleur wake tower 6,5 pouces, 200 W, noir, LED RVB",
+    description:
+      "Version noire du haut-parleur Tower XS Sport 6,5 pouces, 200 W avec éclairage LED RVB intégré, pour une finition discrète sur la wake tower.",
+    specs: [
+      { label: "Taille", value: "6,5 pouces" },
+      { label: "Puissance", value: "200 W" },
+      { label: "Montage", value: "Wake tower" },
+      { label: "Finition", value: "Noir, LED RVB" },
+    ],
+  },
+
   // --- Fusion — Gamme HP Wake Tower Signature ------------------------------
   {
     slug: "fusion-signature-flt653-white",
@@ -867,6 +903,22 @@ const products: ProductSeed[] = [
     ],
   },
   {
+    slug: "fusion-apollo-fl65-grey",
+    name: "Fusion HP Apollo 6.5\" Gris",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl65-grey-${i + 1}.png`),
+    shortDescription: "Haut-parleur Apollo 6,5 pouces, 300 W, gris, avec LEDs",
+    description:
+      "Version grise du haut-parleur Apollo 6,5 pouces, 300 W avec éclairage LED intégré, pour s'harmoniser avec les finitions plus sombres du pont.",
+    specs: [
+      { label: "Taille", value: "6,5 pouces" },
+      { label: "Puissance", value: "300 W" },
+      { label: "Finition", value: "Gris, avec LEDs" },
+    ],
+  },
+  {
     slug: "fusion-apollo-fl77-white",
     name: "Fusion HP Apollo 7.7\" Blanc",
     brand: "fusion",
@@ -895,6 +947,38 @@ const products: ProductSeed[] = [
     specs: [
       { label: "Taille", value: "7,7 pouces" },
       { label: "Puissance", value: "400 W" },
+      { label: "Finition", value: "Gris, avec LEDs" },
+    ],
+  },
+  {
+    slug: "fusion-apollo-fl88-white",
+    name: "Fusion HP Apollo 8.8\" Blanc",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl88-white-${i + 1}.png`),
+    shortDescription: "Haut-parleur Apollo 8,8 pouces, 520 W, blanc, avec LEDs",
+    description:
+      "Le haut-parleur Apollo 8,8 pouces est le plus puissant de la gamme, avec 520 W et un éclairage LED intégré, pour une sonorisation généreuse en finition blanche.",
+    specs: [
+      { label: "Taille", value: "8,8 pouces" },
+      { label: "Puissance", value: "520 W" },
+      { label: "Finition", value: "Blanc, avec LEDs" },
+    ],
+  },
+  {
+    slug: "fusion-apollo-fl88-grey",
+    name: "Fusion HP Apollo 8.8\" Gris",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl88-grey-${i + 1}.png`),
+    shortDescription: "Haut-parleur Apollo 8,8 pouces, 520 W, gris, avec LEDs",
+    description:
+      "Version grise du haut-parleur Apollo 8,8 pouces, 520 W avec éclairage LED intégré, pour s'harmoniser avec les finitions plus sombres du pont.",
+    specs: [
+      { label: "Taille", value: "8,8 pouces" },
+      { label: "Puissance", value: "520 W" },
       { label: "Finition", value: "Gris, avec LEDs" },
     ],
   },
@@ -938,6 +1022,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Signature",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-signature-da4-1400-${i + 1}.png`),
     shortDescription: "Amplificateur marinisé 4 voies, Classe D, 1400 W, pour 4 HP",
     description:
       "L'amplificateur Signature 4 voies délivre 1400 W en Classe D pour alimenter jusqu'à 4 haut-parleurs, avec un boîtier marinisé résistant aux conditions embarquées.",

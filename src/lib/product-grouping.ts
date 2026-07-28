@@ -16,6 +16,7 @@ const PRODUCT_LINE_ORDER = [
   "NSS 4",
   "Stéréos & Radios",
   "HP XS Sport",
+  "HP Tower XS Sport",
   "HP Wake Tower Signature",
   "HP Apollo",
   "Amplificateurs Signature",
