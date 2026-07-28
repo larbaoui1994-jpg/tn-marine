@@ -251,6 +251,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "GO",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-go7-${i + 1}.png`),
     shortDescription: "Traceur/sondeur compact 7 pouces, écran tactile lisible au soleil",
     description:
       "Le GO7 associe cartographie et sondeur sur un format compact taillé pour les petites embarcations. Son écran tactile résiste aux embruns et reste lisible en plein soleil, avec une cartographie C-MAP intégrée prête à l'emploi dès la sortie du carton.",
@@ -267,6 +268,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "GO",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-go9-${i + 1}.png`),
     shortDescription: "Traceur/sondeur compact 9 pouces, écran tactile lisible au soleil",
     description:
       "Le GO9 reprend la simplicité d'utilisation de la gamme GO sur un écran plus grand, pour une lecture confortable de la cartographie et du sondeur au poste de barre. Sa cartographie C-MAP intégrée et son sondeur CHIRP en font une solution accessible pour la pêche côtière.",
