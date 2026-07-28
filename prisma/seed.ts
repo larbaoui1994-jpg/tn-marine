@@ -382,6 +382,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS EVO 3",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-nss-7-evo3-${i + 1}.png`),
     shortDescription: "Traceur multifonction professionnel 7 pouces, écran SolarMAX HD",
     description:
       "Le NSS 7 evo3 associe un écran SolarMAX HD lisible en plein soleil à un sondeur large bande intégré, avec une compatibilité complète avec l'écosystème Simrad — radars Halo, pilotes automatiques et sondes StructureScan. Une base solide pour équiper un poste de barre professionnel.",
@@ -400,6 +401,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS EVO 3S",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-nss-9-evo3s-${i + 1}.png`),
     shortDescription: "Traceur multifonction professionnel 9 pouces, processeur renforcé",
     description:
       "Le NSS 9 evo3S reprend l'écran SolarMAX HD de la gamme evo3 avec un processeur plus puissant et des connectiques élargies, pour intégrer davantage de capteurs et de sources vidéo au poste de barre.",
@@ -416,6 +418,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS EVO 3S",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-nss-12-evo3s-${i + 1}.png`),
     shortDescription: "Traceur multifonction professionnel 12 pouces, processeur renforcé",
     description:
       "Le NSS 12 evo3S offre une plus grande surface d'affichage pour exploiter pleinement la cartographie et le sondeur large bande, avec le processeur renforcé et les connectiques élargies de la gamme evo3S.",
@@ -432,6 +435,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS EVO 3S",
+    images: Array.from({ length: 4 }, (_, i) => `/products/simrad-nss-16-evo3s-${i + 1}.png`),
     shortDescription: "Traceur multifonction professionnel haut de gamme, écran 16 pouces",
     description:
       "Le NSS 16 evo3S est le modèle amiral de la gamme evo3S, avec un très grand écran SolarMAX HD pour une lecture précise de la cartographie et des images sonar à plusieurs à bord. Il centralise le contrôle du poste de barre pour les unités de pêche hauturière.",
