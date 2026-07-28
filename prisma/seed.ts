@@ -454,6 +454,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS 4",
+    images: Array.from({ length: 9 }, (_, i) => `/products/simrad-nss4-10-${i + 1}.png`),
     shortDescription: "Traceur multifonction nouvelle génération, écran tactile 10 pouces",
     description:
       "Le NSS4-10 inaugure la nouvelle génération d'interface Simrad, avec un écran SolarMAX HD et une intégration étendue à l'ensemble de l'écosystème Simrad — radars Halo, sondes StructureScan et pilotes automatiques — pour un poste de barre professionnel évolutif.",
@@ -470,6 +471,7 @@ const products: ProductSeed[] = [
     brand: "simrad",
     category: "gps-traceurs",
     productLine: "NSS 4",
+    images: Array.from({ length: 7 }, (_, i) => `/products/simrad-nss4-12-${i + 1}.png`),
     shortDescription: "Traceur multifonction nouvelle génération, écran tactile 12 pouces",
     description:
       "Le NSS4-12 offre une plus grande surface d'affichage pour la nouvelle génération d'interface Simrad, avec une intégration étendue à l'ensemble de l'écosystème Simrad — radars Halo, sondes StructureScan et pilotes automatiques.",
@@ -478,6 +480,23 @@ const products: ProductSeed[] = [
       { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D et Forward Scan" },
       { label: "Cartographie", value: "C-MAP dernière génération" },
       { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad" },
+    ],
+  },
+  {
+    slug: "simrad-nss4-16",
+    name: "Simrad NSS4-16",
+    brand: "simrad",
+    category: "gps-traceurs",
+    productLine: "NSS 4",
+    images: Array.from({ length: 8 }, (_, i) => `/products/simrad-nss4-16-${i + 1}.png`),
+    shortDescription: "Traceur multifonction nouvelle génération, grand écran tactile 16 pouces",
+    description:
+      "Le NSS4-16 est le plus grand modèle de la nouvelle génération d'interface Simrad, avec un vaste écran SolarMAX HD pour afficher simultanément cartographie, sondeur et caméras IP. Une intégration étendue à l'ensemble de l'écosystème Simrad — radars Halo, sondes StructureScan et pilotes automatiques — pour un poste de barre professionnel complet.",
+    specs: [
+      { label: "Écran", value: "16 pouces tactile, SolarMAX HD" },
+      { label: "Sondeur", value: "Large bande intégré, compatible StructureScan 3D et Forward Scan" },
+      { label: "Cartographie", value: "C-MAP dernière génération" },
+      { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad, caméras IP" },
     ],
   },
   // Halo20+ (radar) et AP44 (pilote automatique) retirés temporairement
