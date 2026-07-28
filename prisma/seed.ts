@@ -646,6 +646,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-ra800-${i + 1}.png`),
     shortDescription: "Système audio écran tactile 4,3 pouces, 4x40 W, IPX7, Wi-Fi",
     description:
       "L'Apollo RA800 pilote la sono du bord depuis un écran tactile couleur 4,3 pouces lisible en plein soleil. Sa connectivité Wi-Fi et Bluetooth permet le streaming et le contrôle via l'application Fusion-Link, avec une façade étanche IPX7 pour résister aux embruns.",
@@ -662,6 +663,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-ra670-${i + 1}.png`),
     shortDescription: "Système audio écran LCD 2,7 pouces, 4x70 W",
     description:
       "L'Apollo RA670 associe un écran LCD 2,7 pouces à une puissance de sortie de 4x70 W, pour une sonorisation généreuse sur les unités de taille moyenne. Compatible Bluetooth et application Fusion-Link pour un contrôle à distance.",
@@ -677,6 +679,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-ra210-${i + 1}.png`),
     shortDescription: "Radio marine DSP, compatible NMEA 2000",
     description:
       "La RA210 embarque un processeur de signal numérique (DSP) pour un rendu audio optimisé et se connecte au réseau NMEA 2000 du bord, pour un contrôle centralisé depuis les instruments compatibles.",
@@ -691,6 +694,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-ra70n-${i + 1}.png`),
     shortDescription: "Lecteur stéréo et radio marine, compatible NMEA 2000",
     description:
       "Le RA70N combine lecteur stéréo et radio marine dans un format compact, avec intégration NMEA 2000 pour un contrôle direct depuis l'écran de navigation. Une solution fiable et accessible pour équiper un poste de pilotage.",
@@ -705,6 +709,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-ra60-${i + 1}.png`),
     shortDescription: "Lecteur stéréo et radio marine, IPX7, Bluetooth",
     description:
       "Le RA60 est un lecteur stéréo radio marine étanche IPX7 avec connectivité Bluetooth intégrée, pensé comme une solution audio accessible et robuste pour les petites et moyennes embarcations.",
@@ -719,6 +724,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Stéréos & Radios",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-bb100-${i + 1}.png`),
     shortDescription: "Système audio compact contrôlable à distance via NMEA 2000",
     description:
       "Le BlackBox BB100 déporte l'électronique audio dans un boîtier compact à installer hors de vue, contrôlable à distance depuis un traceur compatible NMEA 2000 ou l'application Fusion-Link — idéal pour libérer de l'espace au poste de barre.",
@@ -735,6 +741,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-f65-sport-${i + 1}.png`),
     shortDescription: "Haut-parleur 6,5 pouces, 200 W, gris et blanc, sans LED",
     description:
       "Le haut-parleur XS Sport 6,5 pouces délivre 200 W avec une grille interchangeable gris et blanc, pour une intégration esthétique au pont ou au cockpit. Conçu pour résister aux UV et aux embruns.",
@@ -750,6 +757,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-fl65-sport-${i + 1}.png`),
     shortDescription: "Haut-parleur 6,5 pouces, 200 W, gris et blanc, avec LED",
     description:
       "Version éclairée du haut-parleur XS Sport 6,5 pouces, avec LED intégrée pour une ambiance lumineuse à bord en plus des 200 W de puissance audio.",
@@ -765,6 +773,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-f77-sport-${i + 1}.png`),
     shortDescription: "Haut-parleur 7,7 pouces, 240 W, gris et blanc, sans LED",
     description:
       "Le haut-parleur XS Sport 7,7 pouces monte en puissance à 240 W pour une sonorisation plus large, avec la même grille interchangeable gris et blanc que le reste de la gamme.",
@@ -780,6 +789,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-fl77-sport-${i + 1}.png`),
     shortDescription: "Haut-parleur 7,7 pouces, 240 W, gris et blanc, avec LED",
     description:
       "Version éclairée du haut-parleur XS Sport 7,7 pouces, associant 240 W de puissance à un éclairage LED intégré pour le confort visuel à bord de nuit.",
@@ -795,6 +805,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP XS Sport",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-xs-sl10-sport-${i + 1}.png`),
     shortDescription: "Subwoofer 10 pouces, 600 W",
     description:
       "Le subwoofer XS Sport 10 pouces complète la gamme avec 600 W de puissance, pour renforcer les basses de l'installation audio marine sans sacrifier la résistance aux conditions embarquées.",
@@ -811,6 +822,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Wake Tower Signature",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-signature-flt653-white-${i + 1}.png`),
     shortDescription: "Haut-parleur wake tower 6,5 pouces, blanc, avec LEDs",
     description:
       "Conçu pour un montage sur wake tower, ce haut-parleur Signature Série 3i 6,5 pouces en finition blanche intègre un éclairage LED, pour une sonorisation dirigée vers l'eau lors des activités de wakeboard et de ski nautique.",
@@ -826,6 +838,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Wake Tower Signature",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-signature-flt653-black-${i + 1}.png`),
     shortDescription: "Haut-parleur wake tower 6,5 pouces, noir, avec LEDs",
     description:
       "Version noire du haut-parleur Signature Série 3i 6,5 pouces pour montage sur wake tower, avec éclairage LED intégré et une finition discrète adaptée aux structures sombres.",
@@ -843,6 +856,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl65-white-${i + 1}.png`),
     shortDescription: "Haut-parleur Apollo 6,5 pouces, 300 W, blanc, avec LEDs",
     description:
       "Le haut-parleur Apollo 6,5 pouces délivre 300 W avec un éclairage LED intégré, en finition blanche. Le haut de gamme Fusion pour une sonorisation puissante et une ambiance lumineuse personnalisable.",
@@ -858,6 +872,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl77-white-${i + 1}.png`),
     shortDescription: "Haut-parleur Apollo 7,7 pouces, 400 W, blanc, avec LEDs",
     description:
       "Le haut-parleur Apollo 7,7 pouces monte à 400 W pour une sonorisation plus ample, avec éclairage LED intégré et finition blanche assortie au reste de la gamme Apollo.",
@@ -873,6 +888,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-fl77-grey-${i + 1}.png`),
     shortDescription: "Haut-parleur Apollo 7,7 pouces, 400 W, gris, avec LEDs",
     description:
       "Version grise du haut-parleur Apollo 7,7 pouces, 400 W avec éclairage LED intégré, pour s'harmoniser avec les finitions plus sombres du pont.",
@@ -888,6 +904,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-sl10-white-${i + 1}.png`),
     shortDescription: "Subwoofer Apollo 10 pouces, 600 W, blanc, avec LEDs",
     description:
       "Le subwoofer Apollo 10 pouces en finition blanche complète la gamme haut de gamme Fusion avec 600 W de puissance et un éclairage LED intégré.",
@@ -903,6 +920,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "HP Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-sl10-grey-${i + 1}.png`),
     shortDescription: "Subwoofer Apollo 10 pouces, 600 W, gris, avec LEDs",
     description:
       "Version grise du subwoofer Apollo 10 pouces, 600 W avec éclairage LED intégré, pour compléter une installation Apollo en finition gris.",
@@ -935,6 +953,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Signature",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-signature-da5-1600-${i + 1}.png`),
     shortDescription: "Amplificateur marinisé 5 voies, Classe D, 1600 W",
     description:
       "L'amplificateur Signature 5 voies offre 1600 W en Classe D, une voie supplémentaire dédiée au caisson de basses pour une installation audio complète.",
@@ -949,6 +968,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Signature",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-signature-24v-da6-2000-${i + 1}.png`),
     shortDescription: "Amplificateur marinisé 6 voies, 24 volts, Classe D, 2000 W",
     description:
       "Version 24 volts de l'amplificateur Signature 6 voies, taillée pour les installations électriques 24 V des unités professionnelles, avec 2000 W de puissance en Classe D.",
@@ -966,6 +986,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-ap6-1800-${i + 1}.png`),
     shortDescription: "Amplificateur marin Apollo 6 canaux, Classe D, 1800 W",
     description:
       "L'amplificateur Apollo 6 canaux délivre 1800 W en Classe D pour une installation audio marine haut de gamme, avec la robustesse et la finition de la série Apollo.",
@@ -980,6 +1001,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-ap8-2400-${i + 1}.png`),
     shortDescription: "Amplificateur marin Apollo 8 canaux, Classe D, 2400 W",
     description:
       "Le haut de gamme des amplificateurs Apollo : 8 canaux et 2400 W en Classe D pour piloter une installation audio marine complète sur plusieurs zones.",
@@ -994,6 +1016,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Amplificateurs Apollo",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-apollo-ap1-2000-${i + 1}.png`),
     shortDescription: "Amplificateur marin Apollo monobloc, Classe D, 2000 W",
     description:
       "Amplificateur monobloc Apollo dédié, délivrant 2000 W en Classe D — idéal pour alimenter un caisson de basses dans une installation audio marine Apollo.",
@@ -1010,6 +1033,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Accessoires",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-led-rgb-controller-${i + 1}.png`),
     shortDescription: "Boîtier de commande pour éclairage LED RGB Fusion",
     description:
       "Ce boîtier de commande pilote l'éclairage LED RGB des haut-parleurs et subwoofers Fusion compatibles, pour synchroniser les couleurs et les effets lumineux à bord.",
@@ -1023,6 +1047,7 @@ const products: ProductSeed[] = [
     brand: "fusion",
     category: "audio-marine",
     productLine: "Accessoires",
+    images: Array.from({ length: 2 }, (_, i) => `/products/fusion-led-crgbw-controller-${i + 1}.png`),
     shortDescription: "Boîtier de commande pour éclairage LED CRGBW Fusion",
     description:
       "Variante CRGBW du boîtier de commande Fusion, avec un canal blanc dédié en complément du RGB pour un éclairage LED plus nuancé sur les haut-parleurs et subwoofers compatibles.",
