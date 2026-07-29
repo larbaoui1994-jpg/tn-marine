@@ -26,8 +26,10 @@ const PRODUCT_LINE_ORDER = [
   "Cruiser 200",
   "Ultra 300",
   "Micron 350",
+  "Interspeed 6400",
   "Antifouling hélices & embases",
   "Primaires",
+  "Finitions",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,

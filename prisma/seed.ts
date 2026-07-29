@@ -1468,24 +1468,94 @@ const products: ProductSeed[] = [
 
   // --- International — Antifouling hélices & embases ---------------------
   {
-    slug: "international-trilux-prop-o-drev",
-    name: "International Trilux Prop-O-Drev",
+    slug: "international-trilux-prop-o-drev-gris",
+    name: "International Trilux Prop-O-Drev Gris",
     brand: "international",
     category: "peintures-antifouling",
     productLine: "Antifouling hélices & embases",
     images: ["/products/international-trilux-prop-o-drev.png"],
-    shortDescription: "Antifouling aérosol matrice dure pour hélices, Z-Drive et embases hors-bord",
+    shortDescription: "Antifouling aérosol matrice dure pour hélices, Z-Drive et embases hors-bord, gris",
     description:
       "Trilux Prop-O-Drev est un antifouling à matrice dure spécialement formulé pour les hélices, Z-Drive et embases de moteur hors-bord, en aluminium, acier inoxydable ou alliage. Son format aérosol facilite l'application sur les zones difficiles d'accès.",
     specs: [
       { label: "Type", value: "Matrice dure, aérosol" },
-      { label: "Couleurs", value: "Gris, Noir" },
+      { label: "Couleur", value: "Gris" },
+      { label: "Conditionnement", value: "500 ml" },
+      { label: "Usage", value: "Hélices, Z-Drive, embases hors-bord" },
+    ],
+  },
+  {
+    slug: "international-trilux-prop-o-drev-noir",
+    name: "International Trilux Prop-O-Drev Noir",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Antifouling hélices & embases",
+    images: ["/products/international-trilux-prop-o-drev.png"],
+    shortDescription: "Antifouling aérosol matrice dure pour hélices, Z-Drive et embases hors-bord, noir",
+    description:
+      "Trilux Prop-O-Drev est un antifouling à matrice dure spécialement formulé pour les hélices, Z-Drive et embases de moteur hors-bord, en aluminium, acier inoxydable ou alliage. Son format aérosol facilite l'application sur les zones difficiles d'accès.",
+    specs: [
+      { label: "Type", value: "Matrice dure, aérosol" },
+      { label: "Couleur", value: "Noir" },
       { label: "Conditionnement", value: "500 ml" },
       { label: "Usage", value: "Hélices, Z-Drive, embases hors-bord" },
     ],
   },
 
+  // --- International — Gamme Interspeed 6400 ------------------------------
+  {
+    slug: "international-interspeed-6400-noir",
+    name: "International Interspeed 6400 Noir",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Interspeed 6400",
+    images: ["/products/international-interspeed-6400.png"],
+    shortDescription: "Antifouling professionnel CDP semi-dur autopolissant, noir",
+    description:
+      "Interspeed 6400 est un antifouling professionnel à polymère à déplétion contrôlée (CDP), semi-dur et autopolissant, conçu pour la construction neuve, l'entretien et la réparation, pour des périodes de service allant jusqu'à 36 mois.",
+    specs: [
+      { label: "Type", value: "CDP semi-dur, autopolissant" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "5 L, 20 L" },
+      { label: "Usage", value: "Construction neuve, entretien professionnel" },
+    ],
+  },
+  {
+    slug: "international-interspeed-6400-bleu",
+    name: "International Interspeed 6400 Bleu",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Interspeed 6400",
+    images: ["/products/international-interspeed-6400.png"],
+    shortDescription: "Antifouling professionnel CDP semi-dur autopolissant, bleu",
+    description:
+      "Interspeed 6400 est un antifouling professionnel à polymère à déplétion contrôlée (CDP), semi-dur et autopolissant, conçu pour la construction neuve, l'entretien et la réparation, pour des périodes de service allant jusqu'à 36 mois.",
+    specs: [
+      { label: "Type", value: "CDP semi-dur, autopolissant" },
+      { label: "Couleur", value: "Bleu" },
+      { label: "Conditionnement", value: "5 L" },
+      { label: "Usage", value: "Construction neuve, entretien professionnel" },
+    ],
+  },
+
   // --- International — Primaires ------------------------------------------
+  {
+    slug: "international-intertuf-203-aluminium",
+    name: "International Intertuf 203 Aluminium",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Primaires",
+    images: ["/products/international-intertuf-203.png"],
+    shortDescription: "Primaire anticorrosif vinylique monocomposant, aluminium, sans brai",
+    description:
+      "Intertuf 203 est un primaire anticorrosif vinylique monocomposant sans brai, utilisable au-dessus comme au-dessous de la ligne de flottaison, ou comme isolant sur d'anciens antifoulings aux sels d'étain (TBT). Applicable à basse température jusqu'à -5°C.",
+    specs: [
+      { label: "Type", value: "Primaire vinylique monocomposant, sans brai" },
+      { label: "Couleur", value: "Aluminium" },
+      { label: "Référence", value: "JVA202" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet, jusqu'à -5°C" },
+    ],
+  },
   {
     slug: "international-primocon",
     name: "International Primocon",
@@ -1518,6 +1588,41 @@ const products: ProductSeed[] = [
       { label: "Conditionnement", value: "0,75 L, 2,5 L, 5 L" },
       { label: "Support", value: "Polyester, acier, aluminium, bois, ferrociment" },
       { label: "Application", value: "Brosse ou rouleau" },
+    ],
+  },
+  // --- International — Finitions -------------------------------------------
+  {
+    slug: "international-interlac-665-blanche",
+    name: "International Interlac 665 Blanche",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Finitions",
+    images: ["/products/international-interlac-665-blanche.png"],
+    shortDescription: "Finition émail brillant alkyde monocomposante, blanche, œuvres mortes",
+    description:
+      "Interlac 665 est une peinture de finition émail brillant alkyde monocomposante, simple d'emploi, pour les œuvres mortes, superstructures et intérieurs. Utilisable au neuvage, en entretien ou en réparation.",
+    specs: [
+      { label: "Type", value: "Émail alkyde monocomposant, brillant" },
+      { label: "Couleur", value: "Blanche" },
+      { label: "Conditionnement", value: "0,75 L, 2,5 L, 5 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet" },
+    ],
+  },
+  {
+    slug: "international-interlac-665-noir",
+    name: "International Interlac 665 Noir",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Finitions",
+    images: ["/products/international-interlac-665-noir.png"],
+    shortDescription: "Finition émail brillant alkyde monocomposante, noire, œuvres mortes",
+    description:
+      "Interlac 665 est une peinture de finition émail brillant alkyde monocomposante, simple d'emploi, pour les œuvres mortes, superstructures et intérieurs. Utilisable au neuvage, en entretien ou en réparation.",
+    specs: [
+      { label: "Type", value: "Émail alkyde monocomposant, brillant" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "0,75 L, 2,5 L, 5 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet" },
     ],
   },
   {
