@@ -1186,19 +1186,321 @@ const products: ProductSeed[] = [
     ],
   },
 
-  // --- International -------------------------------------------------
+  // --- International — Gamme Boatguard 100 ----------------------------
   {
-    slug: "international-micron-350",
-    name: "International Micron 350",
+    slug: "international-boatguard-100-noir-075l",
+    name: "International Boatguard 100 Noir 0,75L",
     brand: "international",
     category: "peintures-antifouling",
-    shortDescription: "Antifouling matrice dure haute performance, usage professionnel et plaisance",
+    productLine: "Boatguard 100",
+    images: ["/products/international-boatguard-100.png"],
+    shortDescription: "Antifouling économique érodable, noir, bidon 0,75L",
     description:
-      "Micron 350 est un antifouling à matrice dure offrant une protection longue durée contre les salissures marines, adapté aux coques régulièrement carénées et aux bateaux rapides.",
+      "Boatguard 100 est un antifouling économique érodable/semi-érodable, formulé pour protéger la coque contre tous les types de salissures en zones de salissures moyennes pendant toute une saison.",
     specs: [
-      { label: "Type", value: "Antifouling matrice dure" },
-      { label: "Usage", value: "Coques régulièrement carénées, bateaux rapides" },
-      { label: "Application", value: "Rouleau, pistolet ou brosse" },
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet airless" },
+    ],
+  },
+  {
+    slug: "international-boatguard-100-noir-25l",
+    name: "International Boatguard 100 Noir 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Boatguard 100",
+    images: ["/products/international-boatguard-100.png"],
+    shortDescription: "Antifouling économique érodable, noir, bidon 2,5L",
+    description:
+      "Boatguard 100 est un antifouling économique érodable/semi-érodable, formulé pour protéger la coque contre tous les types de salissures en zones de salissures moyennes pendant toute une saison.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet airless" },
+    ],
+  },
+  {
+    slug: "international-boatguard-100-navy-075l",
+    name: "International Boatguard 100 Navy 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Boatguard 100",
+    images: ["/products/international-boatguard-100.png"],
+    shortDescription: "Antifouling économique érodable, navy, bidon 0,75L",
+    description:
+      "Boatguard 100 est un antifouling économique érodable/semi-érodable, formulé pour protéger la coque contre tous les types de salissures en zones de salissures moyennes pendant toute une saison.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet airless" },
+    ],
+  },
+  {
+    slug: "international-boatguard-100-navy-25l",
+    name: "International Boatguard 100 Navy 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Boatguard 100",
+    images: ["/products/international-boatguard-100.png"],
+    shortDescription: "Antifouling économique érodable, navy, bidon 2,5L",
+    description:
+      "Boatguard 100 est un antifouling économique érodable/semi-érodable, formulé pour protéger la coque contre tous les types de salissures en zones de salissures moyennes pendant toute une saison.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet airless" },
+    ],
+  },
+
+  // --- International — Gamme Cruiser 200 --------------------------------
+  {
+    slug: "international-cruiser-200-noir-075l",
+    name: "International Cruiser 200 Noir 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Cruiser 200",
+    images: ["/products/international-cruiser-200.png"],
+    shortDescription: "Antifouling érodable polyvalent, compatible aluminium, noir, bidon 0,75L",
+    description:
+      "Cruiser 200 est un antifouling érodable polyvalent offrant une bonne protection sur tous supports, y compris l'aluminium, avec une application facile permettant des réparations rapides.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Compatibilité", value: "Coques aluminium" },
+    ],
+  },
+  {
+    slug: "international-cruiser-200-noir-25l",
+    name: "International Cruiser 200 Noir 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Cruiser 200",
+    images: ["/products/international-cruiser-200.png"],
+    shortDescription: "Antifouling érodable polyvalent, compatible aluminium, noir, bidon 2,5L",
+    description:
+      "Cruiser 200 est un antifouling érodable polyvalent offrant une bonne protection sur tous supports, y compris l'aluminium, avec une application facile permettant des réparations rapides.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Compatibilité", value: "Coques aluminium" },
+    ],
+  },
+  {
+    slug: "international-cruiser-200-navy-075l",
+    name: "International Cruiser 200 Navy 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Cruiser 200",
+    images: ["/products/international-cruiser-200.png"],
+    shortDescription: "Antifouling érodable polyvalent, compatible aluminium, navy, bidon 0,75L",
+    description:
+      "Cruiser 200 est un antifouling érodable polyvalent offrant une bonne protection sur tous supports, y compris l'aluminium, avec une application facile permettant des réparations rapides.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Compatibilité", value: "Coques aluminium" },
+    ],
+  },
+  {
+    slug: "international-cruiser-200-navy-25l",
+    name: "International Cruiser 200 Navy 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Cruiser 200",
+    images: ["/products/international-cruiser-200.png"],
+    shortDescription: "Antifouling érodable polyvalent, compatible aluminium, navy, bidon 2,5L",
+    description:
+      "Cruiser 200 est un antifouling érodable polyvalent offrant une bonne protection sur tous supports, y compris l'aluminium, avec une application facile permettant des réparations rapides.",
+    specs: [
+      { label: "Type", value: "Érodable, semi-érodable" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Compatibilité", value: "Coques aluminium" },
+    ],
+  },
+
+  // --- International — Gamme Ultra 300 -----------------------------------
+  {
+    slug: "international-ultra-300-noir-075l",
+    name: "International Ultra 300 Noir 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Ultra 300",
+    images: ["/products/international-ultra-300.png"],
+    shortDescription: "Antifouling matrice dure haute performance, noir, bidon 0,75L, usage professionnel",
+    description:
+      "Ultra 300 est l'antifouling à matrice dure le plus performant d'International, offrant une protection d'un an idéale pour les bateaux à moteur ou rapides, même dans les pires conditions de salissures. Produit réservé à l'application par un professionnel.",
+    specs: [
+      { label: "Type", value: "Matrice dure" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Usage", value: "Application par professionnel uniquement" },
+    ],
+  },
+  {
+    slug: "international-ultra-300-noir-25l",
+    name: "International Ultra 300 Noir 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Ultra 300",
+    images: ["/products/international-ultra-300.png"],
+    shortDescription: "Antifouling matrice dure haute performance, noir, bidon 2,5L, usage professionnel",
+    description:
+      "Ultra 300 est l'antifouling à matrice dure le plus performant d'International, offrant une protection d'un an idéale pour les bateaux à moteur ou rapides, même dans les pires conditions de salissures. Produit réservé à l'application par un professionnel.",
+    specs: [
+      { label: "Type", value: "Matrice dure" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Usage", value: "Application par professionnel uniquement" },
+    ],
+  },
+  {
+    slug: "international-ultra-300-navy-075l",
+    name: "International Ultra 300 Navy 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Ultra 300",
+    images: ["/products/international-ultra-300.png"],
+    shortDescription: "Antifouling matrice dure haute performance, navy, bidon 0,75L, usage professionnel",
+    description:
+      "Ultra 300 est l'antifouling à matrice dure le plus performant d'International, offrant une protection d'un an idéale pour les bateaux à moteur ou rapides, même dans les pires conditions de salissures. Produit réservé à l'application par un professionnel.",
+    specs: [
+      { label: "Type", value: "Matrice dure" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Usage", value: "Application par professionnel uniquement" },
+    ],
+  },
+  {
+    slug: "international-ultra-300-navy-25l",
+    name: "International Ultra 300 Navy 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Ultra 300",
+    images: ["/products/international-ultra-300.png"],
+    shortDescription: "Antifouling matrice dure haute performance, navy, bidon 2,5L, usage professionnel",
+    description:
+      "Ultra 300 est l'antifouling à matrice dure le plus performant d'International, offrant une protection d'un an idéale pour les bateaux à moteur ou rapides, même dans les pires conditions de salissures. Produit réservé à l'application par un professionnel.",
+    specs: [
+      { label: "Type", value: "Matrice dure" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Usage", value: "Application par professionnel uniquement" },
+    ],
+  },
+
+  // --- International — Gamme Micron 350 ----------------------------------
+  {
+    slug: "international-micron-350-noir-075l",
+    name: "International Micron 350 Noir 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Micron 350",
+    images: ["/products/international-micron-350.png"],
+    shortDescription: "Antifouling SPC autopolissant haut de gamme, noir, bidon 0,75L, protection 2 ans",
+    description:
+      "Micron 350 est un antifouling haut de gamme à copolymère autopolissant (SPC), offrant une protection continue jusqu'à 2 ans quelles que soient les conditions de salissures, avec des performances constantes même à l'arrêt.",
+    specs: [
+      { label: "Type", value: "Copolymère autopolissant (SPC)" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Protection", value: "Jusqu'à 2 ans" },
+    ],
+  },
+  {
+    slug: "international-micron-350-noir-25l",
+    name: "International Micron 350 Noir 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Micron 350",
+    images: ["/products/international-micron-350.png"],
+    shortDescription: "Antifouling SPC autopolissant haut de gamme, noir, bidon 2,5L, protection 2 ans",
+    description:
+      "Micron 350 est un antifouling haut de gamme à copolymère autopolissant (SPC), offrant une protection continue jusqu'à 2 ans quelles que soient les conditions de salissures, avec des performances constantes même à l'arrêt.",
+    specs: [
+      { label: "Type", value: "Copolymère autopolissant (SPC)" },
+      { label: "Couleur", value: "Noir" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Protection", value: "Jusqu'à 2 ans" },
+    ],
+  },
+  {
+    slug: "international-micron-350-navy-075l",
+    name: "International Micron 350 Navy 0,75L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Micron 350",
+    images: ["/products/international-micron-350.png"],
+    shortDescription: "Antifouling SPC autopolissant haut de gamme, navy, bidon 0,75L, protection 2 ans",
+    description:
+      "Micron 350 est un antifouling haut de gamme à copolymère autopolissant (SPC), offrant une protection continue jusqu'à 2 ans quelles que soient les conditions de salissures, avec des performances constantes même à l'arrêt.",
+    specs: [
+      { label: "Type", value: "Copolymère autopolissant (SPC)" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "0,75 L" },
+      { label: "Protection", value: "Jusqu'à 2 ans" },
+    ],
+  },
+  {
+    slug: "international-micron-350-navy-25l",
+    name: "International Micron 350 Navy 2,5L",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Micron 350",
+    images: ["/products/international-micron-350.png"],
+    shortDescription: "Antifouling SPC autopolissant haut de gamme, navy, bidon 2,5L, protection 2 ans",
+    description:
+      "Micron 350 est un antifouling haut de gamme à copolymère autopolissant (SPC), offrant une protection continue jusqu'à 2 ans quelles que soient les conditions de salissures, avec des performances constantes même à l'arrêt.",
+    specs: [
+      { label: "Type", value: "Copolymère autopolissant (SPC)" },
+      { label: "Couleur", value: "Navy" },
+      { label: "Conditionnement", value: "2,5 L" },
+      { label: "Protection", value: "Jusqu'à 2 ans" },
+    ],
+  },
+
+  // --- International — Antifouling hélices & embases ---------------------
+  {
+    slug: "international-trilux-prop-o-drev",
+    name: "International Trilux Prop-O-Drev",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Antifouling hélices & embases",
+    images: ["/products/international-trilux-prop-o-drev.png"],
+    shortDescription: "Antifouling aérosol matrice dure pour hélices, Z-Drive et embases hors-bord",
+    description:
+      "Trilux Prop-O-Drev est un antifouling à matrice dure spécialement formulé pour les hélices, Z-Drive et embases de moteur hors-bord, en aluminium, acier inoxydable ou alliage. Son format aérosol facilite l'application sur les zones difficiles d'accès.",
+    specs: [
+      { label: "Type", value: "Matrice dure, aérosol" },
+      { label: "Couleurs", value: "Gris, Noir" },
+      { label: "Conditionnement", value: "500 ml" },
+      { label: "Usage", value: "Hélices, Z-Drive, embases hors-bord" },
+    ],
+  },
+
+  // --- International — Primaires ------------------------------------------
+  {
+    slug: "international-primocon",
+    name: "International Primocon",
+    brand: "international",
+    category: "peintures-antifouling",
+    productLine: "Primaires",
+    images: ["/products/international-primocon.png"],
+    shortDescription: "Primaire monocomposant anticorrosif à séchage rapide, sous la ligne de flottaison",
+    description:
+      "Primocon est un primaire monocomposant anticorrosif en vinyl pigmenté à l'aluminium, à utiliser sous la ligne de flottaison avant application d'un antifouling. Séchage rapide, il peut être surcouché par lui-même après de longues périodes.",
+    specs: [
+      { label: "Type", value: "Primaire monocomposant anticorrosif" },
+      { label: "Conditionnement", value: "0,75 L, 2,5 L, 5 L" },
+      { label: "Support", value: "Bois, acier, aluminium, quilles fonte et plomb" },
+      { label: "Application", value: "Brosse, rouleau ou pistolet airless" },
     ],
   },
   {
@@ -1206,13 +1508,16 @@ const products: ProductSeed[] = [
     name: "International Interprotect",
     brand: "international",
     category: "peintures-antifouling",
-    shortDescription: "Primaire époxy de protection de coque contre l'osmose",
+    productLine: "Primaires",
+    images: ["/products/international-interprotect.png"],
+    shortDescription: "Primaire époxy bi-composants haute performance, au-dessus et au-dessous de la ligne de flottaison",
     description:
-      "Interprotect est un système époxy multicouche qui protège la coque contre la pénétration d'eau et le risque d'osmose, à appliquer avant toute couche d'antifouling.",
+      "Interprotect est un primaire/sous-couche bi-composants époxy-polyamide haute performance, adapté au polyester, vinylester, époxy, acier, aluminium, ferrociment et bois, au-dessus comme au-dessous de la ligne de flottaison. Il peut être surcouché par lui-même jusqu'à 6 mois.",
     specs: [
-      { label: "Type", value: "Primaire époxy multicouche" },
-      { label: "Fonction", value: "Protection contre l'osmose" },
-      { label: "Support", value: "Coques polyester" },
+      { label: "Type", value: "Primaire époxy-polyamide bi-composants" },
+      { label: "Conditionnement", value: "0,75 L, 2,5 L, 5 L" },
+      { label: "Support", value: "Polyester, acier, aluminium, bois, ferrociment" },
+      { label: "Application", value: "Brosse ou rouleau" },
     ],
   },
   {

@@ -22,6 +22,12 @@ const PRODUCT_LINE_ORDER = [
   "Amplificateurs Signature",
   "Amplificateurs Apollo",
   "Accessoires",
+  "Boatguard 100",
+  "Cruiser 200",
+  "Ultra 300",
+  "Micron 350",
+  "Antifouling hélices & embases",
+  "Primaires",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
