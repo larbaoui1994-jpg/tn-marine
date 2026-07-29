@@ -33,6 +33,8 @@ const PRODUCT_LINE_ORDER = [
   "Reveal",
   "Discover",
   "Génération X",
+  "Navionics+",
+  "Navionics Platinum+",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,

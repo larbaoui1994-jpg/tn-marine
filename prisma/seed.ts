@@ -658,34 +658,75 @@ const products: ProductSeed[] = [
     ],
   },
 
-  // --- Navionics -------------------------------------------------------
+  // --- Navionics — Gamme Navionics+ -------------------------------------
   {
-    slug: "navionics-plus-regular",
-    name: "Navionics+ Regular",
+    slug: "navionics-plus-eu646l",
+    name: "Navionics+ EU646L Europe Centrale et Occidentale",
     brand: "navionics",
     category: "cartographie",
-    shortDescription: "Carte marine régionale avec données de pêche SonarChart",
+    productLine: "Navionics+",
+    images: ["/products/navionics-plus-eu646l.png"],
+    shortDescription: "Carte Large, Europe centrale et occidentale, données de pêche SonarChart",
     description:
-      "Navionics+ Regular couvre une zone de navigation régionale avec cartographie détaillée, courbes bathymétriques SonarChart et informations utiles à la pêche et à la plaisance.",
+      "Navionics+ EU646L couvre l'Europe centrale et occidentale (Royaume-Uni, France, Espagne, Portugal, Italie, Açores...) avec cartographie détaillée, courbes bathymétriques SonarChart et informations utiles à la pêche et à la plaisance. Compatible Lowrance, Simrad, B&G, Raymarine et Humminbird — non compatible Garmin.",
     specs: [
-      { label: "Couverture", value: "Régionale" },
-      { label: "Bathymétrie", value: "SonarChart" },
-      { label: "Mises à jour", value: "Via l'application Navionics Boating" },
+      { label: "Couverture", value: "Europe centrale et occidentale (Large)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Lowrance, Simrad, B&G, Raymarine, Humminbird" },
+      { label: "Référence", value: "NAEU646L" },
     ],
   },
   {
-    slug: "navionics-platinum-plus",
-    name: "Navionics Platinum+",
+    slug: "navionics-plus-eu643l",
+    name: "Navionics+ EU643L Méditerranée et Mer Noire",
     brand: "navionics",
     category: "cartographie",
-    shortDescription:
-      "Cartographie haut de gamme avec relief ombré et données bathymétriques enrichies",
+    productLine: "Navionics+",
+    images: ["/products/navionics-plus-eu643l.png"],
+    shortDescription: "Carte Large, Méditerranée et mer Noire, données de pêche SonarChart",
     description:
-      "Navionics Platinum+ ajoute le relief ombré terrestre et sous-marin ainsi que des courbes bathymétriques enrichies pour une lecture fine du relief des fonds, idéale pour la pêche et la navigation de précision.",
+      "Navionics+ EU643L couvre l'ensemble de la Méditerranée et de la mer Noire, des Açores au Bosphore, avec cartographie détaillée, courbes bathymétriques SonarChart et informations utiles à la pêche et à la plaisance. Compatible Lowrance, Simrad, B&G, Raymarine et Humminbird — non compatible Garmin.",
     specs: [
+      { label: "Couverture", value: "Méditerranée et mer Noire (Large)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Lowrance, Simrad, B&G, Raymarine, Humminbird" },
+      { label: "Référence", value: "NAEU643L" },
+    ],
+  },
+
+  // --- Navionics — Gamme Navionics Platinum+ ------------------------------
+  {
+    slug: "navionics-platinum-plus-eu646l",
+    name: "Navionics Platinum+ EU646L Europe Centrale et Occidentale",
+    brand: "navionics",
+    category: "cartographie",
+    productLine: "Navionics Platinum+",
+    images: ["/products/navionics-platinum-plus-eu646l.png"],
+    shortDescription: "Carte Large haut de gamme, Europe centrale et occidentale, relief ombré",
+    description:
+      "Navionics Platinum+ EU646L couvre l'Europe centrale et occidentale et ajoute le relief ombré terrestre et sous-marin ainsi que des courbes bathymétriques enrichies pour une lecture fine du relief des fonds. Compatible Lowrance, Simrad, B&G, Raymarine et Humminbird — non compatible Garmin.",
+    specs: [
+      { label: "Couverture", value: "Europe centrale et occidentale (Large)" },
       { label: "Relief", value: "Relief ombré terre et mer" },
-      { label: "Bathymétrie", value: "Courbes enrichies SonarChart+" },
-      { label: "Usage", value: "Pêche et navigation de précision" },
+      { label: "Compatibilité", value: "Lowrance, Simrad, B&G, Raymarine, Humminbird" },
+      { label: "Référence", value: "NPEU646L" },
+    ],
+  },
+  {
+    slug: "navionics-platinum-plus-eu643l",
+    name: "Navionics Platinum+ EU643L Méditerranée et Mer Noire",
+    brand: "navionics",
+    category: "cartographie",
+    productLine: "Navionics Platinum+",
+    images: ["/products/navionics-platinum-plus-eu643l.png"],
+    shortDescription: "Carte Large haut de gamme, Méditerranée et mer Noire, relief ombré",
+    description:
+      "Navionics Platinum+ EU643L couvre l'ensemble de la Méditerranée et de la mer Noire et ajoute le relief ombré terrestre et sous-marin ainsi que des courbes bathymétriques enrichies pour une lecture fine du relief des fonds. Compatible Lowrance, Simrad, B&G, Raymarine et Humminbird — non compatible Garmin.",
+    specs: [
+      { label: "Couverture", value: "Méditerranée et mer Noire (Large)" },
+      { label: "Relief", value: "Relief ombré terre et mer" },
+      { label: "Compatibilité", value: "Lowrance, Simrad, B&G, Raymarine, Humminbird" },
+      { label: "Référence", value: "NPEU643L" },
     ],
   },
   {
