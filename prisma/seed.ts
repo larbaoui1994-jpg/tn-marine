@@ -764,20 +764,6 @@ const products: ProductSeed[] = [
       { label: "Référence", value: "NVEU010R" },
     ],
   },
-  {
-    slug: "navionics-small-craft",
-    name: "Navionics Small Craft Chart",
-    brand: "navionics",
-    category: "cartographie",
-    shortDescription: "Cartographie détaillée pour petites embarcations en zone côtière",
-    description:
-      "Pensée pour les petites unités naviguant près des côtes, cette carte met l'accent sur le détail des zones portuaires, des chenaux et des mouillages.",
-    specs: [
-      { label: "Couverture", value: "Zone côtière rapprochée" },
-      { label: "Détail", value: "Ports, chenaux, mouillages" },
-    ],
-  },
-
   // --- Fusion — Gamme Stéréos & Radios ------------------------------------
   {
     slug: "fusion-ra800",
