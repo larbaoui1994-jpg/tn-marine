@@ -30,6 +30,9 @@ const PRODUCT_LINE_ORDER = [
   "Antifouling hélices & embases",
   "Primaires",
   "Finitions",
+  "Reveal",
+  "Discover",
+  "Génération X",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,

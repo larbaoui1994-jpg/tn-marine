@@ -550,48 +550,111 @@ const products: ProductSeed[] = [
     ],
   },
 
-  // --- C-MAP -------------------------------------------------------------
+  // --- C-MAP — Gamme Reveal ------------------------------------------------
   {
-    slug: "cmap-discover-x",
-    name: "C-MAP Discover X",
+    slug: "cmap-reveal-y076",
+    name: "C-MAP Reveal EM-Y076 Méditerranée Sud-Ouest",
     brand: "cmap",
     category: "cartographie",
-    shortDescription: "Cartographie marine détaillée pour la navigation côtière",
+    productLine: "Reveal",
+    images: ["/products/cmap-reveal-y076.png"],
+    shortDescription: "Carte Reveal Large, relief ombragé et imagerie satellite, Méditerranée sud-ouest",
     description:
-      "C-MAP Discover X propose une cartographie vectorielle détaillée incluant les données bathymétriques, les aides à la navigation et les points d'intérêt portuaires, avec mises à jour régulières.",
+      "C-MAP Reveal EM-Y076 couvre la Méditerranée sud-ouest (Gibraltar à Corfou), les Açores et les Canaries. Elle ajoute le relief ombragé des fonds marins, l'imagerie satellite et la bathymétrie haute résolution à la cartographie vectorielle complète, avec 12 mois de mises à jour en ligne inclus.",
     specs: [
-      { label: "Format", value: "Carte mémoire, mise à jour en ligne" },
-      { label: "Couverture", value: "Zone côtière détaillée" },
-      { label: "Données", value: "Bathymétrie, aides à la navigation, ports" },
+      { label: "Zone", value: "Méditerranée sud-ouest, Açores, Canaries" },
+      { label: "Support", value: "Carte micro-SD/SD, 64 Go" },
+      { label: "Compatibilité", value: "Traceurs Lowrance, Simrad et B&G" },
+      { label: "Référence", value: "M-EM-Y076-MS" },
+    ],
+  },
+
+  // --- C-MAP — Gamme Discover ----------------------------------------------
+  {
+    slug: "cmap-discover-y045",
+    name: "C-MAP Discover Southern Europe",
+    brand: "cmap",
+    category: "cartographie",
+    productLine: "Discover",
+    images: ["/products/cmap-discover-y045.png"],
+    shortDescription: "Carte Discover Extra Large, bathymétrie haute résolution, Europe du Sud",
+    description:
+      "C-MAP Discover Southern Europe couvre une large zone incluant l'Europe du Sud et la Méditerranée. Elle offre une cartographie vectorielle complète avec bathymétrie haute résolution (données Genesis intégrées), personnalisation des couleurs de profondeur, marées et courants, et Easy Routing sans abonnement.",
+    specs: [
+      { label: "Zone", value: "Europe du Sud (Extra Large)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Traceurs Lowrance, Simrad et B&G" },
+      { label: "Référence", value: "M-EM-Y045-MS" },
     ],
   },
   {
-    slug: "cmap-reveal-x",
-    name: "C-MAP Reveal X",
+    slug: "cmap-discover-y200",
+    name: "C-MAP Discover West Mediterranean",
     brand: "cmap",
     category: "cartographie",
-    shortDescription: "Cartographie avec relief 3D et imagerie satellite haute résolution",
+    productLine: "Discover",
+    images: ["/products/cmap-discover-y200.png"],
+    shortDescription: "Carte Discover Medium, bathymétrie haute résolution, Méditerranée occidentale",
     description:
-      "C-MAP Reveal X ajoute le relief sous-marin en 3D et l'imagerie satellite haute résolution à la cartographie vectorielle, pour une meilleure lecture des zones côtières et des fonds marins.",
+      "C-MAP Discover West Mediterranean couvre la Méditerranée occidentale. Elle offre une cartographie vectorielle complète avec bathymétrie haute résolution (données Genesis intégrées), personnalisation des couleurs de profondeur, marées et courants, et Easy Routing sans abonnement.",
     specs: [
-      { label: "Relief", value: "Vue 3D des fonds marins" },
-      { label: "Imagerie", value: "Satellite haute résolution" },
-      { label: "Compatibilité", value: "Traceurs C-MAP compatibles" },
+      { label: "Zone", value: "Méditerranée occidentale (Medium)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Traceurs Lowrance, Simrad et B&G" },
+      { label: "Référence", value: "M-EM-Y200-MS" },
     ],
   },
   {
-    slug: "cmap-genesis",
-    name: "C-MAP Genesis",
+    slug: "cmap-discover-y202",
+    name: "C-MAP Discover Mediterranean South Central",
     brand: "cmap",
     category: "cartographie",
-    shortDescription:
-      "Création de cartes bathymétriques personnalisées à partir des relevés du sondeur",
+    productLine: "Discover",
+    images: ["/products/cmap-discover-y202.png"],
+    shortDescription: "Carte Discover Medium, bathymétrie haute résolution, Méditerranée centre-sud",
     description:
-      "La fonction Genesis permet de générer ses propres cartes bathymétriques haute précision à partir des données collectées par le sondeur du bord, puis de les partager avec la communauté C-MAP.",
+      "C-MAP Discover Mediterranean South Central couvre le centre-sud de la Méditerranée. Elle offre une cartographie vectorielle complète avec bathymétrie haute résolution (données Genesis intégrées), personnalisation des couleurs de profondeur, marées et courants, et Easy Routing sans abonnement.",
     specs: [
-      { label: "Fonction", value: "Cartographie bathymétrique participative" },
-      { label: "Source", value: "Données du sondeur du bord" },
-      { label: "Partage", value: "Communauté C-MAP en ligne" },
+      { label: "Zone", value: "Méditerranée centre-sud (Medium)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Traceurs Lowrance, Simrad et B&G" },
+      { label: "Référence", value: "M-EM-Y202-MS" },
+    ],
+  },
+
+  // --- C-MAP — Génération X (Discover X / Reveal X) -------------------------
+  {
+    slug: "cmap-discover-x-t076",
+    name: "C-MAP Discover X West Mediterranean",
+    brand: "cmap",
+    category: "cartographie",
+    productLine: "Génération X",
+    images: ["/products/cmap-discover-x-t076.png"],
+    shortDescription: "Carte Discover X Large, Méditerranée occidentale, Açores et Canaries",
+    description:
+      "C-MAP Discover X West Mediterranean est la nouvelle génération de cartographie C-MAP, avec l'outil Map Inspector, une bathymétrie haute résolution et une cartographie vectorielle complète. Couvre la Méditerranée occidentale, les Açores et les Canaries.",
+    specs: [
+      { label: "Zone", value: "Méditerranée occidentale, Açores, Canaries (Large)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Traceurs Simrad NSX et NSS4 uniquement" },
+      { label: "Référence", value: "M-EM-T076-D-MS" },
+    ],
+  },
+  {
+    slug: "cmap-reveal-x-t076",
+    name: "C-MAP Reveal X West Mediterranean",
+    brand: "cmap",
+    category: "cartographie",
+    productLine: "Génération X",
+    images: ["/products/cmap-reveal-x-t076.png"],
+    shortDescription: "Carte Reveal X Large, Méditerranée occidentale, Açores et Canaries",
+    description:
+      "C-MAP Reveal X West Mediterranean apporte toutes les fonctionnalités de Discover X, avec en plus le relief ombragé des fonds marins et l'imagerie satellite haute résolution. Couvre la Méditerranée occidentale, les Açores et les Canaries.",
+    specs: [
+      { label: "Zone", value: "Méditerranée occidentale, Açores, Canaries (Large)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Traceurs Simrad NSX et NSS4 uniquement" },
+      { label: "Référence", value: "M-EM-T076-R-MS" },
     ],
   },
 
