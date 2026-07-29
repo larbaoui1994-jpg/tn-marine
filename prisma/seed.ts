@@ -658,13 +658,13 @@ const products: ProductSeed[] = [
     ],
   },
 
-  // --- Navionics — Gamme Navionics+ -------------------------------------
+  // --- Navionics — Compatible Lowrance & Simrad ---------------------------
   {
     slug: "navionics-plus-eu646l",
     name: "Navionics+ EU646L Europe Centrale et Occidentale",
     brand: "navionics",
     category: "cartographie",
-    productLine: "Navionics+",
+    productLine: "Compatible Lowrance & Simrad",
     images: ["/products/navionics-plus-eu646l.png"],
     shortDescription: "Carte Large, Europe centrale et occidentale, données de pêche SonarChart",
     description:
@@ -681,7 +681,7 @@ const products: ProductSeed[] = [
     name: "Navionics+ EU643L Méditerranée et Mer Noire",
     brand: "navionics",
     category: "cartographie",
-    productLine: "Navionics+",
+    productLine: "Compatible Lowrance & Simrad",
     images: ["/products/navionics-plus-eu643l.png"],
     shortDescription: "Carte Large, Méditerranée et mer Noire, données de pêche SonarChart",
     description:
@@ -694,13 +694,12 @@ const products: ProductSeed[] = [
     ],
   },
 
-  // --- Navionics — Gamme Navionics Platinum+ ------------------------------
   {
     slug: "navionics-platinum-plus-eu646l",
     name: "Navionics Platinum+ EU646L Europe Centrale et Occidentale",
     brand: "navionics",
     category: "cartographie",
-    productLine: "Navionics Platinum+",
+    productLine: "Compatible Lowrance & Simrad",
     images: ["/products/navionics-platinum-plus-eu646l.png"],
     shortDescription: "Carte Large haut de gamme, Europe centrale et occidentale, relief ombré",
     description:
@@ -717,7 +716,7 @@ const products: ProductSeed[] = [
     name: "Navionics Platinum+ EU643L Méditerranée et Mer Noire",
     brand: "navionics",
     category: "cartographie",
-    productLine: "Navionics Platinum+",
+    productLine: "Compatible Lowrance & Simrad",
     images: ["/products/navionics-platinum-plus-eu643l.png"],
     shortDescription: "Carte Large haut de gamme, Méditerranée et mer Noire, relief ombré",
     description:
@@ -727,6 +726,42 @@ const products: ProductSeed[] = [
       { label: "Relief", value: "Relief ombré terre et mer" },
       { label: "Compatibilité", value: "Lowrance, Simrad, B&G, Raymarine, Humminbird" },
       { label: "Référence", value: "NPEU643L" },
+    ],
+  },
+
+  // --- Navionics — Compatible Garmin ---------------------------------------
+  {
+    slug: "garmin-navionics-plus-nseu010r",
+    name: "Garmin Navionics+ NSEU010R Espagne, Côte Méditerranéenne",
+    brand: "navionics",
+    category: "cartographie",
+    productLine: "Compatible Garmin",
+    images: ["/products/garmin-navionics-plus-nseu010r.png"],
+    shortDescription: "Carte Regular, Espagne et côte méditerranéenne, écrans Garmin uniquement",
+    description:
+      "Garmin Navionics+ NSEU010R couvre la côte méditerranéenne de Lagos (Portugal) à La Spezia (Italie), avec cartographie détaillée, courbes bathymétriques SonarChart et informations utiles à la pêche et à la plaisance. Carte au format micro-SD compatible uniquement avec les écrans Garmin les plus récents.",
+    specs: [
+      { label: "Couverture", value: "Espagne, côte méditerranéenne (Regular)" },
+      { label: "Support", value: "Carte micro-SD/SD" },
+      { label: "Compatibilité", value: "Écrans Garmin récents uniquement" },
+      { label: "Référence", value: "NSEU010R" },
+    ],
+  },
+  {
+    slug: "garmin-navionics-vision-plus-nveu010r",
+    name: "Garmin Navionics Vision+ NVEU010R Espagne, Côte Méditerranéenne",
+    brand: "navionics",
+    category: "cartographie",
+    productLine: "Compatible Garmin",
+    images: ["/products/garmin-navionics-vision-plus-nveu010r.png"],
+    shortDescription: "Carte Regular haut de gamme, Espagne et côte méditerranéenne, écrans Garmin uniquement",
+    description:
+      "Garmin Navionics Vision+ NVEU010R couvre la côte méditerranéenne de Lagos (Portugal) à La Spezia (Italie), avec en plus du relief ombré terrestre et sous-marin, l'imagerie satellite et une bathymétrie enrichie. Carte au format micro-SD compatible uniquement avec les écrans Garmin les plus récents.",
+    specs: [
+      { label: "Couverture", value: "Espagne, côte méditerranéenne (Regular)" },
+      { label: "Relief", value: "Relief ombré, imagerie satellite" },
+      { label: "Compatibilité", value: "Écrans Garmin récents uniquement" },
+      { label: "Référence", value: "NVEU010R" },
     ],
   },
   {
