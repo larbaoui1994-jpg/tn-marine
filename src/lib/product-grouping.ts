@@ -35,6 +35,9 @@ const PRODUCT_LINE_ORDER = [
   "Génération X",
   "Compatible Lowrance & Simrad",
   "Compatible Garmin",
+  "Riptide Terrova GPS 55 Lbs",
+  "Riptide Terrova GPS 80 Lbs",
+  "Riptide Terrova GPS 112 Lbs",
 ];
 
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
