@@ -69,13 +69,7 @@ export default async function BrandPage({
             className="h-10 w-auto object-contain"
           />
         )}
-        <h1
-          className={
-            brand.slug === "cobra-marine"
-              ? "sr-only"
-              : "mt-3 text-3xl font-bold text-primary sm:text-4xl"
-          }
-        >
+        <h1 className={logoUrl ? "sr-only" : "mt-3 text-3xl font-bold text-primary sm:text-4xl"}>
           {brand.name}
         </h1>
         {key && <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>}
