@@ -1917,23 +1917,6 @@ const products: ProductSeed[] = [
     ],
   },
   {
-    slug: "airmar-p66-dst",
-    name: "Airmar P66 DST",
-    brand: "airmar",
-    category: "sondeurs",
-    images: ["/products/airmar-p66.png"],
-    shortDescription: "Sonde tableau arrière 600W, profondeur/vitesse/température, connecteur bleu Simrad/Lowrance",
-    description:
-      "La P66 DST reprend le boîtier robuste de la P66 en ajoutant la mesure de vitesse surface à la profondeur et la température. Livrée avec le connecteur bleu 7 broches, compatible directement avec les traceurs Simrad, Lowrance et B&G.",
-    specs: [
-      { label: "Type", value: "Sonde tableau arrière" },
-      { label: "Puissance", value: "600 W" },
-      { label: "Fréquence", value: "50/200 kHz" },
-      { label: "Mesures", value: "Profondeur, vitesse, température" },
-      { label: "Connecteur", value: "Bleu 7 broches Simrad / Lowrance / B&G" },
-    ],
-  },
-  {
     slug: "airmar-tm150m",
     name: "Airmar TM150M",
     brand: "airmar",
