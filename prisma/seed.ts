@@ -1858,16 +1858,69 @@ const products: ProductSeed[] = [
   // --- Cobra Marine --------------------------------------------------
   {
     slug: "cobra-marine-mr-hh350-flt",
-    name: "Cobra Marine MR HH350 FLT",
+    name: "Cobra MR HH350 FLT",
     brand: "cobra-marine",
     category: "vhf-communication",
-    shortDescription: "VHF portable flottante, étanche IPX7",
+    images: ["/products/cobra-mr-hh350-flt.png"],
+    shortDescription: "VHF portable flottante 6W, étanche IPX7, micro anti-bruit",
     description:
-      "La MR HH350 FLT est une VHF portable flottante et étanche IPX7, équipée de canaux météo et d'une fonction d'appel de détresse, pensée pour rester à portée de main en toutes circonstances.",
+      "La MR HH350 FLT est la VHF portable d'entrée de gamme de Cobra, flottante avec âme orange pour la retrouver facilement à l'eau. Elle offre 6 W de puissance sélectionnable, un micro anti-bruit, le mode Tri-Watch, le balayage mémoire et la fonction BURP pour évacuer l'eau du haut-parleur.",
     specs: [
       { label: "Type", value: "VHF portable, flottante" },
-      { label: "Étanchéité", value: "IPX7" },
-      { label: "Fonctions", value: "Canaux météo, appel de détresse" },
+      { label: "Puissance", value: "1/3/6 W sélectionnable" },
+      { label: "Étanchéité", value: "IPX7, submersible" },
+      { label: "Fonctions", value: "Tri-Watch, balayage mémoire, BURP" },
+    ],
+  },
+  {
+    slug: "cobra-marine-mr-hh500-flt-bt",
+    name: "Cobra MR HH500 FLT BT",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    images: ["/products/cobra-mr-hh500-flt-bt.png"],
+    shortDescription: "VHF portable flottante 6W avec Bluetooth et Rewind-Say-Again",
+    description:
+      "La MR HH500 FLT BT reprend toutes les qualités de la HH350 et ajoute le Bluetooth pour passer des appels téléphoniques directement depuis la VHF, ainsi que la fonction Rewind-Say-Again qui réécoute les 20 dernières secondes d'un appel manqué. Un second bac à piles est fourni de série.",
+    specs: [
+      { label: "Type", value: "VHF portable, flottante" },
+      { label: "Puissance", value: "1/3/6 W sélectionnable" },
+      { label: "Étanchéité", value: "IPX7, submersible" },
+      { label: "Bluetooth", value: "Appels téléphoniques depuis la VHF" },
+      { label: "Fonctions", value: "Rewind-Say-Again, Tri-Watch, balayage mémoire" },
+    ],
+  },
+  {
+    slug: "cobra-marine-mr-hh600-flt-gps-bt",
+    name: "Cobra MR HH600 FLT GPS BT",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    images: ["/products/cobra-mr-hh600-flt-gps-bt.png"],
+    shortDescription: "VHF portable flottante haut de gamme avec GPS intégré, DSC et Bluetooth",
+    description:
+      "La MR HH600 FLT GPS BT est le haut de gamme portable de Cobra : GPS intégré qui affiche la position et l'envoie automatiquement lors d'un appel DSC, Bluetooth pour téléphoner depuis la VHF, lampe torche avec strobe d'urgence, le tout dans un boîtier flottant étanche.",
+    specs: [
+      { label: "Type", value: "VHF portable, flottante" },
+      { label: "Puissance", value: "1/3/6 W sélectionnable" },
+      { label: "GPS", value: "Récepteur intégré, position envoyée en DSC" },
+      { label: "Bluetooth", value: "Appels téléphoniques depuis la VHF" },
+      { label: "Fonctions", value: "Lampe torche + strobe d'urgence, Rewind-Say-Again" },
+    ],
+  },
+  {
+    slug: "cobra-am1055",
+    name: "Cobra AM1055",
+    brand: "cobra-marine",
+    category: "vhf-communication",
+    images: ["/products/cobra-am1055.png"],
+    shortDescription: "Talkie-walkie PMR446 flottant et étanche, portée jusqu'à 12 km",
+    description:
+      "Le Cobra AM1055 est un talkie-walkie PMR446 flottant et étanche IPX7, offrant une portée annoncée jusqu'à 12 km selon les conditions. Il propose 16 canaux et 121 codes de confidentialité, la fonction mains libres VOX, un signal vibrant VibrAlert pour les appels entrants et un chargement micro-USB.",
+    specs: [
+      { label: "Type", value: "Talkie-walkie PMR446" },
+      { label: "Portée", value: "Jusqu'à 12 km" },
+      { label: "Canaux", value: "16 canaux, 121 codes de confidentialité" },
+      { label: "Étanchéité", value: "IPX7, flottant" },
+      { label: "Fonctions", value: "VOX mains libres, VibrAlert, chargement micro-USB" },
     ],
   },
   {
