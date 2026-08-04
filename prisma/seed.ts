@@ -1268,46 +1268,20 @@ const products: ProductSeed[] = [
 
   // --- Minn Kota ---------------------------------------------------------
   {
-    slug: "minn-kota-riptide-terrova",
-    name: "Minn Kota Riptide Terrova",
+    slug: "minn-kota-riptide-terrova-gps",
+    name: "Minn Kota Riptide Terrova GPS",
     brand: "minn-kota",
     category: "moteurs-electriques",
+    images: ["/products/minn-kota-riptide-terrova-gps.png"],
     shortDescription:
-      "Moteur de traîne électrique avec pointeur GPS et fonction ancre virtuelle",
+      "Moteur de traîne eau salée avec système GPS i-Pilot, Spot-Lock et télécommande sans fil",
     description:
-      "Le Riptide Terrova intègre la technologie i-Pilot avec pointeur GPS, mémorisation d'itinéraires et ancre virtuelle Spot-Lock, pour un positionnement précis en toutes conditions, y compris en eau salée.",
+      "Le Riptide Terrova GPS intègre le système de navigation GPS i-Pilot avec ancre virtuelle Spot-Lock, mémorisation et rappel d'itinéraires, et pilotage automatique AutoPilot. Conçu pour l'eau salée, il se pilote à distance via télécommande sans fil et s'intègre au réseau One-Boat Network des sondeurs Humminbird.",
     specs: [
       { label: "Usage", value: "Eau salée" },
-      { label: "Technologie", value: "i-Pilot, Spot-Lock (ancre virtuelle)" },
-      { label: "Commande", value: "Télécommande et pédale sans fil" },
-    ],
-  },
-  {
-    slug: "minn-kota-endura-max",
-    name: "Minn Kota Endura Max",
-    brand: "minn-kota",
-    category: "moteurs-electriques",
-    shortDescription: "Moteur de traîne manuel, entrée de gamme, fiable et robuste",
-    description:
-      "L'Endura Max est un moteur de traîne manuel simple d'utilisation, au rapport qualité/prix reconnu, adapté aux plaisanciers et pêcheurs occasionnels.",
-    specs: [
-      { label: "Commande", value: "Manuelle (manche directionnel)" },
-      { label: "Usage", value: "Eau douce" },
-      { label: "Vitesses", value: "5 vitesses avant, 3 arrière" },
-    ],
-  },
-  {
-    slug: "minn-kota-ulterra",
-    name: "Minn Kota Ulterra",
-    brand: "minn-kota",
-    category: "moteurs-electriques",
-    shortDescription: "Moteur de traîne rétractable avec télécommande et déploiement automatique",
-    description:
-      "L'Ulterra se déploie et se range automatiquement d'une simple pression, et se pilote à distance via télécommande ou application. Il intègre également la technologie i-Pilot avec pointeur GPS.",
-    specs: [
-      { label: "Déploiement", value: "Automatique, motorisé" },
-      { label: "Technologie", value: "i-Pilot avec pointeur GPS" },
-      { label: "Commande", value: "Télécommande, application mobile" },
+      { label: "Technologie", value: "GPS i-Pilot, Spot-Lock, AutoPilot, Drift Mode" },
+      { label: "Commande", value: "Télécommande sans fil, direction assistée électrique" },
+      { label: "Fixation", value: "Montage proue (bow-mount), fixation boulonnée" },
     ],
   },
 
