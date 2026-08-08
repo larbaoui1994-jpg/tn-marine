@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { DM_Sans, Barlow_Condensed } from "next/font/google";
+import { DM_Sans, Barlow_Condensed, Roboto, Oswald } from "next/font/google";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -18,6 +18,12 @@ import HeroVideo from "@/components/brand/HeroVideo";
 // uniquement sur la page Lowrance (cf. `isLowrance`).
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
 const barlowCondensed = Barlow_Condensed({ subsets: ["latin"], weight: ["500", "600"] });
+
+// Typographie de garmin.com : Roboto pour le texte courant, Oswald en
+// majuscules pour les grands titres — appliquée uniquement sur la page
+// Garmin (cf. `isGarmin`).
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const oswald = Oswald({ subsets: ["latin"], weight: ["500", "700"] });
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -75,6 +81,7 @@ export default async function BrandPage({
   const logoUrl = brandLogoUrl(brand.slug);
   const isLowrance = brand.slug === "lowrance";
   const isSimrad = brand.slug === "simrad";
+  const isGarmin = brand.slug === "garmin";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -98,7 +105,11 @@ export default async function BrandPage({
     );
 
   return (
-    <div className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${isLowrance ? dmSans.className : ""}`}>
+    <div
+      className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${
+        isLowrance ? dmSans.className : isGarmin ? roboto.className : ""
+      }`}
+    >
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
         ← {t("kicker")}
       </Link>
@@ -116,8 +127,21 @@ export default async function BrandPage({
         <h1 className={logoUrl ? "sr-only" : "mt-3 text-3xl font-bold text-primary sm:text-4xl"}>
           {brand.name}
         </h1>
-        {key && <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>}
+        {key &&
+          (isGarmin ? (
+            <h2
+              className={`${oswald.className} mt-6 text-4xl font-medium uppercase tracking-tight text-black sm:text-5xl`}
+            >
+              {t(`items.${key}.tagline`)}
+            </h2>
+          ) : (
+            <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>
+          ))}
       </div>
+
+      {isGarmin && (
+        <span className="mt-6 block h-0.5 w-16 bg-black" aria-hidden="true" />
+      )}
 
       {isLowrance && (
         <>

@@ -508,6 +508,7 @@ const products: ProductSeed[] = [
     name: "Garmin GPSMAP 943xsv",
     brand: "garmin",
     category: "gps-traceurs",
+    images: ["/products/garmin-gpsmap-943xsv-1.png"],
     shortDescription:
       "Traceur/sondeur combiné 9 pouces avec sondeur CHIRP traditionnel et ClearVü",
     description:
@@ -524,6 +525,7 @@ const products: ProductSeed[] = [
     name: "Garmin ECHOMAP UHD2 63cv",
     brand: "garmin",
     category: "sondeurs",
+    images: ["/products/garmin-echomap-uhd2-63cv-1.png"],
     shortDescription: "Sondeur/GPS 6 pouces avec cartographie préchargée",
     description:
       "L'ECHOMAP UHD2 63cv embarque un écran haute définition, un sondeur CHIRP traditionnel et ClearVü, ainsi que la cartographie côtière préchargée pour une mise en route immédiate.",
@@ -539,12 +541,13 @@ const products: ProductSeed[] = [
     name: "Garmin GNX 130",
     brand: "garmin",
     category: "gps-traceurs",
-    shortDescription: "Instrument de navigation multifonction, écran couleur lisible au soleil",
+    images: ["/products/garmin-gnx-130-1.png"],
+    shortDescription: "Instrument de navigation grand format 10 pouces, écran lisible au soleil",
     description:
-      "Le GNX 130 affiche les données essentielles de navigation — vitesse, cap, profondeur, vent — sur un écran couleur circulaire lisible en plein soleil. Il s'intègre au réseau NMEA 2000 existant du bord.",
+      "Le GNX 130 affiche les données essentielles de navigation — vitesse, cap, distance, vent — en très grands chiffres sur un écran de 10 pouces lisible à distance et en plein soleil. Il s'intègre au réseau NMEA 2000 existant du bord.",
     specs: [
-      { label: "Écran", value: "4 pouces couleur, circulaire" },
-      { label: "Données affichées", value: "Vitesse, cap, profondeur, vent" },
+      { label: "Écran", value: "10 pouces, grand format" },
+      { label: "Données affichées", value: "Vitesse, cap, distance, vent" },
       { label: "Réseau", value: "NMEA 2000" },
       { label: "Étanchéité", value: "IPX7" },
     ],
