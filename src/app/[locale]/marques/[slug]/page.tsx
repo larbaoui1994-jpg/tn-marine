@@ -10,6 +10,7 @@ import { BRAND_DIRECTORY, brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-dir
 import { groupByProductLine, sectionForProductLine } from "@/lib/product-grouping";
 import ProductCard from "@/components/shop/ProductCard";
 import EagleVideoPlaylist from "@/components/brand/EagleVideoPlaylist";
+import HeroVideo from "@/components/brand/HeroVideo";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -106,18 +107,7 @@ export default async function BrandPage({
       {isLowrance && (
         <>
           <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
-            <div className="mx-auto aspect-video w-full max-w-7xl bg-black">
-              <video
-                className="h-full w-full"
-                playsInline
-                loop
-                autoPlay
-                muted
-                preload="auto"
-              >
-                <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
-              </video>
-            </div>
+            <HeroVideo />
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
