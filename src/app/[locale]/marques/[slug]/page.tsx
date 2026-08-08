@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { DM_Sans, Barlow_Condensed, Roboto, Oswald, Open_Sans, Exo_2, Archivo, Archivo_Black } from "next/font/google";
+import { DM_Sans, Barlow_Condensed, Roboto, Oswald, Open_Sans, Exo_2, Archivo, Archivo_Black, Inter } from "next/font/google";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -37,6 +37,11 @@ const exo2 = Exo_2({ subsets: ["latin"], weight: ["600", "700"] });
 // Kota (cf. `isMinnKota`).
 const archivo = Archivo({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const archivoBlack = Archivo_Black({ subsets: ["latin"], weight: ["400"] });
+
+// Typographie de cobra.com (Helvetica Neue, police commerciale) : Inter en
+// équivalent libre, avec le rouge de marque (#C10030) en accent —
+// uniquement sur la page Cobra Marine (cf. `isCobraMarine`).
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -104,6 +109,7 @@ export default async function BrandPage({
   const usesGarminStyle = isGarmin || isNavionics || isFusion;
   const isMinnKota = brand.slug === "minn-kota";
   const isInternational = brand.slug === "international";
+  const isCobraMarine = brand.slug === "cobra-marine";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -137,7 +143,9 @@ export default async function BrandPage({
               ? openSans.className
               : isMinnKota
                 ? archivo.className
-                : ""
+                : isCobraMarine
+                  ? inter.className
+                  : ""
       }`}
     >
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
@@ -164,10 +172,16 @@ export default async function BrandPage({
             >
               {t(`items.${key}.tagline`)}
             </h2>
+          ) : isCobraMarine ? (
+            <h2 className={`${inter.className} mt-6 text-3xl font-bold text-black sm:text-4xl`}>
+              {t(`items.${key}.tagline`)}
+            </h2>
           ) : (
             <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>
           ))}
       </div>
+
+      {isCobraMarine && <span className="mt-4 block h-1 w-16 bg-[#C10030]" aria-hidden="true" />}
 
       {usesGarminStyle && (
         <span className="mt-6 block h-0.5 w-16 bg-black" aria-hidden="true" />
