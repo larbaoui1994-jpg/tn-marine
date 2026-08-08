@@ -103,6 +103,7 @@ export default async function BrandPage({
   const isFusion = brand.slug === "fusion";
   const usesGarminStyle = isGarmin || isNavionics || isFusion;
   const isMinnKota = brand.slug === "minn-kota";
+  const isInternational = brand.slug === "international";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -132,7 +133,7 @@ export default async function BrandPage({
           ? dmSans.className
           : usesGarminStyle
             ? roboto.className
-            : isCmap
+            : isCmap || isInternational
               ? openSans.className
               : isMinnKota
                 ? archivo.className
@@ -328,13 +329,16 @@ export default async function BrandPage({
                         ? `${oswald.className} scroll-mt-24 text-2xl font-medium uppercase text-black`
                         : isMinnKota
                           ? `${archivoBlack.className} scroll-mt-24 text-xl uppercase text-black`
-                          : "scroll-mt-24 text-lg font-semibold text-primary"
+                          : isInternational
+                            ? `${openSans.className} scroll-mt-24 text-2xl font-bold uppercase text-[#005192]`
+                            : "scroll-mt-24 text-lg font-semibold text-primary"
                 }
               >
                 {tShop("productLine", { line })}
               </h3>
               {isCmap && <span className="mt-1.5 block h-1 w-12 bg-[#FC5000]" aria-hidden="true" />}
               {isMinnKota && <span className="mt-1.5 block h-1 w-12 bg-[#FDB924]" aria-hidden="true" />}
+              {isInternational && <span className="mt-1.5 block h-1 w-12 bg-[#008BC5]" aria-hidden="true" />}
               {isLowrance && line === "Eagle" && <EagleVideoPlaylist />}
               <div className="mt-4">{renderGrid(lineProducts)}</div>
             </div>
