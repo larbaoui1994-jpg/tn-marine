@@ -47,7 +47,6 @@ export default function EagleVideoPlaylist() {
         <video
           ref={videoRef}
           className="h-full w-full"
-          controls
           playsInline
           autoPlay
           muted

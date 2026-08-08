@@ -109,7 +109,6 @@ export default async function BrandPage({
             <div className="mx-auto aspect-video w-full max-w-7xl bg-black">
               <video
                 className="h-full w-full"
-                controls
                 playsInline
                 loop
                 autoPlay
