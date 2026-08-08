@@ -49,7 +49,9 @@ export default function EagleVideoPlaylist() {
           className="h-full w-full"
           controls
           playsInline
-          preload="metadata"
+          autoPlay
+          muted
+          preload="auto"
           onEnded={handleEnded}
           onPlaying={handlePlaying}
         >

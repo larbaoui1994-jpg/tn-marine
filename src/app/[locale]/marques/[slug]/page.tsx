@@ -107,7 +107,15 @@ export default async function BrandPage({
         <>
           <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
             <div className="mx-auto aspect-video w-full max-w-7xl bg-black">
-              <video className="h-full w-full" controls playsInline loop preload="metadata">
+              <video
+                className="h-full w-full"
+                controls
+                playsInline
+                loop
+                autoPlay
+                muted
+                preload="auto"
+              >
                 <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
               </video>
             </div>
