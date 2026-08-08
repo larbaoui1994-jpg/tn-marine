@@ -75,6 +75,18 @@ export default async function BrandPage({
         {key && <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>}
       </div>
 
+      {brand.slug === "lowrance" && (
+        <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/O_2J_bM62h8"
+            title="Lowrance — Notre histoire"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      )}
+
       {brand.products.length > 0 ? (
         (() => {
           const { groups, ungrouped } = groupByProductLine(brand.products);
