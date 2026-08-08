@@ -88,14 +88,15 @@ export default async function BrandPage({
       </div>
 
       {brand.slug === "lowrance" && (
-        <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl">
-          <iframe
+        <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-black">
+          <video
             className="h-full w-full"
-            src="https://www.youtube.com/embed/O_2J_bM62h8"
-            title="Lowrance — Notre histoire"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+            controls
+            playsInline
+            preload="metadata"
+          >
+            <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
+          </video>
         </div>
       )}
 
