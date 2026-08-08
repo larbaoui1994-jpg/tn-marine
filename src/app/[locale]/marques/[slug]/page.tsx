@@ -94,16 +94,20 @@ export default async function BrandPage({
             }
           }
 
+          const renderGrid = (lineProducts: (typeof groups)[number]["products"]) => (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {lineProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          );
+
           const renderLine = ({ line, products: lineProducts }: (typeof groups)[number]) => (
             <div key={line}>
               <h3 className="text-lg font-semibold text-primary">
                 {tShop("productLine", { line })}
               </h3>
-              <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {lineProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+              <div className="mt-4">{renderGrid(lineProducts)}</div>
             </div>
           );
 
@@ -115,7 +119,11 @@ export default async function BrandPage({
                     <h2 className="text-2xl font-bold text-primary">
                       {tShop(`sections.${section}`)}
                     </h2>
-                    <div className="mt-6 space-y-10">{lines.map(renderLine)}</div>
+                    <div className="mt-6 space-y-10">
+                      {lines.length === 1
+                        ? renderGrid(lines[0].products)
+                        : lines.map(renderLine)}
+                    </div>
                   </div>
                 ) : (
                   <div key={`nosection-${index}`} className="space-y-10">
