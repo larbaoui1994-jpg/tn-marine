@@ -108,7 +108,7 @@ export default async function BrandPage({
       {isLowrance && (
         <>
           <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
-            <HeroVideo />
+            <HeroVideo src="/videos/lowrance-we-make-fishing.mp4" />
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
@@ -159,6 +159,7 @@ export default async function BrandPage({
 
       {isSimrad && (
         <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
+          <HeroVideo src="/videos/simrad-introducing-nsx-ultrawide.mp4" />
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
               {[
