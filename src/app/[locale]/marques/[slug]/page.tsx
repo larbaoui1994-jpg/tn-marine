@@ -122,13 +122,13 @@ export default async function BrandPage({
               },
               {
                 anchor: "gamme-elite-fs",
-                image: "/products/lowrance-elite-fs-12-1.png",
+                image: "/products/lowrance-elite-fs-9-1.png",
                 title: "Elite FS",
                 text: "Tous les outils de détection de poissons Lowrance sur un écran facile à installer.",
               },
               {
                 anchor: "gamme-hds-pro",
-                image: "/products/lowrance-hds-pro-16-1.png",
+                image: "/products/lowrance-hds-pro-9-1.png",
                 title: "HDS PRO",
                 text: "Le niveau supérieur : clarté sondeur ultime, cartographie C-MAP et contrôle proue à poupe.",
               },
