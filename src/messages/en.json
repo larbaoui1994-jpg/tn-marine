@@ -206,7 +206,8 @@
     "productLine": "{line} range",
     "sections": {
       "sondeursGps": "GPS Fishfinders",
-      "sondes": "Transducers"
+      "sondes": "Transducers",
+      "cartographie": "Cartography"
     },
     "noResults": "No products match these filters.",
     "resetFilters": "Reset filters",

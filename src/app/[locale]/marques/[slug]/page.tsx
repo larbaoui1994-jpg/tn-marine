@@ -25,6 +25,17 @@ const getBrand = cache(async (slug: string) => {
   });
 });
 
+// Cartes C-MAP compatibles Lowrance (Reveal, Discover) affichées dans la
+// section "Cartographie" de la page Lowrance. La gamme "Génération X" est
+// exclue : elle n'est compatible qu'avec les traceurs Simrad NSX/NSS4.
+const getLowranceCompatibleCharts = cache(async () => {
+  return prisma.product.findMany({
+    where: { brand: { slug: "cmap" }, productLine: { in: ["Reveal", "Discover"] } },
+    include: { brand: true, category: true },
+    orderBy: { name: "asc" },
+  });
+});
+
 export async function generateMetadata({
   params,
 }: {
@@ -52,6 +63,7 @@ export default async function BrandPage({
 
   const key = brandKeyFromSlug(brand.slug);
   const logoUrl = brandLogoUrl(brand.slug);
+  const cartographyProducts = brand.slug === "lowrance" ? await getLowranceCompatibleCharts() : [];
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -158,6 +170,30 @@ export default async function BrandPage({
           {tShop("noResults")}
         </p>
       )}
+
+      {cartographyProducts.length > 0 &&
+        (() => {
+          const { groups: chartGroups } = groupByProductLine(cartographyProducts);
+          return (
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-primary">{tShop("sections.cartographie")}</h2>
+              <div className="mt-6 space-y-10">
+                {chartGroups.map(({ line, products: lineProducts }) => (
+                  <div key={line}>
+                    <h3 className="text-lg font-semibold text-primary">
+                      {tShop("productLine", { line })}
+                    </h3>
+                    <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      {lineProducts.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
     </div>
   );
 }

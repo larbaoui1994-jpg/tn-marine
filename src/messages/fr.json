@@ -206,7 +206,8 @@
     "productLine": "Gamme {line}",
     "sections": {
       "sondeursGps": "Sondeurs GPS",
-      "sondes": "Sondes"
+      "sondes": "Sondes",
+      "cartographie": "Cartographie"
     },
     "noResults": "Aucun produit ne correspond à ces filtres.",
     "resetFilters": "Réinitialiser les filtres",

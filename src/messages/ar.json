@@ -206,7 +206,8 @@
     "productLine": "فئة {line}",
     "sections": {
       "sondeursGps": "أجهزة السونار GPS",
-      "sondes": "المجسات"
+      "sondes": "المجسات",
+      "cartographie": "الخرائط الملاحية"
     },
     "noResults": "لا يوجد منتج يطابق هذه الفلاتر.",
     "resetFilters": "إعادة تعيين الفلاتر",
