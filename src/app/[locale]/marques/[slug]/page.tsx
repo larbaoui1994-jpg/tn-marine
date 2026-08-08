@@ -55,6 +55,7 @@ export default async function BrandPage({
   setRequestLocale(locale);
   const t = await getTranslations("Brands");
   const tShop = await getTranslations("Shop");
+  const tCommon = await getTranslations("Common");
 
   const brand = await getBrand(slug);
   if (!brand) {
@@ -88,16 +89,63 @@ export default async function BrandPage({
       </div>
 
       {brand.slug === "lowrance" && (
-        <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-black">
-          <video
-            className="h-full w-full"
-            controls
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <>
+          <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-black">
+            <video
+              className="h-full w-full"
+              controls
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {[
+              {
+                anchor: "gamme-eagle",
+                image: "/products/lowrance-eagle-9-1.png",
+                title: "Eagle",
+                text: "Le sondeur/traceur le plus accessible et le plus facile à utiliser de Lowrance.",
+              },
+              {
+                anchor: "gamme-elite-fs",
+                image: "/products/lowrance-elite-fs-12-1.png",
+                title: "Elite FS",
+                text: "Tous les outils de détection de poissons Lowrance sur un écran facile à installer.",
+              },
+              {
+                anchor: "gamme-hds-pro",
+                image: "/products/lowrance-hds-pro-16-1.png",
+                title: "HDS PRO",
+                text: "Le niveau supérieur : clarté sondeur ultime, cartographie C-MAP et contrôle proue à poupe.",
+              },
+            ].map((tile) => (
+              <a
+                key={tile.anchor}
+                href={`#${tile.anchor}`}
+                className="group overflow-hidden rounded-xl border border-border bg-surface-alt transition hover:border-secondary"
+              >
+                <div className="relative aspect-square bg-white">
+                  <Image
+                    src={tile.image}
+                    alt={tile.title}
+                    fill
+                    className="object-contain p-6"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold text-primary">{tile.title}</h3>
+                  <p className="mt-1 text-sm text-text-muted">{tile.text}</p>
+                  <span className="mt-3 inline-block text-sm font-medium text-secondary group-hover:underline">
+                    {tCommon("readMore")} →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
       )}
 
       {brand.products.length > 0 ? (
@@ -129,7 +177,10 @@ export default async function BrandPage({
 
           const renderLine = ({ line, products: lineProducts }: (typeof groups)[number]) => (
             <div key={line}>
-              <h3 className="text-lg font-semibold text-primary">
+              <h3
+                id={`gamme-${line.toLowerCase().replace(/\s+/g, "-")}`}
+                className="scroll-mt-24 text-lg font-semibold text-primary"
+              >
                 {tShop("productLine", { line })}
               </h3>
               <div className="mt-4">{renderGrid(lineProducts)}</div>
