@@ -9,6 +9,7 @@ import { prisma } from "@/lib/prisma";
 import { BRAND_DIRECTORY, brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-directory";
 import { groupByProductLine, sectionForProductLine } from "@/lib/product-grouping";
 import ProductCard from "@/components/shop/ProductCard";
+import EagleVideoPlaylist from "@/components/brand/EagleVideoPlaylist";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -106,7 +107,7 @@ export default async function BrandPage({
         <>
           <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
             <div className="mx-auto aspect-video w-full max-w-7xl bg-black">
-              <video className="h-full w-full" controls playsInline preload="metadata">
+              <video className="h-full w-full" controls playsInline loop preload="metadata">
                 <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
               </video>
             </div>
@@ -193,6 +194,7 @@ export default async function BrandPage({
               >
                 {tShop("productLine", { line })}
               </h3>
+              {isLowrance && line === "Eagle" && <EagleVideoPlaylist />}
               <div className="mt-4">{renderGrid(lineProducts)}</div>
             </div>
           );
