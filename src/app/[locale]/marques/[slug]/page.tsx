@@ -89,10 +89,12 @@ export default async function BrandPage({
   const isSimrad = brand.slug === "simrad";
   const isGarmin = brand.slug === "garmin";
   const isCmap = brand.slug === "cmap";
-  // navionics.com redirige aujourd'hui entièrement vers garmin.com (marque
-  // rachetée par Garmin) : même direction artistique que la page Garmin.
+  // navionics.com et fusionentertainment.com redirigent aujourd'hui
+  // entièrement vers garmin.com (marques rachetées par Garmin) : même
+  // direction artistique que la page Garmin.
   const isNavionics = brand.slug === "navionics";
-  const usesGarminStyle = isGarmin || isNavionics;
+  const isFusion = brand.slug === "fusion";
+  const usesGarminStyle = isGarmin || isNavionics || isFusion;
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
