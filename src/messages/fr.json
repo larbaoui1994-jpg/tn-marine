@@ -58,8 +58,7 @@
     "columnsResources": "Ressources",
     "columnsContact": "Contact",
     "hours": "Horaires",
-    "hoursText": "Lun-Jeu & Sam-Dim : 9h–17h · Vendredi : fermé",
-    "hoursNotice": "(horaires à confirmer)",
+    "hoursText": "Samedi-Jeudi : 9h–17h",
     "social": "Réseaux sociaux",
     "rights": "Tous droits réservés.",
     "authGuideLink": "Guide des autorisations ANF"
@@ -125,8 +124,7 @@
     "addressLabel": "Adresse",
     "phoneLabel": "Téléphone",
     "hoursLabel": "Horaires",
-    "hoursText": "Lundi-Jeudi et Samedi-Dimanche : 9h–17h · Vendredi : fermé",
-    "hoursNotice": "(horaires à confirmer avec TN Marine)",
+    "hoursText": "Samedi-Jeudi : 9h–17h",
     "socialLabel": "Réseaux sociaux",
     "mapTitle": "Localisation de TN Marine sur Google Maps",
     "form": {

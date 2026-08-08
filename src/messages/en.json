@@ -58,8 +58,7 @@
     "columnsResources": "Resources",
     "columnsContact": "Contact",
     "hours": "Opening hours",
-    "hoursText": "Mon-Thu & Sat-Sun: 9am–5pm · Friday: closed",
-    "hoursNotice": "(hours to be confirmed)",
+    "hoursText": "Saturday-Thursday: 9am–5pm",
     "social": "Social media",
     "rights": "All rights reserved.",
     "authGuideLink": "ANF authorization guide"
@@ -125,8 +124,7 @@
     "addressLabel": "Address",
     "phoneLabel": "Phone",
     "hoursLabel": "Opening hours",
-    "hoursText": "Monday-Thursday and Saturday-Sunday: 9am–5pm · Friday: closed",
-    "hoursNotice": "(hours to be confirmed with TN Marine)",
+    "hoursText": "Saturday-Thursday: 9am–5pm",
     "socialLabel": "Social media",
     "mapTitle": "TN Marine location on Google Maps",
     "form": {
