@@ -64,7 +64,21 @@ export default async function BrandPage({
 
   const key = brandKeyFromSlug(brand.slug);
   const logoUrl = brandLogoUrl(brand.slug);
-  const cartographyProducts = brand.slug === "lowrance" ? await getLowranceCompatibleCharts() : [];
+  const isLowrance = brand.slug === "lowrance";
+  const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
+
+  // Direction artistique inspirée de lowrance.com/fr-fr/ : bandeau vidéo
+  // plein écran sur fond marine, titres en majuscules avec liseré d'accent
+  // turquoise. Réservée à la page Lowrance (cf. `isLowrance`).
+  const sectionHeading = (text: string) =>
+    isLowrance ? (
+      <div>
+        <h2 className="text-2xl font-bold uppercase tracking-wide text-primary">{text}</h2>
+        <span className="mt-2 block h-0.5 w-12 bg-secondary" aria-hidden="true" />
+      </div>
+    ) : (
+      <h2 className="text-2xl font-bold text-primary">{text}</h2>
+    );
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -88,20 +102,17 @@ export default async function BrandPage({
         {key && <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>}
       </div>
 
-      {brand.slug === "lowrance" && (
+      {isLowrance && (
         <>
-          <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-black">
-            <video
-              className="h-full w-full"
-              controls
-              playsInline
-              preload="metadata"
-            >
-              <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
-            </video>
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
+            <div className="mx-auto aspect-video w-full max-w-7xl bg-black">
+              <video className="h-full w-full" controls playsInline preload="metadata">
+                <source src="/videos/lowrance-we-make-fishing.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
             {[
               {
                 anchor: "gamme-eagle",
@@ -122,23 +133,22 @@ export default async function BrandPage({
                 text: "Le niveau supérieur : clarté sondeur ultime, cartographie C-MAP et contrôle proue à poupe.",
               },
             ].map((tile) => (
-              <a
-                key={tile.anchor}
-                href={`#${tile.anchor}`}
-                className="group overflow-hidden rounded-xl border border-border bg-surface-alt transition hover:border-secondary"
-              >
-                <div className="relative aspect-square bg-white">
+              <a key={tile.anchor} href={`#${tile.anchor}`} className="group flex flex-col">
+                <div className="relative aspect-square w-full bg-surface">
                   <Image
                     src={tile.image}
                     alt={tile.title}
                     fill
-                    className="object-contain p-6"
+                    className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-primary">{tile.title}</h3>
-                  <p className="mt-1 text-sm text-text-muted">{tile.text}</p>
-                  <span className="mt-3 inline-block text-sm font-medium text-secondary group-hover:underline">
+                <div className="mt-4">
+                  <h3 className="text-lg font-bold uppercase tracking-wide text-primary">
+                    {tile.title}
+                  </h3>
+                  <span className="mt-1.5 block h-0.5 w-10 bg-secondary" aria-hidden="true" />
+                  <p className="mt-3 text-sm text-text-muted">{tile.text}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-secondary group-hover:underline">
                     {tCommon("readMore")} →
                   </span>
                 </div>
@@ -192,9 +202,7 @@ export default async function BrandPage({
               {sections.map(({ section, lines }, index) =>
                 section ? (
                   <div key={`${section}-${index}`}>
-                    <h2 className="text-2xl font-bold text-primary">
-                      {tShop(`sections.${section}`)}
-                    </h2>
+                    {sectionHeading(tShop(`sections.${section}`))}
                     <div className="mt-6 space-y-10">
                       {lines.length === 1
                         ? renderGrid(lines[0].products)
@@ -228,7 +236,7 @@ export default async function BrandPage({
           const { groups: chartGroups } = groupByProductLine(cartographyProducts);
           return (
             <div className="mt-12">
-              <h2 className="text-2xl font-bold text-primary">{tShop("sections.cartographie")}</h2>
+              {sectionHeading(tShop("sections.cartographie"))}
               <div className="mt-6 space-y-10">
                 {chartGroups.map(({ line, products: lineProducts }) => (
                   <div key={line}>
