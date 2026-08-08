@@ -110,6 +110,7 @@ export default async function BrandPage({
   const isMinnKota = brand.slug === "minn-kota";
   const isInternational = brand.slug === "international";
   const isCobraMarine = brand.slug === "cobra-marine";
+  const isAirmar = brand.slug === "airmar";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -137,7 +138,7 @@ export default async function BrandPage({
       className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${
         isLowrance
           ? dmSans.className
-          : usesGarminStyle
+          : usesGarminStyle || isAirmar
             ? roboto.className
             : isCmap || isInternational
               ? openSans.className
@@ -176,12 +177,17 @@ export default async function BrandPage({
             <h2 className={`${inter.className} mt-6 text-3xl font-bold text-black sm:text-4xl`}>
               {t(`items.${key}.tagline`)}
             </h2>
+          ) : isAirmar ? (
+            <h2 className={`${roboto.className} mt-6 text-3xl font-bold text-[#2E64B0] sm:text-4xl`}>
+              {t(`items.${key}.tagline`)}
+            </h2>
           ) : (
             <p className="mt-3 text-text-muted">{t(`items.${key}.tagline`)}</p>
           ))}
       </div>
 
       {isCobraMarine && <span className="mt-4 block h-1 w-16 bg-[#C10030]" aria-hidden="true" />}
+      {isAirmar && <span className="mt-4 block h-1 w-16 bg-[#2E64B0]" aria-hidden="true" />}
 
       {usesGarminStyle && (
         <span className="mt-6 block h-0.5 w-16 bg-black" aria-hidden="true" />
