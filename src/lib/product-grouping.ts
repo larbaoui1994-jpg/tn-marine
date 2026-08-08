@@ -14,6 +14,7 @@ const PRODUCT_LINE_ORDER = [
   "NSS EVO 3",
   "NSS EVO 3S",
   "NSS 4",
+  "Sonde",
   "Stéréos & Radios",
   "HP XS Sport",
   "HP Tower XS Sport",
