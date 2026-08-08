@@ -89,6 +89,10 @@ export default async function BrandPage({
   const isSimrad = brand.slug === "simrad";
   const isGarmin = brand.slug === "garmin";
   const isCmap = brand.slug === "cmap";
+  // navionics.com redirige aujourd'hui entièrement vers garmin.com (marque
+  // rachetée par Garmin) : même direction artistique que la page Garmin.
+  const isNavionics = brand.slug === "navionics";
+  const usesGarminStyle = isGarmin || isNavionics;
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -114,7 +118,7 @@ export default async function BrandPage({
   return (
     <div
       className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${
-        isLowrance ? dmSans.className : isGarmin ? roboto.className : isCmap ? openSans.className : ""
+        isLowrance ? dmSans.className : usesGarminStyle ? roboto.className : isCmap ? openSans.className : ""
       }`}
     >
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
@@ -135,7 +139,7 @@ export default async function BrandPage({
           {brand.name}
         </h1>
         {key &&
-          (isGarmin ? (
+          (usesGarminStyle ? (
             <h2
               className={`${oswald.className} mt-6 text-4xl font-medium uppercase tracking-tight text-black sm:text-5xl`}
             >
@@ -146,7 +150,7 @@ export default async function BrandPage({
           ))}
       </div>
 
-      {isGarmin && (
+      {usesGarminStyle && (
         <span className="mt-6 block h-0.5 w-16 bg-black" aria-hidden="true" />
       )}
 
@@ -302,7 +306,9 @@ export default async function BrandPage({
                     ? `${barlowCondensed.className} scroll-mt-24 text-2xl font-medium text-primary`
                     : isCmap
                       ? `${exo2.className} scroll-mt-24 text-2xl font-bold uppercase text-[#242424]`
-                      : "scroll-mt-24 text-lg font-semibold text-primary"
+                      : usesGarminStyle
+                        ? `${oswald.className} scroll-mt-24 text-2xl font-medium uppercase text-black`
+                        : "scroll-mt-24 text-lg font-semibold text-primary"
                 }
               >
                 {tShop("productLine", { line })}
