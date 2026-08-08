@@ -2,6 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { DM_Sans, Barlow_Condensed } from "next/font/google";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -11,6 +12,12 @@ import { groupByProductLine, sectionForProductLine } from "@/lib/product-groupin
 import ProductCard from "@/components/shop/ProductCard";
 import EagleVideoPlaylist from "@/components/brand/EagleVideoPlaylist";
 import HeroVideo from "@/components/brand/HeroVideo";
+
+// Typographie de lowrance.com/fr-fr/ : DM Sans pour le texte courant,
+// Barlow Condensed (Medium) pour les grands titres — appliquée
+// uniquement sur la page Lowrance (cf. `isLowrance`).
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const barlowCondensed = Barlow_Condensed({ subsets: ["latin"], weight: ["500", "600"] });
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -74,7 +81,14 @@ export default async function BrandPage({
   // simrad-yachting.com/fr-fr/ : titres en majuscules avec liseré d'accent
   // turquoise. Réservée aux pages Lowrance et Simrad.
   const sectionHeading = (text: string) =>
-    isLowrance || isSimrad ? (
+    isLowrance ? (
+      <div>
+        <h2 className={`${barlowCondensed.className} text-3xl font-medium uppercase tracking-wide text-primary`}>
+          {text}
+        </h2>
+        <span className="mt-2 block h-0.5 w-12 bg-secondary" aria-hidden="true" />
+      </div>
+    ) : isSimrad ? (
       <div>
         <h2 className="text-2xl font-bold uppercase tracking-wide text-primary">{text}</h2>
         <span className="mt-2 block h-0.5 w-12 bg-secondary" aria-hidden="true" />
@@ -84,7 +98,7 @@ export default async function BrandPage({
     );
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${isLowrance ? dmSans.className : ""}`}>
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
         ← {t("kicker")}
       </Link>
@@ -142,12 +156,12 @@ export default async function BrandPage({
                   />
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-lg font-bold uppercase tracking-wide text-primary">
+                  <h3 className={`${barlowCondensed.className} text-3xl font-medium text-primary`}>
                     {tile.title}
                   </h3>
                   <span className="mt-1.5 block h-0.5 w-10 bg-secondary" aria-hidden="true" />
                   <p className="mt-3 text-sm text-text-muted">{tile.text}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-secondary group-hover:underline">
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm text-secondary group-hover:underline">
                     {tCommon("readMore")} →
                   </span>
                 </div>
@@ -252,7 +266,11 @@ export default async function BrandPage({
             <div key={line}>
               <h3
                 id={`gamme-${line.toLowerCase().replace(/\s+/g, "-")}`}
-                className="scroll-mt-24 text-lg font-semibold text-primary"
+                className={
+                  isLowrance
+                    ? `${barlowCondensed.className} scroll-mt-24 text-2xl font-medium text-primary`
+                    : "scroll-mt-24 text-lg font-semibold text-primary"
+                }
               >
                 {tShop("productLine", { line })}
               </h3>
