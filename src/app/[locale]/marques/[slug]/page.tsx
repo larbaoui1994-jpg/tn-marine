@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { DM_Sans, Barlow_Condensed, Roboto, Oswald } from "next/font/google";
+import { DM_Sans, Barlow_Condensed, Roboto, Oswald, Open_Sans, Exo_2 } from "next/font/google";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -24,6 +24,12 @@ const barlowCondensed = Barlow_Condensed({ subsets: ["latin"], weight: ["500", "
 // Garmin (cf. `isGarmin`).
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 const oswald = Oswald({ subsets: ["latin"], weight: ["500", "700"] });
+
+// Typographie de c-map.com : Open Sans pour le texte courant, Exo 2 pour
+// les titres, avec l'orange de marque (#FC5000) en accent — appliquée
+// uniquement sur la page C-MAP (cf. `isCmap`).
+const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "600", "700"] });
+const exo2 = Exo_2({ subsets: ["latin"], weight: ["600", "700"] });
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -82,6 +88,7 @@ export default async function BrandPage({
   const isLowrance = brand.slug === "lowrance";
   const isSimrad = brand.slug === "simrad";
   const isGarmin = brand.slug === "garmin";
+  const isCmap = brand.slug === "cmap";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -107,7 +114,7 @@ export default async function BrandPage({
   return (
     <div
       className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${
-        isLowrance ? dmSans.className : isGarmin ? roboto.className : ""
+        isLowrance ? dmSans.className : isGarmin ? roboto.className : isCmap ? openSans.className : ""
       }`}
     >
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
@@ -293,11 +300,14 @@ export default async function BrandPage({
                 className={
                   isLowrance
                     ? `${barlowCondensed.className} scroll-mt-24 text-2xl font-medium text-primary`
-                    : "scroll-mt-24 text-lg font-semibold text-primary"
+                    : isCmap
+                      ? `${exo2.className} scroll-mt-24 text-2xl font-bold uppercase text-[#242424]`
+                      : "scroll-mt-24 text-lg font-semibold text-primary"
                 }
               >
                 {tShop("productLine", { line })}
               </h3>
+              {isCmap && <span className="mt-1.5 block h-1 w-12 bg-[#FC5000]" aria-hidden="true" />}
               {isLowrance && line === "Eagle" && <EagleVideoPlaylist />}
               <div className="mt-4">{renderGrid(lineProducts)}</div>
             </div>
