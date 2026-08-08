@@ -67,13 +67,14 @@ export default async function BrandPage({
   const key = brandKeyFromSlug(brand.slug);
   const logoUrl = brandLogoUrl(brand.slug);
   const isLowrance = brand.slug === "lowrance";
+  const isSimrad = brand.slug === "simrad";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
-  // Direction artistique inspirée de lowrance.com/fr-fr/ : bandeau vidéo
-  // plein écran sur fond marine, titres en majuscules avec liseré d'accent
-  // turquoise. Réservée à la page Lowrance (cf. `isLowrance`).
+  // Direction artistique inspirée de lowrance.com/fr-fr/ et
+  // simrad-yachting.com/fr-fr/ : titres en majuscules avec liseré d'accent
+  // turquoise. Réservée aux pages Lowrance et Simrad.
   const sectionHeading = (text: string) =>
-    isLowrance ? (
+    isLowrance || isSimrad ? (
       <div>
         <h2 className="text-2xl font-bold uppercase tracking-wide text-primary">{text}</h2>
         <span className="mt-2 block h-0.5 w-12 bg-secondary" aria-hidden="true" />
@@ -154,6 +155,69 @@ export default async function BrandPage({
             ))}
           </div>
         </>
+      )}
+
+      {isSimrad && (
+        <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen overflow-x-hidden bg-primary-dark">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+              {[
+                {
+                  anchor: "gamme-go",
+                  image: "/products/simrad-go9-1.png",
+                  title: "GO",
+                  text: "La gamme d'entrée, compacte et tactile, pour équiper rapidement votre poste de barre.",
+                },
+                {
+                  anchor: "gamme-nsx",
+                  image: "/products/simrad-nsx-3009-1.png",
+                  title: "NSX",
+                  text: "Notre système d'exploitation le plus fluide et le plus rapide, en version tactile.",
+                },
+                {
+                  anchor: "gamme-nsx-ultrawide",
+                  image: "/products/simrad-nsx-ultrawide-3012-1.png",
+                  title: "NSX Ultrawide",
+                  text: "Le format panoramique NSX pour multiplier les vues sans perdre en lisibilité.",
+                },
+                {
+                  anchor: "gamme-nss-evo-3",
+                  image: "/products/simrad-nss-7-evo3-1.png",
+                  title: "NSS evo3",
+                  text: "Traceur professionnel SolarMAX HD, compatible radar Halo et pilote automatique.",
+                },
+                {
+                  anchor: "gamme-nss-4",
+                  image: "/products/simrad-nss4-12-1.png",
+                  title: "NSS4",
+                  text: "La nouvelle génération Simrad : SolarMAX HD et intégration complète du poste de barre.",
+                },
+              ].map((tile) => (
+                <a
+                  key={tile.anchor}
+                  href={`#${tile.anchor}`}
+                  className="group flex flex-col items-center text-center"
+                >
+                  <div className="relative aspect-square w-full">
+                    <Image
+                      src={tile.image}
+                      alt={tile.title}
+                      fill
+                      className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-white sm:text-base">
+                    {tile.title}
+                  </h3>
+                  <p className="mt-2 text-xs text-white/70">{tile.text}</p>
+                  <span className="mt-4 rounded border border-white/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white transition-colors group-hover:bg-white/10">
+                    {tCommon("readMore")}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       )}
 
       {brand.products.length > 0 ? (
