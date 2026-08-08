@@ -204,6 +204,10 @@
     "allBrands": "All brands",
     "resultsCount": "{count, plural, =0 {No products} one {# product} other {# products}}",
     "productLine": "{line} range",
+    "sections": {
+      "sondeursGps": "GPS Fishfinders",
+      "sondes": "Transducers"
+    },
     "noResults": "No products match these filters.",
     "resetFilters": "Reset filters",
     "viewProduct": "View product sheet",

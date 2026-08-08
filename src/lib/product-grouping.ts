@@ -41,6 +41,27 @@ const PRODUCT_LINE_ORDER = [
   "Riptide Terrova GPS 112 Lbs",
 ];
 
+// Regroupement de plus haut niveau, au-dessus des gammes (`productLine`),
+// utilisé uniquement pour les pages Lowrance et Simrad : les traceurs/
+// sondeurs GPS d'un côté, les sondes (transducteurs) de l'autre. Les autres
+// marques n'ont pas d'entrée ici et restent affichées sans section.
+const SECTION_BY_PRODUCT_LINE: Record<string, string> = {
+  Eagle: "sondeursGps",
+  "Elite FS": "sondeursGps",
+  "HDS PRO": "sondeursGps",
+  GO: "sondeursGps",
+  NSX: "sondeursGps",
+  "NSX ULTRAWIDE": "sondeursGps",
+  "NSS EVO 3": "sondeursGps",
+  "NSS EVO 3S": "sondeursGps",
+  "NSS 4": "sondeursGps",
+  Sonde: "sondes",
+};
+
+export function sectionForProductLine(line: string): string | undefined {
+  return SECTION_BY_PRODUCT_LINE[line];
+}
+
 // Extrait la taille d'écran depuis le nom du produit (ex. "Eagle 4X" → 4,
 // "NSS 9 EVO 3S" → 9) pour trier chaque gamme du plus petit écran au plus
 // grand plutôt que par ordre alphabétique. On prend le plus grand nombre

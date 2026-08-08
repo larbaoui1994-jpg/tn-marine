@@ -7,7 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { prisma } from "@/lib/prisma";
 import { BRAND_DIRECTORY, brandKeyFromSlug, brandLogoUrl } from "@/lib/brand-directory";
-import { groupByProductLine } from "@/lib/product-grouping";
+import { groupByProductLine, sectionForProductLine } from "@/lib/product-grouping";
 import ProductCard from "@/components/shop/ProductCard";
 
 export function generateStaticParams() {
@@ -78,20 +78,51 @@ export default async function BrandPage({
       {brand.products.length > 0 ? (
         (() => {
           const { groups, ungrouped } = groupByProductLine(brand.products);
+
+          // Regroupe les gammes consécutives partageant la même section
+          // (ex. Lowrance/Simrad : "Sondeurs GPS" puis "Sondes"). Les
+          // marques sans mapping de section gardent un seul bloc sans
+          // en-tête de section, identique au rendu précédent.
+          const sections: { section?: string; lines: typeof groups }[] = [];
+          for (const group of groups) {
+            const section = sectionForProductLine(group.line);
+            const current = sections[sections.length - 1];
+            if (current && current.section === section) {
+              current.lines.push(group);
+            } else {
+              sections.push({ section, lines: [group] });
+            }
+          }
+
+          const renderLine = ({ line, products: lineProducts }: (typeof groups)[number]) => (
+            <div key={line}>
+              <h3 className="text-lg font-semibold text-primary">
+                {tShop("productLine", { line })}
+              </h3>
+              <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {lineProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </div>
+          );
+
           return (
-            <div className="mt-10 space-y-10">
-              {groups.map(({ line, products: lineProducts }) => (
-                <div key={line}>
-                  <h2 className="text-lg font-semibold text-primary">
-                    {tShop("productLine", { line })}
-                  </h2>
-                  <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {lineProducts.map((product) => (
-                      <ProductCard key={product.id} product={product} />
-                    ))}
+            <div className="mt-10 space-y-12">
+              {sections.map(({ section, lines }, index) =>
+                section ? (
+                  <div key={`${section}-${index}`}>
+                    <h2 className="text-2xl font-bold text-primary">
+                      {tShop(`sections.${section}`)}
+                    </h2>
+                    <div className="mt-6 space-y-10">{lines.map(renderLine)}</div>
                   </div>
-                </div>
-              ))}
+                ) : (
+                  <div key={`nosection-${index}`} className="space-y-10">
+                    {lines.map(renderLine)}
+                  </div>
+                ),
+              )}
               {ungrouped.length > 0 && (
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {ungrouped.map((product) => (
