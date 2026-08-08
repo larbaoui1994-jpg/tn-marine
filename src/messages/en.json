@@ -207,6 +207,7 @@
     "sections": {
       "sondeursGps": "GPS Fishfinders",
       "sondes": "Transducers",
+      "moteursElectriques": "Electric Motors",
       "cartographie": "Cartography"
     },
     "noResults": "No products match these filters.",

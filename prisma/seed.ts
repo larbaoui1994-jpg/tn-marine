@@ -2430,6 +2430,130 @@ const products: ProductSeed[] = [
       { label: "Montage", value: "Tableau arrière" },
     ],
   },
+
+  // --- Lowrance — Gamme Recon SW (moteur électrique avant, eau salée) ----
+  {
+    slug: "lowrance-recon-sw-54",
+    name: "Lowrance Recon SW 54 pouces",
+    brand: "lowrance",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 54 pouces, poussée 115 Lbs (36V) / 90 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour la pêche côtière et hauturière.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16179-001" },
+      { label: "Longueur d'arbre", value: "54 pouces (137 cm)" },
+      { label: "Poussée maximale", value: "115 Lbs à 36V / 90 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
+  {
+    slug: "lowrance-recon-sw-60",
+    name: "Lowrance Recon SW 60 pouces",
+    brand: "lowrance",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 60 pouces, poussée 120 Lbs (36V) / 97 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour la pêche côtière et hauturière.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16180-001" },
+      { label: "Longueur d'arbre", value: "60 pouces (152 cm)" },
+      { label: "Poussée maximale", value: "120 Lbs à 36V / 97 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
+  {
+    slug: "lowrance-recon-sw-72",
+    name: "Lowrance Recon SW 72 pouces",
+    brand: "lowrance",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 72 pouces, poussée 115 Lbs (36V) / 90 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour les grandes unités et les plateformes hautes.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16181-001" },
+      { label: "Longueur d'arbre", value: "72 pouces (183 cm)" },
+      { label: "Poussée maximale", value: "115 Lbs à 36V / 90 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
+
+  // --- Simrad — Gamme Recon SW (moteur électrique avant, eau salée) ------
+  {
+    slug: "simrad-recon-sw-54",
+    name: "Simrad Recon SW 54 pouces",
+    brand: "simrad",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 54 pouces, poussée 115 Lbs (36V) / 90 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour la pêche côtière et hauturière.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16179-001" },
+      { label: "Longueur d'arbre", value: "54 pouces (137 cm)" },
+      { label: "Poussée maximale", value: "115 Lbs à 36V / 90 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
+  {
+    slug: "simrad-recon-sw-60",
+    name: "Simrad Recon SW 60 pouces",
+    brand: "simrad",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 60 pouces, poussée 120 Lbs (36V) / 97 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour la pêche côtière et hauturière.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16180-001" },
+      { label: "Longueur d'arbre", value: "60 pouces (152 cm)" },
+      { label: "Poussée maximale", value: "120 Lbs à 36V / 97 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
+  {
+    slug: "simrad-recon-sw-72",
+    name: "Simrad Recon SW 72 pouces",
+    brand: "simrad",
+    category: "moteurs-electriques",
+    productLine: "Recon SW",
+    images: ["/products/recon-sw.png"],
+    shortDescription: "Moteur électrique avant pour mer, arbre 72 pouces, poussée 115 Lbs (36V) / 90 Lbs (24V)",
+    description:
+      "Le Recon SW est le moteur électrique de proue Lowrance/Simrad conçu pour la pêche en mer. Piloté par le joystick de commande à distance FreeSteer, il assure un positionnement GPS précis et un maintien de cap dans le vent et le courant. Son moteur brushless 24V/36V silencieux et son arbre en composite fibre de carbone, garanti à vie, en font une solution robuste pour les grandes unités et les plateformes hautes.",
+    specs: [
+      { label: "Référence constructeur", value: "000-16181-001" },
+      { label: "Longueur d'arbre", value: "72 pouces (183 cm)" },
+      { label: "Poussée maximale", value: "115 Lbs à 36V / 90 Lbs à 24V" },
+      { label: "Alimentation", value: "24V ou 36V" },
+      { label: "Commande", value: "Joystick de commande à distance FreeSteer" },
+      { label: "Montage", value: "Collier de serrage à verrouillage à came, type pivot" },
+      { label: "Garantie", value: "3 ans moteur, arbre garanti à vie" },
+    ],
+  },
 ];
 
 async function main() {

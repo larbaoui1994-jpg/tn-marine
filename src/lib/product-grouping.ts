@@ -15,6 +15,7 @@ const PRODUCT_LINE_ORDER = [
   "NSS EVO 3S",
   "NSS 4",
   "Sonde",
+  "Recon SW",
   "Stéréos & Radios",
   "HP XS Sport",
   "HP Tower XS Sport",
@@ -56,6 +57,7 @@ const SECTION_BY_PRODUCT_LINE: Record<string, string> = {
   "NSS EVO 3S": "sondeursGps",
   "NSS 4": "sondeursGps",
   Sonde: "sondes",
+  "Recon SW": "moteursElectriques",
 };
 
 export function sectionForProductLine(line: string): string | undefined {

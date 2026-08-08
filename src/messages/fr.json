@@ -207,6 +207,7 @@
     "sections": {
       "sondeursGps": "Sondeurs GPS",
       "sondes": "Sondes",
+      "moteursElectriques": "Moteurs électriques",
       "cartographie": "Cartographie"
     },
     "noResults": "Aucun produit ne correspond à ces filtres.",
