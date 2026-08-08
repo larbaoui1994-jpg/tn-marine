@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { DM_Sans, Barlow_Condensed, Roboto, Oswald, Open_Sans, Exo_2 } from "next/font/google";
+import { DM_Sans, Barlow_Condensed, Roboto, Oswald, Open_Sans, Exo_2, Archivo, Archivo_Black } from "next/font/google";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -30,6 +30,13 @@ const oswald = Oswald({ subsets: ["latin"], weight: ["500", "700"] });
 // uniquement sur la page C-MAP (cf. `isCmap`).
 const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const exo2 = Exo_2({ subsets: ["latin"], weight: ["600", "700"] });
+
+// Typographie de minnkotamotors.com (Trade Gothic / Industry, polices
+// commerciales) : Archivo + Archivo Black en équivalents libres, avec
+// l'ambre de marque (#FDB924) en accent — uniquement sur la page Minn
+// Kota (cf. `isMinnKota`).
+const archivo = Archivo({ subsets: ["latin"], weight: ["400", "600", "700"] });
+const archivoBlack = Archivo_Black({ subsets: ["latin"], weight: ["400"] });
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -95,6 +102,7 @@ export default async function BrandPage({
   const isNavionics = brand.slug === "navionics";
   const isFusion = brand.slug === "fusion";
   const usesGarminStyle = isGarmin || isNavionics || isFusion;
+  const isMinnKota = brand.slug === "minn-kota";
   const cartographyProducts = isLowrance ? await getLowranceCompatibleCharts() : [];
 
   // Direction artistique inspirée de lowrance.com/fr-fr/ et
@@ -120,7 +128,15 @@ export default async function BrandPage({
   return (
     <div
       className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ${
-        isLowrance ? dmSans.className : usesGarminStyle ? roboto.className : isCmap ? openSans.className : ""
+        isLowrance
+          ? dmSans.className
+          : usesGarminStyle
+            ? roboto.className
+            : isCmap
+              ? openSans.className
+              : isMinnKota
+                ? archivo.className
+                : ""
       }`}
     >
       <Link href="/marques" className="text-sm font-medium text-secondary hover:underline">
@@ -310,12 +326,15 @@ export default async function BrandPage({
                       ? `${exo2.className} scroll-mt-24 text-2xl font-bold uppercase text-[#242424]`
                       : usesGarminStyle
                         ? `${oswald.className} scroll-mt-24 text-2xl font-medium uppercase text-black`
-                        : "scroll-mt-24 text-lg font-semibold text-primary"
+                        : isMinnKota
+                          ? `${archivoBlack.className} scroll-mt-24 text-xl uppercase text-black`
+                          : "scroll-mt-24 text-lg font-semibold text-primary"
                 }
               >
                 {tShop("productLine", { line })}
               </h3>
               {isCmap && <span className="mt-1.5 block h-1 w-12 bg-[#FC5000]" aria-hidden="true" />}
+              {isMinnKota && <span className="mt-1.5 block h-1 w-12 bg-[#FDB924]" aria-hidden="true" />}
               {isLowrance && line === "Eagle" && <EagleVideoPlaylist />}
               <div className="mt-4">{renderGrid(lineProducts)}</div>
             </div>
