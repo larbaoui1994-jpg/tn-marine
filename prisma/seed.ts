@@ -2117,6 +2117,7 @@ const products: ProductSeed[] = [
     name: "Airmar P66 DT",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-p66.png"],
     shortDescription: "Sonde tableau arrière 600W, profondeur/température, connecteur bleu Simrad/Lowrance",
     description:
@@ -2134,6 +2135,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM150M",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm150m.png"],
     shortDescription: "Sonde tableau arrière CHIRP medium 300W, connecteur XSonic/Navico",
     description:
@@ -2151,6 +2153,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM165H-W",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm165hw.png"],
     shortDescription: "Sonde tableau arrière CHIRP haute fréquence large faisceau 600W, connecteur XSonic",
     description:
@@ -2168,6 +2171,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM185M",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm185m.png"],
     shortDescription: "Sonde tableau arrière CHIRP medium 1kW, connecteur XSonic",
     description:
@@ -2185,6 +2189,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM185H-W",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm185m.png"],
     shortDescription: "Sonde tableau arrière CHIRP haute fréquence large faisceau 1kW, connecteur XSonic",
     description:
@@ -2202,6 +2207,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM258",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm258.png"],
     shortDescription: "Sonde tableau arrière classique 1kW, connecteur Mix & Match Simrad/Lowrance",
     description:
@@ -2219,6 +2225,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM260",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm258.png"],
     shortDescription: "Sonde tableau arrière classique 1kW, connecteur bleu Simrad/Lowrance",
     description:
@@ -2236,6 +2243,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM265LH",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm265lh.png"],
     shortDescription: "Sonde tableau arrière CHIRP double fréquence low/high 1kW, connecteur bleu Simrad/Lowrance",
     description:
@@ -2253,6 +2261,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM265LM",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm265lh.png"],
     shortDescription: "Sonde tableau arrière CHIRP double fréquence low/medium 1kW, connecteur XSonic Simrad/Lowrance",
     description:
@@ -2270,6 +2279,7 @@ const products: ProductSeed[] = [
     name: "Airmar TM275LH-W",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Tableau arrière",
     images: ["/products/airmar-tm258.png"],
     shortDescription: "Sonde tableau arrière CHIRP low/high-wide 1kW, connecteur XSonic Simrad/Lowrance",
     description:
@@ -2287,6 +2297,7 @@ const products: ProductSeed[] = [
     name: "Airmar B258",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Traversante",
     images: ["/products/airmar-b258-1.png"],
     shortDescription: "Sonde traversante bronze 1kW, double fréquence 50/200 kHz, carénage haute performance",
     description:
@@ -2304,6 +2315,7 @@ const products: ProductSeed[] = [
     name: "Airmar B258M",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Traversante",
     images: ["/products/airmar-b258m-1.png"],
     shortDescription: "Sonde traversante bronze 1kW, double fréquence, connecteur Mix & Match 9 broches",
     description:
@@ -2321,6 +2333,7 @@ const products: ProductSeed[] = [
     name: "Airmar B45",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "Traversante",
     images: ["/products/airmar-b45-1.png"],
     shortDescription: "Sonde traversante bronze compacte 600W, double fréquence 50/200 kHz",
     description:
@@ -2337,6 +2350,7 @@ const products: ProductSeed[] = [
     name: "Airmar P79",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "À coller",
     images: ["/products/airmar-p79-1.png"],
     shortDescription: "Sonde à coller (intra-coque) profondeur seule, double fréquence 600W",
     description:
@@ -2354,6 +2368,7 @@ const products: ProductSeed[] = [
     name: "Airmar M260",
     brand: "airmar",
     category: "sondeurs",
+    productLine: "À coller",
     images: ["/products/airmar-m260-1.png"],
     shortDescription: "Sonde à coller (intra-coque) haute performance 1kW, double fréquence 50/200 kHz",
     description:

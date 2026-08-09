@@ -43,6 +43,9 @@ const PRODUCT_LINE_ORDER = [
   "Riptide Terrova GPS 55 Lbs",
   "Riptide Terrova GPS 80 Lbs",
   "Riptide Terrova GPS 112 Lbs",
+  "Tableau arrière",
+  "Traversante",
+  "À coller",
 ];
 
 // Regroupement de plus haut niveau, au-dessus des gammes (`productLine`),
