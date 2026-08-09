@@ -14,6 +14,8 @@ const PRODUCT_LINE_ORDER = [
   "NSS EVO 3",
   "NSS EVO 3S",
   "NSS 4",
+  "HALO",
+  "VHF",
   "Sonde",
   "Recon SW",
   "Stéréos & Radios",
@@ -56,6 +58,7 @@ const SECTION_BY_PRODUCT_LINE: Record<string, string> = {
   "NSS EVO 3": "sondeursGps",
   "NSS EVO 3S": "sondeursGps",
   "NSS 4": "sondeursGps",
+  HALO: "radars",
   Sonde: "sondes",
   "Recon SW": "moteursElectriques",
 };

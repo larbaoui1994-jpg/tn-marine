@@ -208,7 +208,8 @@
       "sondeursGps": "Sondeurs GPS",
       "sondes": "Sondes",
       "moteursElectriques": "Moteurs électriques",
-      "cartographie": "Cartographie"
+      "cartographie": "Cartographie",
+      "radars": "Radars"
     },
     "noResults": "Aucun produit ne correspond à ces filtres.",
     "resetFilters": "Réinitialiser les filtres",

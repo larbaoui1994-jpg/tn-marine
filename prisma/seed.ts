@@ -244,6 +244,95 @@ const products: ProductSeed[] = [
       { label: "Intégration", value: "Contrôle proue à poupe (moteur électrique, ancre, pilote automatique)" },
     ],
   },
+  // --- Lowrance — Gamme HALO (radars dôme à compression d'impulsions) ----
+  {
+    slug: "lowrance-halo20",
+    name: "Lowrance HALO20",
+    brand: "lowrance",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/lowrance-halo20-1.png"],
+    shortDescription: "Radar dôme 20 pouces, portée 24 nq, sans radiation, format compact",
+    description:
+      "Le HALO20 est un radar dôme compact à compression d'impulsions, qui détecte les obstacles de près comme jusqu'à 24 milles nautiques. Sans radiation et au faible encombrement, il convient bien aux petites unités de pêche côtière et de plaisance en Méditerranée.",
+    specs: [
+      { label: "Antenne", value: "Dôme 20 pouces" },
+      { label: "Portée", value: "Jusqu'à 24 milles nautiques" },
+      { label: "Technologie", value: "Compression d'impulsions, sans radiation" },
+      { label: "Suivi de cibles", value: "MARPA jusqu'à 10 cibles (20 en double portée)" },
+    ],
+  },
+  {
+    slug: "lowrance-halo20-plus",
+    name: "Lowrance HALO20+",
+    brand: "lowrance",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/lowrance-halo20-plus-1.png"],
+    shortDescription: "Radar dôme 20 pouces, portée 36 nq, rotation 60 tr/min, VelocityTrack",
+    description:
+      "Le HALO20+ reprend le format compact du HALO20 et y ajoute une rotation à 60 tours/minute en courte portée pour une image quasi temps réel, la technologie Doppler VelocityTrack pour distinguer les cibles qui s'approchent, et un mode double portée pour surveiller près et loin simultanément.",
+    specs: [
+      { label: "Antenne", value: "Dôme 20 pouces" },
+      { label: "Portée", value: "Jusqu'à 36 milles nautiques" },
+      { label: "Rotation", value: "60 tr/min jusqu'à 1,5 mille nautique" },
+      { label: "Technologie", value: "VelocityTrack Doppler, double portée simultanée" },
+    ],
+  },
+  {
+    slug: "lowrance-halo24",
+    name: "Lowrance HALO24",
+    brand: "lowrance",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/lowrance-halo24-1.png"],
+    shortDescription: "Radar dôme 24 pouces, portée 48 nq, rotation 60 tr/min, VelocityTrack",
+    description:
+      "Le HALO24 est le radar dôme le plus performant de la gamme Lowrance : portée jusqu'à 48 milles nautiques depuis un dôme compact de 24 pouces, rotation 60 tours/minute en courte portée pour une vue quasi instantanée, et technologie Doppler VelocityTrack pour l'évitement de collision.",
+    specs: [
+      { label: "Antenne", value: "Dôme 24 pouces" },
+      { label: "Portée", value: "Jusqu'à 48 milles nautiques" },
+      { label: "Rotation", value: "60 tr/min jusqu'à 1,5 mille nautique" },
+      { label: "Technologie", value: "VelocityTrack Doppler, double portée simultanée" },
+    ],
+  },
+
+  // --- Lowrance — Gamme VHF (radios VHF fixes) ----------------------------
+  {
+    slug: "lowrance-vhf-link-6s",
+    name: "Lowrance VHF Link-6S",
+    brand: "lowrance",
+    category: "vhf-communication",
+    productLine: "VHF",
+    images: ["/products/lowrance-vhf-link-6s-1.png"],
+    shortDescription: "VHF fixe DSC classe D avec GPS interne, combiné 4 boutons",
+    description:
+      "Le Link-6S est une VHF fixe DSC classe D fiable, avec un combiné 4 boutons, une molette et un clavier intuitifs, et un montage mécanique frontal facile à installer. Le GPS interne permet l'envoi automatique de la position lors d'un appel de détresse.",
+    specs: [
+      { label: "Type", value: "VHF fixe, DSC classe D" },
+      { label: "GPS", value: "Récepteur interne" },
+      { label: "Combiné", value: "4 boutons, avec touche Canal 16 dédiée" },
+      { label: "Fonctions", value: "Tri-Watch, mode Mes canaux, balayage multiple" },
+    ],
+  },
+  {
+    slug: "lowrance-vhf-link-9",
+    name: "Lowrance VHF Link-9",
+    brand: "lowrance",
+    category: "vhf-communication",
+    productLine: "VHF",
+    images: ["/products/lowrance-vhf-link-9-1.png"],
+    shortDescription: "VHF fixe avec GPS 4 voies, récepteur AIS double canal intégré",
+    description:
+      "Le Link-9 est une VHF fixe haut de gamme avec récepteur GPS (antenne interne, connecteur SMA, NMEA 0183 et NMEA 2000), récepteur AIS double canal intégré pour visualiser les navires alentour, sortie haut-parleur/corne d'appel et fonction homme à la mer (MOB) dédiée.",
+    specs: [
+      { label: "Type", value: "VHF fixe, DSC" },
+      { label: "GPS", value: "4 sources possibles (interne, SMA, NMEA 0183/2000)" },
+      { label: "AIS", value: "Récepteur double canal intégré" },
+      { label: "Fonctions", value: "Mode Navigation, MOB dédié, sortie corne d'appel" },
+    ],
+  },
+
   // --- Simrad — Gamme GO (entrée de gamme, compacte) ---------------------
   {
     slug: "simrad-go7",
@@ -499,8 +588,58 @@ const products: ProductSeed[] = [
       { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad, caméras IP" },
     ],
   },
-  // Halo20+ (radar) et AP44 (pilote automatique) retirés temporairement
-  // du catalogue à la demande de TN Marine — seront réajoutés plus tard.
+  // --- Simrad — Gamme HALO (radars dôme à compression d'impulsions) ------
+  {
+    slug: "simrad-halo20",
+    name: "Simrad HALO20",
+    brand: "simrad",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/simrad-halo20-1.png"],
+    shortDescription: "Radar dôme 20 pouces, portée 24 nq, sans radiation, format compact",
+    description:
+      "Le HALO20 est un radar dôme compact à compression d'impulsions, qui détecte les obstacles de près comme jusqu'à 24 milles nautiques. Sans radiation et au faible encombrement, il convient bien aux petites unités de pêche côtière et de plaisance en Méditerranée.",
+    specs: [
+      { label: "Antenne", value: "Dôme 20 pouces" },
+      { label: "Portée", value: "Jusqu'à 24 milles nautiques" },
+      { label: "Technologie", value: "Compression d'impulsions, sans radiation" },
+      { label: "Suivi de cibles", value: "MARPA jusqu'à 10 cibles (20 en double portée)" },
+    ],
+  },
+  {
+    slug: "simrad-halo20-plus",
+    name: "Simrad HALO20+",
+    brand: "simrad",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/simrad-halo20-plus-1.png"],
+    shortDescription: "Radar dôme 20 pouces, portée 36 nq, rotation 60 tr/min, VelocityTrack",
+    description:
+      "Le HALO20+ reprend le format compact du HALO20 et y ajoute une rotation à 60 tours/minute en courte portée pour une image quasi temps réel, la technologie Doppler VelocityTrack pour distinguer les cibles qui s'approchent, et un mode double portée pour surveiller près et loin simultanément.",
+    specs: [
+      { label: "Antenne", value: "Dôme 20 pouces" },
+      { label: "Portée", value: "Jusqu'à 36 milles nautiques" },
+      { label: "Rotation", value: "60 tr/min jusqu'à 1,5 mille nautique" },
+      { label: "Technologie", value: "VelocityTrack Doppler, double portée simultanée" },
+    ],
+  },
+  {
+    slug: "simrad-halo24",
+    name: "Simrad HALO24",
+    brand: "simrad",
+    category: "radars",
+    productLine: "HALO",
+    images: ["/products/simrad-halo24-1.png"],
+    shortDescription: "Radar dôme 24 pouces, portée 48 nq, rotation 60 tr/min, VelocityTrack",
+    description:
+      "Le HALO24 est le radar dôme le plus performant de la gamme Simrad : portée jusqu'à 48 milles nautiques depuis un dôme compact de 24 pouces, rotation 60 tours/minute en courte portée pour une vue quasi instantanée, et technologie Doppler VelocityTrack pour l'évitement de collision.",
+    specs: [
+      { label: "Antenne", value: "Dôme 24 pouces" },
+      { label: "Portée", value: "Jusqu'à 48 milles nautiques" },
+      { label: "Rotation", value: "60 tr/min jusqu'à 1,5 mille nautique" },
+      { label: "Technologie", value: "VelocityTrack Doppler, double portée simultanée" },
+    ],
+  },
 
   // --- Garmin ---------------------------------------------------------
   {

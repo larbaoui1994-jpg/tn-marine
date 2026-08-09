@@ -208,7 +208,8 @@
       "sondeursGps": "GPS Fishfinders",
       "sondes": "Transducers",
       "moteursElectriques": "Electric Motors",
-      "cartographie": "Cartography"
+      "cartographie": "Cartography",
+      "radars": "Radars"
     },
     "noResults": "No products match these filters.",
     "resetFilters": "Reset filters",

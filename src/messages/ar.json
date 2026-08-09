@@ -208,7 +208,8 @@
       "sondeursGps": "أجهزة السونار GPS",
       "sondes": "المجسات",
       "moteursElectriques": "المحركات الكهربائية",
-      "cartographie": "الخرائط الملاحية"
+      "cartographie": "الخرائط الملاحية",
+      "radars": "الرادار"
     },
     "noResults": "لا يوجد منتج يطابق هذه الفلاتر.",
     "resetFilters": "إعادة تعيين الفلاتر",
