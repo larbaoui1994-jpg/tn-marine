@@ -588,6 +588,23 @@ const products: ProductSeed[] = [
       { label: "Compatibilité", value: "Radar Halo, pilote automatique Simrad, caméras IP" },
     ],
   },
+  {
+    slug: "simrad-s2009",
+    name: "Simrad S2009",
+    brand: "simrad",
+    category: "sondeurs",
+    images: ["/products/simrad-s2009-1.png"],
+    shortDescription: "Sondeur dédié CHIRP, écran portrait 9 pouces, module large bande intégré",
+    description:
+      "Le S2009 associe un sondeur CHIRP à un écran portrait de 9 pouces qui maximise la hauteur d'affichage de la colonne d'eau, avec un pilotage intuitif au clavier. Compatible avec les sondes Simrad et Airmar à connecteur bleu 7 broches, il s'intègre en réseau Ethernet aux autres afficheurs Simrad pour un poste de barre dédié à la pêche.",
+    specs: [
+      { label: "Écran", value: "9 pouces portrait, 480 x 800" },
+      { label: "Sondeur", value: "CHIRP et large bande, profondeur jusqu'à 3000 m" },
+      { label: "Connectivité", value: "NMEA 0183, NMEA 2000, Ethernet" },
+      { label: "Étanchéité", value: "IPX7" },
+    ],
+  },
+
   // --- Simrad — Gamme HALO (radars dôme à compression d'impulsions) ------
   {
     slug: "simrad-halo20",
@@ -2262,6 +2279,90 @@ const products: ProductSeed[] = [
       { label: "Fréquence", value: "CHIRP basse et haute large faisceau" },
       { label: "Mesures", value: "Profondeur, température" },
       { label: "Connecteur", value: "XSonic 9 broches" },
+    ],
+  },
+  {
+    slug: "airmar-b258",
+    name: "Airmar B258",
+    brand: "airmar",
+    category: "sondeurs",
+    images: ["/products/airmar-b258-1.png"],
+    shortDescription: "Sonde traversante bronze 1kW, double fréquence 50/200 kHz, carénage haute performance",
+    description:
+      "La B258 est une sonde traversante bronze économique de 1 kW, à quatre éléments céramiques produisant un faisceau elliptique pour une meilleure couverture et une bonne résolution des cibles. Le carénage haute performance inclus assure de bons résultats jusqu'à 30 nœuds.",
+    specs: [
+      { label: "Type", value: "Sonde traversante bronze, double fréquence" },
+      { label: "Puissance", value: "1 kW" },
+      { label: "Fréquence", value: "50 kHz (faisceau 15°x21°) / 200 kHz (faisceau 3°x5°)" },
+      { label: "Profondeur max.", value: "647 m à 50 kHz / 294 m à 200 kHz" },
+      { label: "Connecteur", value: "Bleu 7 broches Simrad/Lowrance" },
+    ],
+  },
+  {
+    slug: "airmar-b258m",
+    name: "Airmar B258M",
+    brand: "airmar",
+    category: "sondeurs",
+    images: ["/products/airmar-b258m-1.png"],
+    shortDescription: "Sonde traversante bronze 1kW, double fréquence, connecteur Mix & Match 9 broches",
+    description:
+      "La B258M reprend le même corps de sonde traversante bronze 1 kW que la B258, mais avec le connecteur Airmar Mix & Match 9 broches : un câble adaptateur spécifique à la marque du traceur (Simrad/Lowrance, Garmin, etc.) permet de changer d'électronique sans remplacer la sonde.",
+    specs: [
+      { label: "Type", value: "Sonde traversante bronze, double fréquence" },
+      { label: "Puissance", value: "1 kW" },
+      { label: "Fréquence", value: "50 kHz (faisceau 15°x21°) / 200 kHz (faisceau 3°x5°)" },
+      { label: "Profondeur max.", value: "647 m à 50 kHz / 294 m à 200 kHz" },
+      { label: "Connecteur", value: "Mix & Match 9 broches (câble adaptateur selon la marque)" },
+    ],
+  },
+  {
+    slug: "airmar-b45",
+    name: "Airmar B45",
+    brand: "airmar",
+    category: "sondeurs",
+    images: ["/products/airmar-b45-1.png"],
+    shortDescription: "Sonde traversante bronze compacte 600W, double fréquence 50/200 kHz",
+    description:
+      "La B45 est la plus petite et la plus économique des sondes traversantes bronze d'Airmar, avec un élément céramique unique double fréquence. Le carénage inclus profile la sonde et améliore les performances, même à vitesse élevée.",
+    specs: [
+      { label: "Type", value: "Sonde traversante bronze compacte" },
+      { label: "Puissance", value: "600 W" },
+      { label: "Fréquence", value: "50 kHz (faisceau 45°) / 200 kHz (faisceau 12°)" },
+      { label: "Profondeur max.", value: "353 m à 50 kHz / 206 m à 200 kHz" },
+    ],
+  },
+  {
+    slug: "airmar-p79",
+    name: "Airmar P79",
+    brand: "airmar",
+    category: "sondeurs",
+    images: ["/products/airmar-p79-1.png"],
+    shortDescription: "Sonde à coller (intra-coque) profondeur seule, double fréquence 600W",
+    description:
+      "La P79 est une sonde à coller à l'intérieur de la coque, sans perçage : sa base plastique orientable s'adapte aux angles de quille jusqu'à 22° et se remplit d'antigel non toxique pour transmettre le signal à travers la coque. Idéale pour les coques en fibre de verre massif jusqu'à 8 m, sans aucune protubérance extérieure.",
+    specs: [
+      { label: "Type", value: "Sonde à coller (intra-coque), profondeur seule" },
+      { label: "Puissance", value: "600 W" },
+      { label: "Fréquence", value: "50 kHz (faisceau 45°) / 200 kHz (faisceau 12°)" },
+      { label: "Profondeur max.", value: "305 m à 50 kHz / 183 m à 200 kHz" },
+      { label: "Installation", value: "Sans perçage, angle de quille jusqu'à 22°" },
+    ],
+  },
+  {
+    slug: "airmar-m260",
+    name: "Airmar M260",
+    brand: "airmar",
+    category: "sondeurs",
+    images: ["/products/airmar-m260-1.png"],
+    shortDescription: "Sonde à coller (intra-coque) haute performance 1kW, double fréquence 50/200 kHz",
+    description:
+      "La M260 reprend la puissance et la sensibilité réputées de la gamme Airmar « 260 » en version à coller : installée dans son bac orienté selon l'angle de quille et fixé à l'intérieur de la coque, elle évite tout perçage. Le faisceau étroit de 6° à 200 kHz offre une excellente résolution des cibles, tandis que le 50 kHz assure une bonne détection en eau profonde.",
+    specs: [
+      { label: "Type", value: "Sonde à coller (intra-coque), profondeur seule" },
+      { label: "Puissance", value: "1 kW" },
+      { label: "Fréquence", value: "50 kHz (faisceau 19°) / 200 kHz (faisceau 6°)" },
+      { label: "Profondeur max.", value: "762 m à 50 kHz / 305 m à 200 kHz" },
+      { label: "Installation", value: "Sans perçage, bac de fixation intra-coque fourni" },
     ],
   },
 
