@@ -206,6 +206,7 @@
     "productLine": "Gamme {line}",
     "sections": {
       "sondeursGps": "Sondeurs GPS",
+      "sondeurs": "Sondeurs",
       "sondes": "Sondes",
       "moteursElectriques": "Moteurs électriques",
       "cartographie": "Cartographie",

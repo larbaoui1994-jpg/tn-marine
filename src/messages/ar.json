@@ -206,6 +206,7 @@
     "productLine": "فئة {line}",
     "sections": {
       "sondeursGps": "أجهزة السونار GPS",
+      "sondeurs": "أجهزة السونار",
       "sondes": "المجسات",
       "moteursElectriques": "المحركات الكهربائية",
       "cartographie": "الخرائط الملاحية",

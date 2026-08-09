@@ -593,6 +593,7 @@ const products: ProductSeed[] = [
     name: "Simrad S2009",
     brand: "simrad",
     category: "sondeurs",
+    productLine: "Sondeur",
     images: ["/products/simrad-s2009-1.png"],
     shortDescription: "Sondeur dédié CHIRP, écran portrait 9 pouces, module large bande intégré",
     description:

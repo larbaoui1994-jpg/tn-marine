@@ -206,6 +206,7 @@
     "productLine": "{line} range",
     "sections": {
       "sondeursGps": "GPS Fishfinders",
+      "sondeurs": "Fishfinders",
       "sondes": "Transducers",
       "moteursElectriques": "Electric Motors",
       "cartographie": "Cartography",
