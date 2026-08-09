@@ -1711,6 +1711,40 @@ const products: ProductSeed[] = [
       { label: "Compatibilité", value: "Haut-parleurs et subwoofers LED CRGBW Fusion" },
     ],
   },
+  {
+    slug: "fusion-arx-white",
+    name: "Fusion ARX Blanche",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "Accessoires",
+    images: ["/products/fusion-arx-white-1.png"],
+    shortDescription: "Télécommande sans fil ANT, montage adhésif, blanche",
+    description:
+      "La télécommande Fusion ARX se colle sur n'importe quelle surface plane grâce à son adhésif haute tenue, sans câblage ni découpe. Connectée en sans fil ANT jusqu'à 10 m, elle pilote lecture, pistes et volume des stéréos Fusion compatibles (séries 70, 755, StereoActive, Apollo RA770/RA800, Panel-Stereo).",
+    specs: [
+      { label: "Connectivité", value: "Sans fil ANT, portée jusqu'à 10 m" },
+      { label: "Étanchéité", value: "IPX6 / IPX7" },
+      { label: "Autonomie", value: "Jusqu'à 3 ans (pile intégrée)" },
+      { label: "Installation", value: "Adhésif haute tenue, sans perçage" },
+    ],
+  },
+  {
+    slug: "fusion-arx-black",
+    name: "Fusion ARX Noire",
+    brand: "fusion",
+    category: "audio-marine",
+    productLine: "Accessoires",
+    images: ["/products/fusion-arx-black-1.png"],
+    shortDescription: "Télécommande sans fil ANT, montage adhésif, noire",
+    description:
+      "Version noire de la télécommande Fusion ARX : mêmes fonctions et la même connectivité sans fil ANT que la version blanche, pour s'harmoniser avec un poste de barre aux finitions sombres.",
+    specs: [
+      { label: "Connectivité", value: "Sans fil ANT, portée jusqu'à 10 m" },
+      { label: "Étanchéité", value: "IPX6 / IPX7" },
+      { label: "Autonomie", value: "Jusqu'à 3 ans (pile intégrée)" },
+      { label: "Installation", value: "Adhésif haute tenue, sans perçage" },
+    ],
+  },
 
   // --- Minn Kota — Gamme Riptide Terrova GPS ------------------------------
   {
@@ -2307,6 +2341,7 @@ const products: ProductSeed[] = [
     name: "Cobra MR HH350 FLT",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "VHF Portatifs",
     images: ["/products/cobra-mr-hh350-flt.png"],
     shortDescription: "VHF portable flottante 6W, étanche IPX7, micro anti-bruit",
     description:
@@ -2323,6 +2358,7 @@ const products: ProductSeed[] = [
     name: "Cobra MR HH500 FLT BT",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "VHF Portatifs",
     images: ["/products/cobra-mr-hh500-flt-bt.png"],
     shortDescription: "VHF portable flottante 6W avec Bluetooth et Rewind-Say-Again",
     description:
@@ -2340,6 +2376,7 @@ const products: ProductSeed[] = [
     name: "Cobra MR HH600 FLT GPS BT",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "VHF Portatifs",
     images: ["/products/cobra-mr-hh600-flt-gps-bt.png"],
     shortDescription: "VHF portable flottante haut de gamme avec GPS intégré, DSC et Bluetooth",
     description:
@@ -2357,6 +2394,7 @@ const products: ProductSeed[] = [
     name: "Cobra AM1055",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "Talkie-walkies",
     images: ["/products/cobra-am1055.png"],
     shortDescription: "Talkie-walkie PMR446 flottant et étanche, portée jusqu'à 12 km",
     description:
@@ -2374,6 +2412,7 @@ const products: ProductSeed[] = [
     name: "Cobra Marine MR F80B",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "VHF Fixe",
     shortDescription: "VHF fixe avec DSC et haut-parleur externe",
     description:
       "La MR F80B est une VHF fixe intégrant l'appel sélectif numérique (DSC) relié au GPS du bord, avec sortie haut-parleur externe pour une meilleure écoute au poste de barre.",
@@ -2388,6 +2427,7 @@ const products: ProductSeed[] = [
     name: "Cobra Marine MR HH125",
     brand: "cobra-marine",
     category: "vhf-communication",
+    productLine: "VHF Portatifs",
     shortDescription: "VHF portable compacte et légère pour la plaisance",
     description:
       "La MR HH125 est une VHF portable compacte, simple d'utilisation, idéale comme radio de secours ou pour l'annexe.",

@@ -51,6 +51,9 @@ const PRODUCT_LINE_ORDER = [
   "Tableau arrière",
   "Traversante",
   "À coller",
+  "VHF Portatifs",
+  "VHF Fixe",
+  "Talkie-walkies",
 ];
 
 // Regroupement de plus haut niveau, au-dessus des gammes (`productLine`),
