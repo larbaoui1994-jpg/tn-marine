@@ -226,7 +226,7 @@ export default async function BrandPage({
                     src={tile.image}
                     alt={tile.title}
                     fill
-                    className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-4">
