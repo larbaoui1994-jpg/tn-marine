@@ -16,7 +16,9 @@
     "closeMenu": "Close menu",
     "account": "My account",
     "login": "Log in",
-    "logout": "Log out"
+    "logout": "Log out",
+    "productsMenu": "Menu",
+    "productsMenuTitle": "Shop by category"
   },
   "Common": {
     "language": "Language",
@@ -145,6 +147,7 @@
   "Categories": {
     "gps-traceurs": "GPS & Chartplotters",
     "sondeurs": "Fishfinders",
+    "sondes": "Transducers",
     "cartographie": "Marine Cartography",
     "vhf-communication": "VHF & Communication",
     "radars": "Radars",

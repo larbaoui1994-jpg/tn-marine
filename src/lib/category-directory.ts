@@ -7,6 +7,7 @@
 export const CATEGORY_DIRECTORY = [
   { slug: "gps-traceurs", name: "GPS & traceurs", icon: "🧭" },
   { slug: "sondeurs", name: "Sondeurs", icon: "🐟" },
+  { slug: "sondes", name: "Sondes (transducteurs)", icon: "📌" },
   { slug: "cartographie", name: "Cartographie marine", icon: "🗺️" },
   { slug: "vhf-communication", name: "VHF & communication", icon: "📻" },
   { slug: "radars", name: "Radars", icon: "📡" },

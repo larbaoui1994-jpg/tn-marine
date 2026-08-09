@@ -16,7 +16,9 @@
     "closeMenu": "إغلاق القائمة",
     "account": "حسابي",
     "login": "تسجيل الدخول",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "productsMenu": "القائمة",
+    "productsMenuTitle": "تسوّق حسب الفئة"
   },
   "Common": {
     "language": "اللغة",
@@ -145,6 +147,7 @@
   "Categories": {
     "gps-traceurs": "أجهزة GPS وأجهزة رسم الخرائط",
     "sondeurs": "أجهزة السونار",
+    "sondes": "مسبارات السونار",
     "cartographie": "الخرائط البحرية",
     "vhf-communication": "أجهزة VHF والاتصالات",
     "radars": "الرادارات",

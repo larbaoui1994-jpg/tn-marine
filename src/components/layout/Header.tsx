@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import AccountMenu from "@/components/auth/AccountMenu";
+import CategoriesMenu from "./CategoriesMenu";
 
 const NAV_LINKS = [
   { key: "home", href: "/" },
@@ -24,20 +25,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-surface-alt/95 backdrop-blur supports-[backdrop-filter]:bg-surface-alt/80">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="flex items-center shrink-0"
-          onClick={() => setMobileOpen(false)}
-        >
-          <Image
-            src="/logo/tn-marine-logo.png"
-            alt="TN Marine — Technic Nautic Marine Import"
-            width={464}
-            height={96}
-            priority
-            className="h-9 w-auto"
-          />
-        </Link>
+        <div className="flex items-center gap-3 shrink-0">
+          <CategoriesMenu />
+          <Link
+            href="/"
+            className="flex items-center shrink-0"
+            onClick={() => setMobileOpen(false)}
+          >
+            <Image
+              src="/logo/tn-marine-logo.png"
+              alt="TN Marine — Technic Nautic Marine Import"
+              width={464}
+              height={96}
+              priority
+              className="h-9 w-auto"
+            />
+          </Link>
+        </div>
 
         <nav className="hidden lg:flex items-center gap-1" aria-label={t("menu")}>
           {NAV_LINKS.map((link) => {
